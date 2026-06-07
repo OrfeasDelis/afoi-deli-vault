@@ -46,9 +46,9 @@ Designed as a 5-layer model: **Knowledge (Obsidian) -> Data (future Postgres) ->
 - **Human approval required** for: sending emails, changing order status, changing prices, approving proformas, notifying clients of delays, changing delivery promises, updating financial records.
 
 ## 4. Infrastructure state
-- **Git:** repo initialized 2026-06-07. Identity (repo-local): Orfeas Delis / OrfeasDelis@users.noreply.github.com.
-- **GitHub:** private repo `afoi-deli-vault` under account `OrfeasDelis`.
-- **Obsidian plugins:** Dataview, Templater, Obsidian Git — planned/configured; binaries installed via UI (see [[Obsidian Plugin Setup]]).
+- **Git:** repo initialized 2026-06-07, branch `master`. Identity (repo-local): Orfeas Delis / OrfeasDelis@users.noreply.github.com. Push verified (round-trip OK).
+- **GitHub:** private repo `afoi-deli-vault` under `OrfeasDelis` → https://github.com/OrfeasDelis/afoi-deli-vault.
+- **Obsidian plugins:** Dataview, Templater, Obsidian Git — config pre-seeded in `.obsidian/community-plugins.json`; binaries still need install via UI (see [[Obsidian Plugin Setup]]).
 
 ## 5. Active threads / in progress
 - [x] Establish collaboration + memory layer (`14_AI_COLLABORATION`).
