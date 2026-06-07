@@ -1,0 +1,23 @@
+# Obsidian workspace cache (changes constantly, machine-specific)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+
+# Obsidian trash
+.trash/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Temp / editor files
+*.tmp
+*.bak
+*~
+
+# Local secrets (never commit)
+.env
+*.local.env
+secrets.*

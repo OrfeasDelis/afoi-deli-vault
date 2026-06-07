@@ -1,0 +1,42 @@
+---
+type: schema
+entity: projects
+status: active
+---
+
+# Projects Schema
+
+## Fields
+
+```yaml
+project_id:
+project_name:
+client:
+location:
+project_type:
+architect:
+designer:
+contractor:
+status:
+start_date:
+target_delivery:
+budget:
+orders:
+materials:
+open_issues:
+photos:
+case_study_ready:
+notes:
+```
+
+## Project types
+
+- residence
+- villa
+- hotel
+- retail
+- office
+- bathroom
+- kitchen
+- outdoor
+- public/commercial

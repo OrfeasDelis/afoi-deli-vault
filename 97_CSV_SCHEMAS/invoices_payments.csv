@@ -1,0 +1,1 @@
+record_id,party,party_type,invoice_number,invoice_date,amount,vat,due_date,payment_status,related_order,credit_terms,attachment,notes
