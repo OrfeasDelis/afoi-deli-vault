@@ -1,7 +1,7 @@
 ---
 type: memory_state
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-06-14
 status: active
 confidence: verified
 owner: Orfeas Delis
@@ -9,60 +9,82 @@ owner: Orfeas Delis
 
 # Vault State Memory
 
-> **This is the single source of truth for "where we are."**
-> Claude reads this FIRST at the start of every session and UPDATES it at the end.
+> **Single source of truth for "where we are."**
+> Read this AFTER [[The Heart]], at the start of every session; UPDATE it at the end.
 > See [[Session Protocol]].
 
-## 1. What this vault is
-Operating + knowledge system for **Afoi Deli Floor + Bath** (ΑΦΟΙ ΔΕΛΗ Ε.Ε.), Athens-based premium distributor of architectural materials (tiles, bathrooms, faucets, surfaces, large slabs, outdoor, Scavolini kitchens). Founded 1986. Website afoideli.gr. Owner: Orfeas Delis.
+## 0. Read The Heart first
 
-Designed as a 5-layer model: **Knowledge (Obsidian) -> Data (future Postgres) -> Automation (n8n) -> Interface (future webapp) -> AI Agent**. Core principle: *Obsidian is the memory; the agent is never the source of truth.*
+Before this file, read [[The Heart]] — the foundational note above the structure. It sets the voice, values, and lineage every session inherits. Business strategy descends from it via [[Afoi Deli — Operating Doctrine]].
+
+## 1. What this vault is
+
+Unified operating + knowledge system for **both** Afoi Deli Floor + Bath (ΑΦΟΙ ΔΕΛΗ Ε.Ε., Athens, founded 1986, afoideli.gr) **and Orfeas Delis as a person**. Business and personal are one fabric.
+
+5-layer model: **Knowledge (Obsidian) → Data (Supabase Postgres) → Automation (Python worker) → Interface (future webapp) → AI Agent.** Core principle: *Obsidian is the memory; the agent is never the source of truth.* **No n8n** — settled stack is Supabase + Python worker, solo build via Claude Code.
 
 ## 2. Current structure (high level)
+
 - `00_COMMAND_CENTER` dashboards / priorities / decisions / inbox
-- `01_COMPANY_CORE` identity, brand, business model, people, strategy
+- `01_COMPANY_CORE` identity, brand, business model, people, strategy — **+ [[Afoi Deli — Operating Doctrine]]**
 - `02_OPERATIONS_OS` 12 SOPs (order flow, Kouvas, POs, warehouse, finance)
 - `03_DATABASE_DESIGN` 11 schemas + ID conventions
-- `04_SUPPLIERS_AND_BRANDS` indexes + 12 supplier notes
+- `04_SUPPLIERS_AND_BRANDS` indexes + supplier notes ([[Supplier - Kronos]] now populated)
 - `05_SALES_AND_CLIENT_EXPERIENCE` client journey + comms
 - `06_PROJECTS_AND_CASES` dashboard + 4 projects
 - `07_PRODUCT_KNOWLEDGE` 9 knowledge maps
-- `08_AUTOMATION_AND_AI` masterplan, n8n map, agent roles, RAG rules, Hermes interface
+- `08_AUTOMATION_AND_AI` masterplan, **Python Worker Map**, agent roles, RAG rules, Hermes interface
 - `09_WEBSITE_MARKETING_AND_CONTENT` web/SEO/content
 - `10_FINANCE_AND_MANAGEMENT` dashboards, profitability, credit
-- `11_EXPANSION_AND_VENTURES` 7 growth initiatives
-- `12_PERSONAL_OS` 7 personal-leadership notes
-- `13_DAILY_NOTES` daily template
+- `11_EXPANSION_AND_VENTURES` growth initiatives
+- `12_PERSONAL_OS` personal-leadership notes (focus, health, learning, leadership)
+- `13_DAILY_NOTES` daily template (work capture)
 - **`14_AI_COLLABORATION` (this layer)** memory + protocol + roadmap + sessions
+- **`15_PERSONAL_LIFE`** relationships / finance / wellness *(new)*
+- **`16_IDEAS_AND_VISION`** Mnemonic Atelier, Material Atelier, Circles, future bets *(new)*
+- **`17_JOURNAL`** life log, YYYY-MM-DD, Orfeas's own voice *(new)*
+- **`18_KNOWLEDGE`** Italian, coffee, history, philosophy — things studied *(new)*
 - `97_CSV_SCHEMAS` 10 import headers (no data yet)
 - `98_TEMPLATES` 11+ note templates
 - `99_SYSTEM` vault map + usage rules
+- **Root:** [[The Heart]] — foundational note, above structure.
 
 ## 3. Conventions to always honor
+
 - YAML frontmatter on every note: `type`, `created`, `status`, plus `confidence` where facts are involved.
 - Confidence tags: `verified | likely | memory_seed | needs_check`.
-- Naming: `Entity - Name` (e.g. `Supplier - Florim`), numbered folders, `[[wikilinks]]`.
+- Naming: `Entity - Name`, numbered folders, `[[wikilinks]]`.
 - One note = one purpose. Link aggressively. Mark uncertainty.
-- **Human approval required** for: sending emails, changing order status, changing prices, approving proformas, notifying clients of delays, changing delivery promises, updating financial records.
+- **Human approval** required for: sending emails, changing order status, changing prices, approving proformas, notifying clients of delays, changing delivery promises, updating financial records.
+- **Personal half:** read/reason freely; [[Journal]] and wellness are author-by-invitation — don't write into them unprompted. See [[CLAUDE]] §5.
 
 ## 4. Infrastructure state
-- **Git:** repo initialized 2026-06-07, branch `master`. Identity (repo-local): Orfeas Delis / OrfeasDelis@users.noreply.github.com. Push verified (round-trip OK).
-- **GitHub:** private repo `afoi-deli-vault` under `OrfeasDelis` → https://github.com/OrfeasDelis/afoi-deli-vault.
-- **Obsidian plugins:** Dataview, Templater, Obsidian Git — config pre-seeded in `.obsidian/community-plugins.json`; binaries still need install via UI (see [[Obsidian Plugin Setup]]).
+
+- **Git:** repo on branch `master`. Identity: Orfeas Delis. Private repo `afoi-deli-vault` under `OrfeasDelis`.
+- **Obsidian plugins:** Dataview, Templater, Obsidian Git, Minimal/Style Settings — installed.
+- **Afoi Deli OS build:** Supabase Postgres + Python worker, bilingual, solo via Claude Code. Builder's Manual exists (R0–R3 roadmap). n8n removed from vault doctrine 2026-06-14.
 
 ## 5. Active threads / in progress
-- [x] Establish collaboration + memory layer (`14_AI_COLLABORATION`).
-- [x] Initialize git + private GitHub repo.
-- [ ] User installs the 3 community plugins in Obsidian UI (see [[Obsidian Plugin Setup]]).
-- [ ] Next focus per [[Roadmap]]: confirm memory loop, then move toward automation planning.
+
+- [x] Collaboration + memory layer established.
+- [x] Git + private GitHub repo.
+- [x] Foundation notes shipped: [[The Heart]], [[Afoi Deli — Operating Doctrine]], [[Supplier - Kronos]].
+- [x] CLAUDE.md extended (Heart-first load, identity layer, personal-handling rule).
+- [x] n8n removed; automation files rewritten to Python worker stack.
+- [x] Personal folders created (15–18).
+- [ ] First [[Journal]] entry (begins with the night of 2026-06-14).
+- [ ] Sweep remaining incidental n8n mentions in older files via find-replace.
+- [ ] Continue interview: more suppliers, the people ([[People and Roles Map]]), personal domains.
 
 ## 6. Key open questions
-See [[Open Questions]] for the live list.
+
+See [[Open Questions]].
 
 ## 7. Memory-seed facts needing verification
+
 - Company revenue (~€15m+, `needs_check`).
-- Supplier contacts / pricing / lead times (most supplier notes are `memory_seed`).
+- Supplier contacts / pricing / lead times (most supplier notes still `memory_seed`).
 - Full Kouvas column definitions.
 
 ---
-*Last session: [[Session 2026-06-07]]. Update this file at the end of every session before committing.*
+*Last session: the night of 2026-06-14 — foundation built (The Heart, doctrine, Kronos, CLAUDE.md, n8n removal, personal folders). Update this file at the end of every session before committing.*

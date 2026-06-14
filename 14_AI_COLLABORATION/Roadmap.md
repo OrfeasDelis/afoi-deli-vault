@@ -13,7 +13,7 @@ Phased plan for building the vault and the future apps. Mirrors the 5 phases in 
 - [x] Collaboration + memory layer (`14_AI_COLLABORATION`).
 - [x] Git repo + private GitHub `afoi-deli-vault`.
 - [x] Session protocol + templates.
-- [ ] User installs Obsidian plugins (Dataview, Templater, Obsidian Git).
+- [x] User installs Obsidian plugins (Dataview, Templater, Obsidian Git).
 - [ ] Confirm full memory loop across a fresh session.
 
 ## Phase 1 — Obsidian discipline

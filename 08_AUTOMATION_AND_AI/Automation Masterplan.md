@@ -1,6 +1,7 @@
 ---
 type: automation_masterplan
 created: 2026-06-07
+updated: 2026-06-14
 status: active
 automation_priority: very_high
 ---
@@ -13,13 +14,16 @@ Build a company control tower where every order, supplier, product, loading, pro
 
 ## Recommended architecture
 
+> [!info] Settled stack
+> **Supabase Postgres** for data, a **Python worker** for parsing/automation, bilingual from day one, solo build via Claude Code. **No n8n.** The worker replaces what an external workflow tool would have done.
+
 ```mermaid
 flowchart TD
 A[Obsidian Vault] --> B[Clean Knowledge Layer]
 C[Excel / Kouvas] --> D[Read-only Extractor]
-E[Gmail] --> F[n8n Email Parser]
-G[Supplier PDFs / Excels] --> H[OCR / Parser]
-B --> I[Postgres Database]
+E[Gmail] --> F[Python Worker — Email Parser]
+G[Supplier PDFs / Excels] --> H[Python Worker — OCR / Parser]
+B --> I[Supabase Postgres]
 D --> I
 F --> I
 H --> I
@@ -35,10 +39,10 @@ J --> M[Human approvals]
 Obsidian stores SOPs, rules, supplier notes, product logic, decisions.
 
 ### Layer 2 — Data
-Postgres or similar stores structured operational data.
+**Supabase Postgres** stores structured operational data. Single source of truth for state.
 
 ### Layer 3 — Automation
-n8n watches Gmail, files, and data changes.
+The **Python worker** watches Gmail, files, and data changes; parses; writes to Postgres; drafts outputs. Scheduled and event-triggered jobs (see [[Python Worker Map]]).
 
 ### Layer 4 — Interface
 Dashboard / webapp shows order health, statuses, supplier loadings, client pages.
@@ -61,4 +65,9 @@ AI reads the knowledge layer and data layer to assist, not hallucinate.
 
 ## Golden rule
 
-No automation should send external communication without human approval until it has proven itself.
+No automation should send external communication without human approval until it has proven itself. (See [[Afoi Deli — Operating Doctrine#The responsibility doctrine]] — the client holds Afoi Deli accountable, so nothing goes out unchecked.)
+
+## Links
+
+- Worker jobs → [[Python Worker Map]]
+- Schemas → [[Database Master Schema]]

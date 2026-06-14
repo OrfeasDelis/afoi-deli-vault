@@ -1,5 +1,7 @@
 [
   "dataview",
   "templater-obsidian",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-style-settings",
+  "obsidian-minimal-settings"
 ]
