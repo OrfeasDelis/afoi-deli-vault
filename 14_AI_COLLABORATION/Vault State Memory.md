@@ -1,7 +1,7 @@
 ---
 type: memory_state
 created: 2026-06-07
-updated: 2026-06-14
+updated: 2026-06-15
 status: active
 confidence: verified
 owner: Orfeas Delis
@@ -72,8 +72,13 @@ Unified operating + knowledge system for **both** Afoi Deli Floor + Bath (ΑΦΟ
 - [x] CLAUDE.md extended (Heart-first load, identity layer, personal-handling rule).
 - [x] n8n removed; automation files rewritten to Python worker stack.
 - [x] Personal folders created (15–18).
-- [ ] First [[Journal]] entry (begins with the night of 2026-06-14).
-- [ ] Sweep remaining incidental n8n mentions in older files via find-replace.
+- [x] Supplier ingestion reframed to **public research** ([[Supplier Research Workflow]]); cross-reference machinery parked in [[Automation Backlog]]; [[Hermes Telegram Capture Queue]] rewritten so its drain runs research, not cross-check (2026-06-15).
+- [x] Cross-reference-workflow link graph consolidated — ~12 dangling wikilinks across 6 notes repointed (2026-06-15).
+- [x] First [[Journal]] entry (begins with the night of 2026-06-14).
+- [ ] **n8n sweep still pending** — [[Roadmap]] Phase 3 + [[Hermes Obsidian Codex Interface]] still name n8n and a non-existent `n8n Workflow Map`; contradicts settled doctrine. (Re-confirmed by lint 2026-06-15.)
+- [ ] [[Roadmap]] refresh — still the pre-pivot 2026-06-07 5-phase plan; doesn't reflect Supabase + Python worker / Builder's Manual R0–R3.
+- [ ] Decide: Kronos "On afoideli.gr" column — keep as parked pilot data or strip for consistency.
+- [ ] [[The Material Atelier]] page — linked but no page yet (Capture Backlog Priority 4).
 - [ ] Continue interview: more suppliers, the people ([[People and Roles Map]]), personal domains.
 
 ## 6. Key open questions
@@ -87,4 +92,4 @@ See [[Open Questions]].
 - Full Kouvas column definitions.
 
 ---
-*Last session: the night of 2026-06-14 — foundation built (The Heart, doctrine, Kronos, CLAUDE.md, n8n removal, personal folders). Update this file at the end of every session before committing.*
+*Last session: 2026-06-15 ([[Session 2026-06-15b]]) — Hermes capture queue reframed to supplier research, cross-reference-workflow links consolidated, vault lint. Prior: the Kronos pilot ([[Session 2026-06-15]]) and the 2026-06-14 foundation build. Update this file at the end of every session before committing.*

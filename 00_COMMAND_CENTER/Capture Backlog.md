@@ -52,17 +52,15 @@ tags:
 *Where the SOPs describe the ideal vs. how the business actually runs.*
 
 - [ ] Audit the SOPs in `02_OPERATIONS_OS` for aspirational-vs-real, mark with confidence tags.
-- [ ] Sweep remaining incidental `n8n` mentions via VS Code find-replace.
-- [ ] **Decide on a [[CLAUDE]] update** — add a "Reusable workflows (don't reinvent)" pointer to §6 so future sessions follow [[Supplier Cross-Reference Workflow]] and the Drive/[[Hermes Telegram Capture Queue]] asset pattern instead of improvising. Draft wording proposed 2026-06-15; held for review (CLAUDE.md is framing-layer — author's call).
 
 ## Hermes Capture Queue — registry
-*The Telegram → queue → worker inbox. Full design: [[Hermes Telegram Capture Queue]]. This registry tracks build state; the queue itself (once built) holds the actual items to ingest.*
+*The Telegram → queue → worker inbox. Full design: [[Hermes Telegram Capture Queue]]. This registry tracks build state; the queue itself (once built) holds the actual suppliers/collections for Hermes to research.*
 
 - [ ] **v0 — capture works.** Add `/add <supplier> <collection>`, `/add <url>`, and a file handler to the [[Circles]] bot host; write rows to a queue (bot SQLite or a vault file); reply "queued #N". *Useful even before draining is automated.*
-- [ ] **v0.5 — manual drain.** Process pending rows by running [[Supplier Cross-Reference Workflow]] by hand; mark `done`.
-- [ ] **v1 — worker `/drain` job.** Automate fetch → Drive tree → reference-note entry → afoideli Store-API cross-check → write links back → flip to `done`.
-- [ ] **v2 — second feeder.** The monthly collections-index auto-diff (`article:modified_time`) appends to the *same* queue.
-- Open decisions: queue store (lean: bot SQLite); Drive auth (service account vs OAuth); confirm Circles bot can host a second command set.
+- [ ] **v0.5 — manual drain.** Process pending rows by running the [[Supplier Research Workflow]] by hand — feed each supplier/collection to Hermes, save the dossier, mark `done`.
+- [ ] **v1 — worker `/drain` job.** Automate Hermes deep research → write the dossier (supplier note + collections reference) → flip to `done`. *Public research only — no afoideli.gr cross-check.*
+- [ ] **v2 — second feeder.** The monthly collections-index auto-diff (`article:modified_time`) appends changed collections to the *same* queue, so Hermes re-researches them and refreshes the dossier.
+- Open decisions: queue store (lean: bot SQLite); dossier depth (defined in [[Supplier Research Workflow]]); Drive auth — only if research source assets are filed to Drive, else drop (service account vs OAuth); confirm Circles bot can host a second command set.
 
 ## Future / when the OS exists
 *Captured, deliberately deferred — do NOT pull these forward.*
@@ -85,10 +83,11 @@ tags:
 - [x] Journal begun — template + first entry *(2026-06-14)*
 - [x] [[Session 2026-06-14]] detailed session log *(2026-06-14)*
 - [x] Kronos supplier doc filled from website + all 18 collections — [[Kronos — Collections Reference]] *(2026-06-15)*
-- [x] [[Supplier Cross-Reference Workflow]] — reusable supplier-ingestion skill *(2026-06-15)*
+- [x] [[Supplier Research Workflow]] — reusable supplier-research skill (shipped 2026-06-15 as the cross-reference workflow, since reframed to public research) *(2026-06-15)*
 - [x] [[Kronos — Catalogue & Asset Ingestion]] + [[Hermes Telegram Capture Queue]] concepts *(2026-06-15)*
 - [x] `Suppliers/` restructured to one folder per supplier *(2026-06-15)*
 - [x] [[Session 2026-06-15]] session log *(2026-06-15)*
+- [x] Hermes capture queue reframed to supplier research; cross-reference-workflow links consolidated (6 notes); vault lint — [[Session 2026-06-15b]] *(2026-06-15)*
 
 ---
 *Linked: [[The Heart]] · [[Vault State Memory]] · [[Session 2026-06-15]]*

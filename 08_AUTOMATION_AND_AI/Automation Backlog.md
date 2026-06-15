@@ -78,7 +78,7 @@ human_approval_required: true/false
 
 ## Add new ideas below
 
-### Idea — Hermes Telegram capture queue (asset inbox)
+### Idea — Hermes Telegram capture queue (research inbox)
 ```yaml
 impact: 4
 difficulty: 2
@@ -87,18 +87,19 @@ frequency: event
 owner: solo
 next_step: add /add command + file handler to the Circles bot host, writing to a queue (SQLite/file); reply "queued #N". See [[Hermes Telegram Capture Queue]]
 ```
-Text Hermes a collection name/URL or forward a PDF → appended to an ingestion queue → worker later fetches into the Drive tree, writes the reference-note entry, cross-checks afoideli.gr, links back. Earlier/simpler than the monthly auto-diff; same pattern works for price lists. Reuse the Circles bot host.
+Text Hermes a supplier/collection name or URL (or forward a PDF as a source) → appended to a research queue → worker later runs the [[Supplier Research Workflow]] on it (public deep research → supplier dossier + collections reference), links back. No afoideli.gr cross-check. Earlier/simpler than the monthly auto-diff; the same queue also feeds price-list capture. Reuse the [[Circles]] bot host.
 
-### Idea — Supplier ↔ afoideli.gr cross-reference (Store API)
+### Idea — Supplier ↔ afoideli.gr cross-reference (Store API) — PARKED
 ```yaml
 impact: 4
 difficulty: 2
 risk: 1
 frequency: monthly
 owner: solo
-next_step: run the Store API loop in [[Supplier Cross-Reference Workflow]] over the Kronos collection list; fill the "On afoideli.gr" column
+status: parked
+next_step: PARKED — superseded by public-research-first ([[Supplier Research Workflow]]). Revive only if matching collections against our own range becomes the goal; the spec below is the starting point.
 ```
-Query `afoideli.gr/wp-json/wc/store/v1/products?search=<collection>` per collection to get authoritative presence + permalink (the JS store can't be checked by fetch/search reliably). Powers the supplier-vs-own-range "cross-reference machine". Unauthenticated, returns JSON. Pair with the asset-ingestion job.
+Parked in favour of public research only — see [[Supplier Research Workflow]]; no note now carries an "On afoideli.gr" column (the Kronos pilot reference is the one exception, kept as parked data). Revival spec, if ever needed: query `afoideli.gr/wp-json/wc/store/v1/products?search=<collection>` per collection for authoritative presence + permalink (the JS store can't be checked by fetch/search reliably). Unauthenticated, returns JSON. This idea is the documented home of the cross-reference machinery — there is no separate workflow note.
 
 ### Idea — Supplier catalogue & asset ingestion (Kronos pilot → template)
 ```yaml
