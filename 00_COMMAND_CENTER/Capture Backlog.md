@@ -34,6 +34,9 @@ tags:
 - [x] **Mutina** — identity brand, premium tile. → [[Supplier - Mutina]] + [[Mutina — Collections Reference]]; conduit [[Conduit - Filon IKE]] *(2026-06-16)*
 - [x] **Fantini** — taps/faucets, through Plus Interiors. → [[Supplier - Fantini]] + [[Fantini — Collections Reference]] *(2026-06-16)*
 - [ ] Then the rest of the heavy houses as they earn pages (Salvatori, Antonio Lupi, Atlas Concorde, Florim…).
+- [ ] **Enrich the four full dossiers** (Kronos · Cielo · Mutina · Fantini) — fill the private `[!question]` fields: lead times, famous-for / hero products, payment terms, discount ceilings, specializations, loading/packaging, common proforma mistakes. Walk them via [[Supplier Enrichment Queue]].
+- [ ] **Resolve supplier `needs_check` facts** — Cielo VAT/P.IVA + registered address; Mutina registered-office change; **Fantini Greek importer** (confirm Plus Interiors vs. the food-company namesake); certifications for all three.
+- [ ] **Filon IKE — full subbrand roster** + Plus Interiors relationship specifics ([[Conduit - Filon IKE]] · [[Conduit - Plus Interiors]]).
 
 ## Priority 3 — Open the personal rooms
 *So `15_PERSONAL_LIFE` isn't just empty folders.*
@@ -89,6 +92,7 @@ tags:
 - [x] `Suppliers/` restructured to one folder per supplier *(2026-06-15)*
 - [x] [[Session 2026-06-15]] session log *(2026-06-15)*
 - [x] Hermes capture queue reframed to supplier research; cross-reference-workflow links consolidated (6 notes); vault lint — [[Session 2026-06-15b]] *(2026-06-15)*
+- [x] **Supplier stack** — Cielo, Mutina, Fantini dossiers + collections refs; conduit hubs [[Conduit - Plus Interiors]] / [[Conduit - Filon IKE]]; standing *Famous for & specializations* slot + [[Supplier Enrichment Queue]] — [[Session 2026-06-16]] *(2026-06-16)*
 
 ---
 *Linked: [[The Heart]] · [[Vault State Memory]] · [[Session 2026-06-15]]*
