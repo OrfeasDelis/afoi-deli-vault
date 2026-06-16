@@ -19,18 +19,18 @@ automation_priority:
 
 ## Quick view
 
-| Field | Value |
-|---|---|
-| Country | |
-| Categories | |
-| Brands | |
-| Main contact | |
-| Agency | |
-| Payment terms | |
-| Normal lead time | |
-| Special lead time | |
-| Loading habits | |
-| Relationship status | |
+| Field               | Value |
+| ------------------- | ----- |
+| Country             |       |
+| Categories          |       |
+| Brands              |       |
+| Main contact        |       |
+| Agency              |       |
+| Payment terms       |       |
+| Normal lead time    |       |
+| Special lead time   |       |
+| Loading habits      |       |
+| Relationship status |       |
 
 ## What they supply
 
