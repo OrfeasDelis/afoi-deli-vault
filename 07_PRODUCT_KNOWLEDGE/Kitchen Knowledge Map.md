@@ -12,6 +12,14 @@ strategic_axis: Scavolini
 
 Kitchens can move Afoi Deli from material distribution to full interior package authority.
 
+## Suppliers & sourcing
+
+- **Kitchens** → [[Supplier - Scavolini]] — the cornerstone brand; strategy in [[Scavolini Kitchen Expansion]].
+- **Countertops / worktops** — the cross-sell pathway that pulls our own suppliers into each kitchen:
+  - Porcelain slabs (6 / 12 mm) → [[Supplier - Kronos]] (large slabs / K-LAB bespoke) · [[Large Slabs Knowledge]]
+  - Natural stone — marble · quartz · granite → respective stone suppliers *(notes to be created)*
+- Appliances · handles · lighting → *(to populate — third-party boundaries & who supplies them)*
+
 ## Knowledge sections
 
 - Kitchen models

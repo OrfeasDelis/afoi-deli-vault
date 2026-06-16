@@ -41,6 +41,6 @@ Brand - Brand Name
 - **Tiles / surfaces** — [[Supplier - Kronos|Kronos]] · [[Supplier - Mutina|Mutina]]
 - **Bathroom / sanitary** — [[Supplier - Cielo|Cielo]]
 - **Faucets** — [[Supplier - Fantini|Fantini]]
-- **Kitchens** — *(e.g. [[Supplier - Scavolini|Scavolini]] — to populate)*
+- **Kitchens** — [[Supplier - Scavolini|Scavolini]] (the cornerstone; see [[Scavolini Kitchen Expansion]])
 - **Wellness** — *(e.g. Effe, via [[Conduit - Plus Interiors]] — to populate)*
 - **Outdoor** — *(to populate)*

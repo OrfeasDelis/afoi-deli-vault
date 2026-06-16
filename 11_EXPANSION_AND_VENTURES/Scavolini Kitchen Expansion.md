@@ -9,7 +9,15 @@ status: active
 
 ## Strategic meaning
 
-Scavolini can reposition Afoi Deli from surface/bathroom distributor into whole-interior authority.
+Scavolini can reposition Afoi Deli from surface/bathroom distributor into whole-interior authority. The rationale (Orfeas):
+
+- **Natural expansion of the trade.** After tiling and wood parquet, kitchens are the next must. An ambitious project — and the logical next layer of the same business.
+- **One supplier, one channel, one trusted partner.** Clients can group the whole house under us — a single channel for orders and the project, one partner they trust for everything. That convenience is itself the offer.
+- **Countertop pathways open new sales.** Worktops in 6 mm / 12 mm porcelain slabs or natural materials (marble, quartz, granite…) pull our own slab and stone suppliers into each kitchen — new pathways, more of the project sourced through us. (Porcelain slabs → [[Supplier - Kronos]] / [[Large Slabs Knowledge]].)
+- **Cashflow — drain more of the project share.** Each kitchen captures a larger slice of the client's total project spend (wallet share), not just the surfaces.
+- **Status & branding.** Working with **Scavolini**, a renowned Italian brand, is uplifting for the company — and it showcases our full range of expertise and products.
+
+Supplier dossier: [[Supplier - Scavolini]]. Product layer: [[Kitchen Knowledge Map]].
 
 ## Needed systems
 

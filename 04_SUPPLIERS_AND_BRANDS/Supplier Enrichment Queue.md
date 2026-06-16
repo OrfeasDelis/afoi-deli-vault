@@ -47,7 +47,7 @@ WHERE type = "supplier"
 SORT updated DESC
 ```
 
-The `memory_seed` stubs (Florim, Atlas Concorde, Antonio Lupi, ABK, Emilgroup, 41zero42, Sant'Agostino, Fima Carlo Frattini, Scavolini) need the **public research first** — run the [[Supplier Research Workflow]]. The full dossiers (Kronos, Cielo, Mutina, Fantini) are ready for your private enrichment now.
+The `memory_seed` stubs (Florim, Atlas Concorde, Antonio Lupi, ABK, Emilgroup, 41zero42, Sant'Agostino, Fima Carlo Frattini) need the **public research first** — run the [[Supplier Research Workflow]]. The full dossiers (Kronos, Cielo, Mutina, Fantini, Scavolini) are ready for your private enrichment now.
 
 ## Links
 - [[Supplier Master Index]] · [[Supplier Research Workflow]] · [[Capture Backlog]]

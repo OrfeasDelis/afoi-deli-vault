@@ -32,11 +32,11 @@ Each supplier lives in its own folder: `Suppliers/<Name>/Supplier - <Name>.md`. 
 - ● [[Supplier - Cielo]] — bathroom / sanitary ware · via [[Conduit - Plus Interiors]]
 - ● [[Supplier - Mutina]] — design porcelain tile · via [[Conduit - Filon IKE]]
 - ● [[Supplier - Fantini]] — faucets / taps · via [[Conduit - Plus Interiors]]
+- ● [[Supplier - Scavolini]] — kitchens / living / bath · dealer & Store network · [[Scavolini Kitchen Expansion]]
 
 **Seed / stub (awaiting the Kronos treatment — see [[Supplier Research Workflow]]):**
 
 - ◐ [[Supplier - Florim]]
-- ◐ [[Supplier - Scavolini]]
 - ◐ [[Supplier - Fima Carlo Frattini]]
 - ◐ [[Supplier - Atlas Concorde]]
 - ◐ [[Supplier - ABK]]
