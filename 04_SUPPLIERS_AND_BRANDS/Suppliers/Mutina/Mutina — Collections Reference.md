@@ -7,7 +7,7 @@ category: tile / porcelain stoneware
 status: active
 created: 2026-06-16
 updated: 2026-06-16
-confidence: confirmed
+confidence: verified
 source: https://www.mutina.it/en/collection
 tags:
   - supplier

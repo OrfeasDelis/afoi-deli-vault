@@ -7,7 +7,7 @@ category: porcelain stoneware
 status: active
 created: 2026-06-15
 updated: 2026-06-15
-confidence: confirmed
+confidence: verified
 source: https://kronosceramiche.com/collections/
 tags:
   - supplier

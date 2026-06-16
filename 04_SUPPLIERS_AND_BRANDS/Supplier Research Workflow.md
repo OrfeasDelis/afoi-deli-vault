@@ -50,8 +50,8 @@ Never silently guess a private fact. A clean public dossier with honest gaps bea
 
 Work down this list; prefer primary sources and mark confidence by tier.
 
-1. **The manufacturer's own website** — collections, company/about, sustainability, press/news, downloads (catalogue + technical PDFs), showroom/contact pages. The authoritative source for product and identity. `confidence: confirmed` for what it states directly.
-2. **Official registries / legal** — the legal entity, VAT/P.IVA, registered address, group ownership (e.g. an Italian SpA inside a larger ceramics group). `confirmed` when from an official or the company's own imprint.
+1. **The manufacturer's own website** — collections, company/about, sustainability, press/news, downloads (catalogue + technical PDFs), showroom/contact pages. The authoritative source for product and identity. `confidence: verified` for what it states directly.
+2. **Official registries / legal** — the legal entity, VAT/P.IVA, registered address, group ownership (e.g. an Italian SpA inside a larger ceramics group). `verified` when from an official or the company's own imprint.
 3. **Trade press & design media** — Cersaie coverage, Floor Daily, Domus/Dezeen/Archiproducts launches, group financials. Good for history, ownership moves, awards, design-director names. `likely`.
 4. **LinkedIn / company profiles** — size, HQ, leadership, distribution footprint. `likely`.
 5. **Distributor & spec sites** — other markets' distributor pages, architect spec libraries (Archello, Material Bank). Useful for formats/specs cross-checking. `likely`.
@@ -100,7 +100,7 @@ Frontmatter: `type: supplier`, `supplier_name`, `country`, `category`, `represen
 
 ### B. Collections reference — `Suppliers/<Name>/<Name> — Collections Reference.md`
 
-Frontmatter: `type: reference`, `parent: "[[Supplier - <Name>]]"`, `supplier`, `country`, `category`, `status`, `created`, `updated`, `confidence: confirmed`, `source: <collections index URL>`, `tags`. Body:
+Frontmatter: `type: reference`, `parent: "[[Supplier - <Name>]]"`, `supplier`, `country`, `category`, `status`, `created`, `updated`, `confidence: verified`, `source: <collections index URL>`, `tags`. Body:
 
 - Intro callout: what this is, depth (summary, not full SKU list), and that SKUs/sizes live in the PDFs and in real proforma/Kouvas data.
 - One entry per collection: `### <Name> — *look*`, a 1–3 line character description with colour/structure names, then `Page:`, `Catalogue:`, `Technical:`. **No `On afoideli.gr:` line.**
@@ -121,7 +121,7 @@ Frontmatter: `type: reference`, `parent: "[[Supplier - <Name>]]"`, `supplier`, `
 - **Brand names are search-polluted** — scope every web query with the ceramics/bath + country context; prefer the manufacturer's own site and registries over general search.
 - **Generic collection names collide** ("Essence", "Materia" exist across many brands) — always attribute to the right manufacturer.
 - **Cap fetch token limits** on collection/nav-heavy pages (~4–5k).
-- **Mark confidence by source tier** — `confirmed` for the manufacturer's own statements and registries, `likely` for trade press / LinkedIn, `needs_check` for un-corroborated general search. Never launder a guess into a fact.
+- **Mark confidence by source tier** — `verified` for the manufacturer's own statements and registries, `likely` for trade press / LinkedIn, `needs_check` for un-corroborated general search. Never launder a guess into a fact.
 
 ## Links
 

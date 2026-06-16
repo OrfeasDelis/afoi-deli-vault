@@ -7,7 +7,7 @@ category: faucets / taps
 status: active
 created: 2026-06-16
 updated: 2026-06-16
-confidence: confirmed
+confidence: verified
 source: https://www.fantini.it/en-us/discover-collections
 tags:
   - supplier

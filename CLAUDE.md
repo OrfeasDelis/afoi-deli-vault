@@ -25,6 +25,9 @@ After The Heart, read in this order:
 
 Then briefly confirm current state and proposed focus with Orfeas before acting. Full workflow: [[Session Protocol]].
 
+> [!warning] These boot notes drift — sanity-check before trusting them
+> [[Roadmap]] and [[Open Questions]] are the stalest notes in the vault (pre-pivot); treat any n8n reference in them as superseded per §7. Before trusting [[Vault State Memory]]'s structure section, confirm it against [[Vault Map]] (the canonical folder index) and the actual folders on disk. `18_KNOWLEDGE` is intentionally **deferred** — not on disk; studies live in `12_PERSONAL_OS` via [[Studies and Subjects]].
+
 ---
 
 ## 2. Identity & context
@@ -40,8 +43,11 @@ Then briefly confirm current state and proposed focus with Orfeas before acting.
 ## 3. Conventions (always)
 
 - Every note: YAML frontmatter `type`, `created`, `status`; add `confidence` for factual notes.
-- Confidence: `verified | likely | memory_seed | needs_check`. Mark uncertainty — never guess silently.
-- Naming `Entity - Name`; numbered folders; `[[wikilinks]]`, link aggressively.
+- **Confidence (exhaustive set):** `verified | likely | memory_seed | needs_check`. No other value is valid — templates and workflows must emit only these. Mark uncertainty with `needs_check`; never guess silently.
+- **Status (allowed set):** `active | draft | seed | idea | complete | backlog` (plus `living` for continuously-revised foundation notes like [[The Heart]]). Use `seed` for an intentionally-empty scaffold so it's distinguishable from abandoned work. (`completed` is a deprecated spelling of `complete` — don't use it.)
+- `type` is a free-text human label, **not** a query facet — don't try to normalize it. The real navigation system is **numbered folders + `[[wikilinks]]`** (tags are not used here).
+- Naming `Entity - Name`; numbered folders; link by **bare note name** (`[[Supplier - Kronos]]`, not `[[04_SUPPLIERS_AND_BRANDS/...]]`) so links survive renames. Link aggressively.
+- **Inbound-link rule:** every new content note must earn at least one **inbound** link — from its folder index/MOC or a relevant hub — in the same session it's created. Outbound links alone don't count; a note with zero inbound links is unfinished.
 - One note = one purpose; keep facts separate from opinions.
 - Full rules: [[Obsidian Usage Rules]] and [[RAG Knowledge Base Rules]].
 
@@ -92,13 +98,16 @@ When asked to lint (or at natural milestones):
 > [!warning] The authorship line — this overrides the pattern's default
 > The LLM-Wiki pattern's default is "you never write the wiki yourself." For the **reference layer** (suppliers, products, operations) that's correct — Claude writes and maintains it. **But for the parts that are *Orfeas* — [[The Heart]], the [[Journal]], decisions, framing, the strategic positions — authorship stays with him.** Claude maintains the connective tissue (links, summaries, consistency); Orfeas authors the soul. If the LLM writes the framing and the decisions, the continuity quietly stops being his. Maintain this split deliberately.
 
+> [!important] Non-negotiable vs best-effort
+> This loop is **prose-enforced** — no slash commands or hooks back it, so adherence depends on you reading it each session. Never skip: (1) read [[The Heart]] + [[Vault State Memory]] at start; (2) honor the §4 approval gates; (3) at session end, update [[Vault State Memory]] and commit + push. Best-effort (do when there's room): full lint sweep, ADR logging, [[Roadmap]]/[[Open Questions]] pruning. If you skip a best-effort step, say so in the session log.
+
 ---
 
 ## 7. Freshness flags — read before trusting old doctrine
 
 > [!warning] Known stale areas (verify, don't inherit blindly)
-> - **`08_AUTOMATION_AND_AI` and the "5-layer model" in older notes may still name n8n.** The settled architecture is **Supabase Postgres + Python worker, no n8n** (see [[Automation Masterplan]] and [[Python Worker Map]]). Treat any n8n reference as superseded. A find-replace sweep of incidental mentions is still pending.
-> - Several supplier notes remain `memory_seed`. [[Supplier - Kronos]] is populated from Orfeas directly (`likely`). Promote others as they're verified.
+> - **n8n is still named as the *current* automation layer in ~15 live notes** — live prescriptions an implementer would follow, not incidental mentions: [[Roadmap]] Phase 3, [[Home Dashboard]] axis 5, [[Strategic Axes]] axis 5, the automation sections of [[Kouvas System]] / [[Supplier PO Creation SOP]] / [[Order Workflow 0-4]], [[Database Master Schema]]'s target line, and [[Hermes Obsidian Codex Interface]]. The settled architecture is **Supabase Postgres + Python worker, no n8n** (see [[Automation Masterplan]] and [[Python Worker Map]]). Replace every n8n prescription with the worker. Tracked as one owned task in [[Capture Backlog]] (P1) — scoped work, not a perpetual flag.
+> - Several supplier notes remain `memory_seed`. [[Supplier - Kronos]] is `likely`. Promote others as they're verified.
 
 ---
 
@@ -120,4 +129,6 @@ When asked to lint (or at natural milestones):
 
 ## 9. Start here in Obsidian
 
-[[Collaboration Home]] is the working hub. `README_START_HERE.md` covers vault philosophy. Root: [[The Heart]].
+[[Collaboration Home]] is the working hub. The canonical philosophy + current state are **[[The Heart]]** (the soul, the voice, the doctrine) and **[[Vault State Memory]]** (where the build actually is); the canonical folder index is **[[Vault Map]]**. Root: [[The Heart]].
+
+> [!warning] `README_START_HERE.md` is a historical onboarding artifact — pre-pivot (it still names n8n and a now-retired "4-layer" model). Do not treat it as current doctrine until rewritten. Use The Heart + Vault State Memory instead.

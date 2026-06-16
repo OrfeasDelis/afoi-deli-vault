@@ -37,7 +37,7 @@ The natural next layer of the trade. After tiling and wood parquet, **kitchens a
 ## Commercial profile
 
 - **Website:** https://www.scavolini.com (Greek site: scavolini.com/gr).
-- **Legal entity:** **Scavolini S.p.A.** — sede **Via Risara 60/70, 61025 Montelabbate (PU), Marche** (just outside Pesaro). P.IVA / CF **00113120414**; REA PS 50969; ATECO 31.02 (kitchen-furniture manufacture). Tel +39 0721 443333. Share capital €10M. `confidence: confirmed` (registry + own site).
+- **Legal entity:** **Scavolini S.p.A.** — sede **Via Risara 60/70, 61025 Montelabbate (PU), Marche** (just outside Pesaro). P.IVA / CF **00113120414**; REA PS 50969; ATECO 31.02 (kitchen-furniture manufacture). Tel +39 0721 443333. Share capital €10M. `confidence: verified` (registry + own site).
 - **Group:** parent of the **Scavolini Group** (also owns **Ernestomeda**, upper-mid market). Family-owned; Chairman **Valter Scavolini**, CEO **Fabiana Scavolini**.
 - **Distribution to market:** mono-brand **Scavolini Store** + dealer network (see *The channel* below).
 

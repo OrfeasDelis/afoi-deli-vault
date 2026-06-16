@@ -46,7 +46,7 @@ Kouvas contains the operational truth that the future database must learn from.
 Document every column and rule.
 
 ### Phase 2 — Read-only extraction
-Use scripts or n8n to read Kouvas and create snapshots.
+Use scripts / the Python worker to read Kouvas and create snapshots.
 
 ### Phase 3 — Validation
 Compare extracted data with manual reality.

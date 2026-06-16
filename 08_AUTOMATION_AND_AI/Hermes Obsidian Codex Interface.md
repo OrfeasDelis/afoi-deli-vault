@@ -10,7 +10,7 @@ status: draft
 
 Obsidian is the memory.  
 Codex/Claude-style tools can edit/build.  
-n8n moves events.  
+The Python worker (on Supabase Postgres) moves events.  
 A future webapp becomes the cockpit.
 
 ## Pilot interface options
@@ -23,9 +23,9 @@ Use dashboards, templates, search, links, and daily notes.
 
 Scripts read markdown/YAML and generate CSV/database updates.
 
-### Phase 3 — Obsidian + n8n
+### Phase 3 — Obsidian + Python worker
 
-n8n watches folders/Gmail and creates tasks/notes.
+The Python worker watches folders/Gmail and creates tasks/notes. See [[Python Worker Map]].
 
 ### Phase 4 — Database + web dashboard
 

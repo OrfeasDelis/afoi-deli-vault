@@ -82,7 +82,7 @@ The owners are not interchangeable. Each is a distinct force in the engine. (Rol
 - **[[People and Roles Map|Orfeas]] (you)** — the successor, the steward. Holds the whole at a standard and carries the doctrine forward.
 - **[[People and Roles Map|Ektoras]] (brother)** — *(to be described — room left open).*
 
-The engine has two halves: the **staging** (taste, discretion, aesthetic — the showroom that makes a brand look expensive) and the **conversion** (the human gift that makes the client say yes). The uplift needs both.
+The engine has two halves: the **staging** (taste, discretion, aesthetic — the showroom that makes a brand look expensive) and the **conversion** (the human gift that makes the client say yes). The uplift needs both. The conversion half — how a general brief becomes a specified, sold scheme at the sample wall — is documented in [[The Selection Engine]].
 
 ---
 

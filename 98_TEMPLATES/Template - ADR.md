@@ -1,6 +1,6 @@
 ---
 type: adr
-created: 2026-01-01
+created: <% tp.date.now("YYYY-MM-DD") %>
 status: proposed
 ---
 

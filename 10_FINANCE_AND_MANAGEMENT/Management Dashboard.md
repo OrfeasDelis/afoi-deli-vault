@@ -55,3 +55,9 @@ status: active
 - Website leads
 - Hotel/real estate actions
 - Automation progress
+
+## Related
+
+- [[Profitability Engine]] — the gross-margin engine behind the finance KPIs above.
+- [[Credit and Due Date Calendar]] — supplier-payable and client-balance due-date tracking.
+- [[Weekly Review]] · [[Operations Map]] · [[Home Dashboard]]

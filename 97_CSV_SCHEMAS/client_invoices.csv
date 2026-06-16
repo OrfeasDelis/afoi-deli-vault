@@ -1,0 +1,1 @@
+client_invoice_id,client,order_id,invoice_number,invoice_date,amount,balance_due,due_date,payment_status,notes

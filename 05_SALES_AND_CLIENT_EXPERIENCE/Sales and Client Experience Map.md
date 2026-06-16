@@ -33,6 +33,8 @@ The client should feel:
 - updated without chasing
 - dealing with a premium but human company
 
+> The craft behind **Product selection** — how a brief becomes a specified, sold scheme — is documented in [[The Selection Engine]] (the conversion half of the [[Afoi Deli — Operating Doctrine|uplift engine]]).
+
 ## Core templates
 
 - [[98_TEMPLATES/Template - Client]]

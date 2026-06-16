@@ -25,33 +25,10 @@ Unified operating + knowledge system for **both** Afoi Deli Floor + Bath (ΑΦΟ
 
 ## 2. Current structure (high level)
 
-> [!warning] Known drift — flagged by the [[2026-06-16-vault-audit|2026-06-16 audit]]; remediation is next session's Priority 0.
-> The list below still names `15_PERSONAL_LIFE` / `16_IDEAS_AND_VISION` / `18_KNOWLEDGE`, which **do not exist on disk** — only `17_JOURNAL` does — and it predates `_meta/`. Treat it as *pending reconciliation*, not source of truth, until the audit P0s are cleared. The canonical folder index will be [[Vault Map]] once corrected.
+> [!note] The canonical folder index is [[Vault Map]].
+> To kill the drift the [[2026-06-16-vault-audit|2026-06-16 audit]] caught (this section used to restate a divergent copy that named phantom folders), the taxonomy is now **maintained in one place — [[Vault Map]] —** and linked from here, not duplicated. **Audit P0-1 is reconciled:** `15_PERSONAL_LIFE` + `16_IDEAS_AND_VISION` are now real seed wings ([[Personal Life — Home]], [[Ideas and Vision — Home]]); `18_KNOWLEDGE` was deferred (see [[Studies and Subjects]]); `17_JOURNAL` is live; `_meta/` holds the audit reports.
 
-- `00_COMMAND_CENTER` dashboards / priorities / decisions / inbox
-- `01_COMPANY_CORE` identity, brand, business model, people, strategy — **+ [[Afoi Deli — Operating Doctrine]]**
-- `02_OPERATIONS_OS` 12 SOPs (order flow, Kouvas, POs, warehouse, finance)
-- `03_DATABASE_DESIGN` 11 schemas + ID conventions
-- `04_SUPPLIERS_AND_BRANDS` indexes + supplier notes (Kronos, Cielo, Mutina, Fantini, Scavolini populated) + conduit hubs [[Conduit - Plus Interiors]] / [[Conduit - Filon IKE]]
-- `05_SALES_AND_CLIENT_EXPERIENCE` client journey + comms
-- `06_PROJECTS_AND_CASES` dashboard + 4 projects
-- `07_PRODUCT_KNOWLEDGE` 9 knowledge maps
-- `08_AUTOMATION_AND_AI` masterplan, **Python Worker Map**, agent roles, RAG rules, Hermes interface
-- `09_WEBSITE_MARKETING_AND_CONTENT` web/SEO/content
-- `10_FINANCE_AND_MANAGEMENT` dashboards, profitability, credit
-- `11_EXPANSION_AND_VENTURES` growth initiatives
-- `12_PERSONAL_OS` personal-leadership notes (focus, health, learning, leadership)
-- `13_DAILY_NOTES` daily template (work capture)
-- **`14_AI_COLLABORATION` (this layer)** memory + protocol + roadmap + sessions
-- **`15_PERSONAL_LIFE`** relationships / finance / wellness *(new)*
-- **`16_IDEAS_AND_VISION`** Mnemonic Atelier, Material Atelier, Circles, future bets *(new)*
-- **`17_JOURNAL`** life log, YYYY-MM-DD, Orfeas's own voice *(new)*
-- **`18_KNOWLEDGE`** Italian, coffee, history, philosophy — things studied *(new)*
-- `97_CSV_SCHEMAS` 10 import headers (no data yet)
-- `98_TEMPLATES` 11+ note templates
-- `99_SYSTEM` vault map + usage rules
-- `_meta/audits` vault audit reports + the [[Vault Integrity Audit]] charter *(new, 2026-06-16)*
-- **Root:** [[The Heart]] — foundational note, above structure.
+In short: one unified vault — business folders `00`–`11`, the personal/operating wing `12`–`17`, system folders `97`–`99`, and `_meta/`. **Root:** [[The Heart]] — the foundational note, above structure. The full table with purposes lives in [[Vault Map]].
 
 ## 3. Conventions to always honor
 
@@ -70,23 +47,25 @@ Unified operating + knowledge system for **both** Afoi Deli Floor + Bath (ΑΦΟ
 
 ## 5. Active threads / in progress
 
-- [ ] **▶ NEXT SESSION — Priority 0: act on the [[2026-06-16-vault-audit|2026-06-16 vault audit]].** Source-of-truth drift is the headline: reconcile [[Vault Map]] + this file's §2 to disk (resolve the `15/16/18` phantom folders), declare one source of truth for the schema-vs-CSV data contract, and apply the drop-in `CLAUDE.md` + [[Session Protocol]] fixes from the audit Appendix. Then the P1 sweep. Recurring practice now charted in [[Vault Integrity Audit]].
+- [x] **Acted on the [[2026-06-16-vault-audit|2026-06-16 vault audit]] — all three P0s cleared (2026-06-16).** P0-1: structure reconciled to disk (`15`/`16` seed wings, `18` deferred, [[Vault Map]] is now the single canonical index, §2 links it). P0-2: schema-vs-CSV precedence declared in [[Database Master Schema]] (CSV = stored contract, `.md` annotates) + entity↔CSV pairing table; Orders' 4 derived fields annotated; invoices split into `supplier_invoices.csv` (AP) + `client_invoices.csv` (AR) per the two-table decision; all 10 entity pairs verified in sync. P0-3: contract fixes applied (`CLAUDE.md §9/§3/§7/§1/§6` + [[Session Protocol]] `cd` path; §5 needed none).
+- [x] **Audit P1 sweep — done (2026-06-16).** n8n→Python-worker across all 10 live-prescription notes (no live n8n reference remains); orphans wired ([[The Selection Engine]], [[Order Workflow 0-4]], [[Profitability Engine]], [[Credit and Due Date Calendar]], [[Strategic Axes]], [[SEO Topic Map]]) + [[The Material Atelier]] created (seed); frontmatter governance fixed at source (templates + [[Supplier Research Workflow]]) and across all existing notes (`confirmed`→`verified`, `completed`→`complete`); cold notes refreshed not retired ([[Roadmap]], [[Open Questions]], **ADR-0004** logs the n8n pivot, [[Collaboration Home]] session list now Dataview); async capture shipped ([[Research Queue]]); [[Circles]] written; [[Inbox]] marked dormant. Recurring practice: [[Vault Integrity Audit]].
+- [ ] **Audit P2 polish (remaining — the only audit work left):** mark [[Weekly Review]] + the daily-note system dormant until the data layer exists; resolve the tag question ([[Obsidian Tips and Tricks]] teaches a dead tag-search); add `created`/`updated` to every dossier for the [[Supplier Enrichment Queue]] Dataview; the ERD `PEOPLE`/`PAYMENTS` gap; remaining orphans beyond the named set; a full [[README_START_HERE]] rewrite. Plus the [[Vault Integrity Audit]] TODO — a `/vault-audit` skill + write-time lint rules.
 - [x] Collaboration + memory layer established.
 - [x] Git + private GitHub repo.
 - [x] Foundation notes shipped: [[The Heart]], [[Afoi Deli — Operating Doctrine]], [[Supplier - Kronos]].
 - [x] CLAUDE.md extended (Heart-first load, identity layer, personal-handling rule).
 - [x] n8n removed; automation files rewritten to Python worker stack.
-- [x] Personal folders created (15–18).
+- [x] Personal folders reconciled (audit P0-1, 2026-06-16): `15_PERSONAL_LIFE` + `16_IDEAS_AND_VISION` are now real seed wings; `18_KNOWLEDGE` deferred into [[Studies and Subjects]]; `17_JOURNAL` live. (Supersedes the earlier "created 15–18" tick, which described empty git-invisible shells.)
 - [x] Supplier ingestion reframed to **public research** ([[Supplier Research Workflow]]); cross-reference machinery parked in [[Automation Backlog]]; [[Hermes Telegram Capture Queue]] rewritten so its drain runs research, not cross-check (2026-06-15).
 - [x] **Supplier stack — Cielo, Mutina, Fantini** built to Kronos depth (dossier + collections reference each); two conduit hubs created ([[Conduit - Plus Interiors]], [[Conduit - Filon IKE]]); the Kronos conduit section consolidated into the Plus Interiors hub; Supplier/Brand indexes + Bathroom/Tile knowledge maps wired (2026-06-16).
 - [x] **Supplier enrichment scaffolding** — standing *Famous for & specializations* section added to all full dossiers + the [[Supplier Research Workflow]] template; [[Supplier Enrichment Queue]] created (surfaces every blank still to fill: `(your knowledge)` / `(to populate)` / `needs_check`); dossiers treated as living, enriched over passes (2026-06-16).
 - [x] **Scavolini ingested** — kitchen dossier (overwrote stub) + collections reference; Orfeas's expansion rationale captured in [[Scavolini Kitchen Expansion]]; countertop cross-sell wired to [[Supplier - Kronos]] / [[Kitchen Knowledge Map]]; our dealer arrangement left as enrichment prompt (Greek Store OMETRY ≠ our channel) (2026-06-16).
 - [x] Cross-reference-workflow link graph consolidated — ~12 dangling wikilinks across 6 notes repointed (2026-06-15).
 - [x] First [[Journal]] entry (begins with the night of 2026-06-14).
-- [ ] **n8n sweep still pending** — [[Roadmap]] Phase 3 + [[Hermes Obsidian Codex Interface]] still name n8n and a non-existent `n8n Workflow Map`; contradicts settled doctrine. (Re-confirmed by lint 2026-06-15.)
-- [ ] [[Roadmap]] refresh — still the pre-pivot 2026-06-07 5-phase plan; doesn't reflect Supabase + Python worker / Builder's Manual R0–R3.
+- [x] **n8n sweep complete (2026-06-16, audit P1-A)** — every live n8n prescription replaced with the Python-worker stack; the dead `n8n Workflow Map` link repointed to [[Python Worker Map]]. Only negations + historical session/audit references remain.
+- [x] [[Roadmap]] refreshed (2026-06-16) — Phase 3 is now the Python worker; points to the Builder's Manual R0–R3 for the OS build.
 - [ ] Decide: Kronos "On afoideli.gr" column — keep as parked pilot data or strip for consistency.
-- [ ] [[The Material Atelier]] page — linked but no page yet (Capture Backlog Priority 4).
+- [x] [[The Material Atelier]] page created as a seed in `16_IDEAS_AND_VISION` (2026-06-16) — scaffold + the merge-vs-differentiate question vs [[AI Construction Materials Platform]]; framing left to Orfeas.
 - [ ] Continue interview: more suppliers, the people ([[People and Roles Map]]), personal domains.
 
 ## 6. Key open questions
@@ -100,4 +79,4 @@ See [[Open Questions]].
 - Full Kouvas column definitions.
 
 ---
-*Last session: 2026-06-16b ([[Session 2026-06-16b]]) — **deep vault audit** ([[2026-06-16-vault-audit]]) + recurring [[Vault Integrity Audit]] charter; next session's Priority 0 is acting on the audit. Prior same day: 2026-06-16 ([[Session 2026-06-16]]) — supplier stack built: Cielo, Mutina, Fantini dossiers + collections references, two conduit hubs ([[Conduit - Plus Interiors]], [[Conduit - Filon IKE]]), Kronos conduit consolidated, Supplier/Brand indexes + product maps wired; plus enrichment scaffolding (a standing *Famous for & specializations* slot + [[Supplier Enrichment Queue]]) and the **Scavolini** kitchen ingestion. Prior: Hermes capture-queue reframe + lint ([[Session 2026-06-15b]]), the Kronos pilot ([[Session 2026-06-15]]), the 2026-06-14 foundation build. Update this file at the end of every session before committing.*
+*Last session: 2026-06-16c ([[Session 2026-06-16c]]) — **acted on the [[2026-06-16-vault-audit]]: all three P0s + the full P1 sweep cleared.** P0s: structure reconciled to disk (15/16 seed wings, 18 deferred, [[Vault Map]] canonical), data-contract precedence + invoices split, CLAUDE.md/Session Protocol contract fixes. P1: n8n→Python-worker sweep, orphans wired + [[The Material Atelier]] created, frontmatter governance at source, cold-notes refresh + ADR-0004, [[Research Queue]] capture surface + [[Circles]] written + [[Inbox]] dormant. Only audit **P2 polish** remains. Prior same day: 2026-06-16b ([[Session 2026-06-16b]]) — the deep audit + [[Vault Integrity Audit]] charter; 2026-06-16 ([[Session 2026-06-16]]) — supplier stack (Cielo/Mutina/Fantini + Scavolini). Earlier: [[Session 2026-06-15b]], [[Session 2026-06-15]], the 2026-06-14 foundation build. Update this file at the end of every session before committing.*

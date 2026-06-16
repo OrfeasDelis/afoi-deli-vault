@@ -37,7 +37,7 @@ The premium **taps & fittings** house in our range — the jewellery of the bath
 
 - **Main contact / Agency:** [[Conduit - Plus Interiors|Plus Interiors — Kostas Tzanidis]] (per the office's portfolio; sourced from Orfeas / the [[Supplier - Kronos|Kronos]] note — `likely`).
 - **Website:** https://www.fantini.it
-- **Legal entity:** **Fratelli Fantini S.p.A.** (trading as *Fantini Rubinetti*) — P.IVA **00582310033**; **Via Michelangelo Buonarroti 4, 28010 Pella (NO), Piemonte** (Lake Orta faucet district). `confidence: confirmed` (registry + own site). Registry revenue ~€38–41M (2022–24); ~100–199 employees.
+- **Legal entity:** **Fratelli Fantini S.p.A.** (trading as *Fantini Rubinetti*) — P.IVA **00582310033**; **Via Michelangelo Buonarroti 4, 28010 Pella (NO), Piemonte** (Lake Orta faucet district). `confidence: verified` (registry + own site). Registry revenue ~€38–41M (2022–24); ~100–199 employees.
 - **Normal lead time:** *(public reputation not stated)* — finish-dependent (see below).
 
 > [!warning] Don't conflate the namesake

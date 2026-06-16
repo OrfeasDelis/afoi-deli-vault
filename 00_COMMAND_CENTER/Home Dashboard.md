@@ -29,11 +29,13 @@ cssclass: dashboard
 
 ## Active strategic axes
 
+*Full detail: [[Strategic Axes]].*
+
 1. **Core distribution engine** — tiles, sanitary ware, bathroom furniture, faucets, accessories, large slabs, outdoor materials.
 2. **Kitchen expansion** — Scavolini, project-based kitchen design, showroom logic, premium specification.
 3. **Operational digitization** — Kouvas, Daily/Prwto/Deftero/Pros Paradosi, Gmail, supplier orders, warehouse, finance.
 4. **Website/content engine** — Afoi Deli as editorial material authority, brand pages, collections, project references.
-5. **AI operating system** — Obsidian + clean files + n8n + local workflows + eventual custom interface.
+5. **AI operating system** — Obsidian + clean files + the Python worker on Supabase Postgres + eventual custom interface.
 6. **Hotel / real estate expansion** — boutique hospitality, design-led material knowledge, Athens positioning.
 7. **Personal mastery** — health, discipline, Italian, leadership, mindfulness, long-term compounding.
 

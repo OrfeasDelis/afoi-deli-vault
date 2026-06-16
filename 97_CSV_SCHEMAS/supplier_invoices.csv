@@ -1,0 +1,1 @@
+supplier_invoice_id,supplier,invoice_number,invoice_date,due_date,amount,vat,related_orders,payment_status,credit_terms,attachment

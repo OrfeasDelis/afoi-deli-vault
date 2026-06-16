@@ -55,13 +55,13 @@ Needed system:
 - Application guides
 - Project case studies
 - Moodboards
-- SEO clusters
+- SEO clusters → [[SEO Topic Map]]
 - Architect resources
 
 ## Axis 5 — AI operating system
 
 Obsidian becomes the memory layer.  
-n8n becomes the automation layer.  
+The Python worker (on Supabase Postgres) becomes the automation layer.  
 Database/webapp becomes the interface layer.
 
 ## Axis 6 — Hotel and real estate intelligence

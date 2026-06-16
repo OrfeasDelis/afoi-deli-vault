@@ -1,10 +1,13 @@
 ---
 type: inbox
 created: 2026-06-07
-status: active
+status: seed
 ---
 
 # Inbox
+
+> [!note] Dormant (audit P1-E)
+> The capture surfaces actually in use are [[Capture Backlog]] (what to work on next) and [[Research Queue]] (suppliers/collections to research). This general raw-capture inbox was never adopted — revive it only if a genuine need for a catch-all surface emerges. Kept as a seed, not deleted.
 
 Capture raw thoughts here before sorting them.
 

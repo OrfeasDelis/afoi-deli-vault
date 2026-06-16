@@ -10,7 +10,7 @@ automation_priority: high
 
 ## Purpose
 
-Create one canonical interpretation of order status so humans, Excel, Obsidian, n8n, and future dashboards speak the same language.
+Create one canonical interpretation of order status so humans, Excel, Obsidian, the Python worker, and future dashboards speak the same language.
 
 ## Status 0 — Not ordered
 

@@ -68,7 +68,7 @@ awaiting: proforma | loading_date | confirmation
 
 ## Future automation
 
-n8n can:
+The Python worker can:
 
 1. Read supplier-ready rows.
 2. Generate draft email.

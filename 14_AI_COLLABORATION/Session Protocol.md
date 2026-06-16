@@ -29,11 +29,12 @@ How every working session with Claude runs, so memory is never lost and the repo
 
 ## Commit + push routine
 ```bash
-cd "C:/Users/user/Desktop/AFOI_DELI_OBSIDIAN_VAULT"
+# You are already in the vault root — no cd needed.
 git add -A
 git commit -m "<type>: <short summary>"   # types: feat, fix, docs, chore, refactor
 git push
 ```
+- PowerShell on this machine does NOT accept `&&` — run the git commands on separate lines.
 - Commit types follow the user's git-workflow rule (feat/fix/docs/chore/refactor/...).
 - If Obsidian Git plugin is enabled, routine commits can also happen automatically on a timer; manual commits remain the norm for meaningful checkpoints.
 

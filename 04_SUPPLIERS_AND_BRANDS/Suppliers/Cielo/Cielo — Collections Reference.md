@@ -7,7 +7,7 @@ category: bathroom / sanitary ware
 status: active
 created: 2026-06-16
 updated: 2026-06-16
-confidence: confirmed
+confidence: verified
 source: https://www.ceramicacielo.it/en/products
 tags:
   - supplier

@@ -1,7 +1,7 @@
 ---
 type: session_log
-date: 2026-01-01
-status: completed
+date: <% tp.date.now("YYYY-MM-DD") %>
+status: complete
 participants: [Orfeas Delis, Claude]
 ---
 

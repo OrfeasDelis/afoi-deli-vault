@@ -22,8 +22,14 @@ The control room for how **Orfeas + Claude** build this vault and the future app
 - [[Obsidian Plugin Setup]] — Dataview, Templater, Obsidian Git.
 
 ## Session history
-- `Sessions/` — one dated log per working session.
-  - [[Session 2026-06-07]] — foundation: memory layer + git + GitHub.
+
+One dated log per working session, in `Sessions/` (auto-listed, newest first — self-maintaining via Dataview):
+
+```dataview
+LIST
+FROM "14_AI_COLLABORATION/Sessions"
+SORT file.name DESC
+```
 
 ## How to use this space
 1. Talk freely here about future plans — this layer is the protected environment.

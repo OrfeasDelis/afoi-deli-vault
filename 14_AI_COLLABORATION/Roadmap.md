@@ -1,13 +1,16 @@
 ---
 type: roadmap
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-06-16
 status: active
 ---
 
 # Roadmap
 
-Phased plan for building the vault and the future apps. Mirrors the 5 phases in `08_AUTOMATION_AND_AI/Hermes Obsidian Codex Interface`.
+Phased plan for building the vault and the future apps. Mirrors the 5 phases in [[Hermes Obsidian Codex Interface]].
+
+> [!note] Refreshed 2026-06-16 (audit P1-D)
+> Updated to the settled **Supabase Postgres + Python worker** stack — n8n removed (see Phase 3). This is the *vault/phases* roadmap; the Afoi Deli **OS build** has its own R0–R3 plan in the Builder's Manual (see [[Vault State Memory]] §4).
 
 ## Phase 0 — Foundation (IN PROGRESS, 2026-06-07)
 - [x] Collaboration + memory layer (`14_AI_COLLABORATION`).
@@ -26,8 +29,8 @@ Phased plan for building the vault and the future apps. Mirrors the 5 phases in 
 - Scripts read markdown/YAML and generate/update CSV in `97_CSV_SCHEMAS`.
 - Validate frontmatter consistency across notes.
 
-## Phase 3 — Automation (n8n)
-- Build first workflows from `08_AUTOMATION_AND_AI/n8n Workflow Map`:
+## Phase 3 — Automation (Python worker)
+- Build first jobs on the **Python worker** (Supabase Postgres) — see [[Python Worker Map]] / [[Automation Masterplan]]:
   - Gmail proforma collector.
   - Daily folder scanner.
   - Ready-for-delivery drafter (human-approved).

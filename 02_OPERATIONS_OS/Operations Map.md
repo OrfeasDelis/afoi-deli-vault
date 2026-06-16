@@ -43,6 +43,8 @@ M --> N[Delivered / invoiced / closed]
 | 3 | Delivered | Future extension |
 | 4 | Invoiced / financially closed | Future extension |
 
+> Full status definitions and the required-fields gate at each step: [[Order Workflow 0-4]] — the canonical 0–4 spine this table summarises.
+
 ## Most important operational principle
 
 An order is not a file.  

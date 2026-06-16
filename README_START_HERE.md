@@ -8,12 +8,15 @@ status: active
 
 # AFOI DELI SECOND BRAIN — START HERE
 
+> [!warning] Historical onboarding artifact (pre-pivot) — verify against current doctrine
+> This note predates the settled architecture. The automation layer is now the **Supabase Postgres + Python worker** stack (no n8n), and the canonical philosophy/voice lives in [[The Heart]], current state in [[Vault State Memory]], and the folder index in [[Vault Map]]. Treat the "four layers" / automation framing below as historical until this note is rewritten.
+
 This vault is designed as the **operating infrastructure** for your business, your future ventures, and your personal command system.
 
 It is not just for storing notes.  
 It is built so that later you can connect it to:
 
-- n8n automations
+- Python-worker automations (Supabase Postgres)
 - Gmail parsing
 - Excel / Kouvas migration
 - supplier and product databases
@@ -53,7 +56,7 @@ Facts, projects, suppliers, clients, products, pricing rules, procedures.
 Dashboards, priorities, decision logs, KPIs, risks, alerts.
 
 ### 3. Automation
-Schemas, clean frontmatter, repeatable SOPs, n8n-ready workflows.
+Schemas, clean frontmatter, repeatable SOPs, Python-worker-ready workflows.
 
 ### 4. Creation
 Website content, brand material, case studies, future ventures, personal thought leadership.

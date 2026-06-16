@@ -36,7 +36,7 @@ The most *art-directed* tile house we carry. Where a commercial factory sells fo
 
 - **Main contact / Agency:** [[Conduit - Filon IKE|Filon IKE — Alexandros Simos]] — a **professional, punctual** office (a contrast to the "forgiven-for-being-late" houses). *Not* through Plus Interiors.
 - **Website:** https://www.mutina.it (EN: /en).
-- **Legal entity:** **Ceramiche Mutina S.p.A.** — P.IVA / CF **00336880364**; sede **Via del Crociale 25, 41042 Fiorano Modenese (MO)**, Emilia-Romagna (Sassuolo–Modena district). Tel +39 0536 812800, info@mutina.it. `confidence: confirmed` (registry + own contacts page). *Note: Mutina published a "change to registered office address" notice — reconfirm the registry address.*
+- **Legal entity:** **Ceramiche Mutina S.p.A.** — P.IVA / CF **00336880364**; sede **Via del Crociale 25, 41042 Fiorano Modenese (MO)**, Emilia-Romagna (Sassuolo–Modena district). Tel +39 0536 812800, info@mutina.it. `confidence: verified` (registry + own contacts page). *Note: Mutina published a "change to registered office address" notice — reconfirm the registry address.*
 - **Lead-time reputation:** punctual per the conduit's character (see your knowledge).
 
 > [!question] (your knowledge)

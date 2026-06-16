@@ -36,7 +36,7 @@ A premium Italian **sanitary-ware** house — washbasins, WCs, bathtubs, ceramic
 
 - **Main contact / Agency:** [[Conduit - Plus Interiors|Plus Interiors — Kostas Tzanidis]] (independent representative office; Greece/Cyprus/Bulgaria). Greek showroom: 131 Ethnikis Antistaseos, Agios Dimitrios 172 36, Athens.
 - **Website:** https://www.ceramicacielo.it (EN: /en). *Note: the `.com` domain throws a TLS certificate error — use `.it`.*
-- **Legal entity:** Ceramica Cielo S.p.A. — HQ & production **Via Falerina km 7.800, 01034 Fabrica di Roma (VT), Lazio** (the Civita Castellana ceramic district). Tel +39 0761 56701. `confidence: confirmed`.
+- **Legal entity:** Ceramica Cielo S.p.A. — HQ & production **Via Falerina km 7.800, 01034 Fabrica di Roma (VT), Lazio** (the Civita Castellana ceramic district). Tel +39 0761 56701. `confidence: verified`.
 - **VAT / P.IVA:** *Unresolved in public sources* — two numbers appear (IT01622510566 tied to an older "Ceramica Cielo SRL" record; IT04372926 implied for the S.p.A.). `needs_check` — confirm via Camera di Commercio / VIES.
 - **Normal lead time:** *(public reputation not stated)* — see your knowledge below.
 
@@ -71,7 +71,7 @@ The reasons Cielo is an identity brand, not a commodity supplier:
 ## Company, ownership & sustainability
 
 - **Founded:** operating company dated **1997** (`likely` — LinkedIn/Kompass); brand created by **Alessio Coramusi**, descendant of a Civita Castellana family of master ceramicists tracing to the early 1900s (artisanal lineage → modern brand).
-- **Ownership:** 100% owned by **IBD – Italian Bathroom Design**, whose majority shareholder is the **listed Mittel Group** (Milan exchange). IBD consolidates several Civita Castellana sanitaryware names (also linked to Galassia, Disegno Ceramica, Catalano). `confidence: confirmed` (own site).
+- **Ownership:** 100% owned by **IBD – Italian Bathroom Design**, whose majority shareholder is the **listed Mittel Group** (Milan exchange). IBD consolidates several Civita Castellana sanitaryware names (also linked to Galassia, Disegno Ceramica, Catalano). `confidence: verified` (own site).
 - **Sustainability:** messaging stresses longevity, nature-derived colour and reduced material use (ultra-thin ceramic), but **no formal certifications page (ISO/EPD) was found** — `needs_check`.
 
 ## Reference projects (their portfolio, for inspiration)

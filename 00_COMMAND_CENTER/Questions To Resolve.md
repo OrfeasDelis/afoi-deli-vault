@@ -23,7 +23,7 @@ status: active
 
 ## Automation
 
-- What should n8n automate first?
+- What should the Python worker automate first?
 - What should stay manual?
 - What is the cleanest bridge from Excel/Kouvas to database?
 - Which files are canonical and which are temporary?

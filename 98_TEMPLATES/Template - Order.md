@@ -1,7 +1,8 @@
 ---
 type: order
 order_id:
-created: 2026-06-07
+status: active
+created: <% tp.date.now("YYYY-MM-DD") %>
 order_date:
 client:
 project:
@@ -17,7 +18,7 @@ estimated_margin:
 contains_wait:
 next_action:
 owner:
-confidence: draft
+confidence: needs_check
 ---
 
 # Order - {client} - {date}

@@ -38,4 +38,4 @@ tags:
 
 
 ---
-*Linked: [[The Heart]] · today's work note (if any) → [[13_DAILY_NOTES]]*
+*Linked: [[The Heart]] · today's work note (if any) in `13_DAILY_NOTES`*
