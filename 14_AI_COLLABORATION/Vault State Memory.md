@@ -74,6 +74,7 @@ Unified operating + knowledge system for **both** Afoi Deli Floor + Bath (ΑΦΟ
 - [x] Personal folders created (15–18).
 - [x] Supplier ingestion reframed to **public research** ([[Supplier Research Workflow]]); cross-reference machinery parked in [[Automation Backlog]]; [[Hermes Telegram Capture Queue]] rewritten so its drain runs research, not cross-check (2026-06-15).
 - [x] **Supplier stack — Cielo, Mutina, Fantini** built to Kronos depth (dossier + collections reference each); two conduit hubs created ([[Conduit - Plus Interiors]], [[Conduit - Filon IKE]]); the Kronos conduit section consolidated into the Plus Interiors hub; Supplier/Brand indexes + Bathroom/Tile knowledge maps wired (2026-06-16).
+- [x] **Supplier enrichment scaffolding** — standing *Famous for & specializations* section added to all full dossiers + the [[Supplier Research Workflow]] template; [[Supplier Enrichment Queue]] created (surfaces every blank still to fill: `(your knowledge)` / `(to populate)` / `needs_check`); dossiers treated as living, enriched over passes (2026-06-16).
 - [x] Cross-reference-workflow link graph consolidated — ~12 dangling wikilinks across 6 notes repointed (2026-06-15).
 - [x] First [[Journal]] entry (begins with the night of 2026-06-14).
 - [ ] **n8n sweep still pending** — [[Roadmap]] Phase 3 + [[Hermes Obsidian Codex Interface]] still name n8n and a non-existent `n8n Workflow Map`; contradicts settled doctrine. (Re-confirmed by lint 2026-06-15.)
@@ -93,4 +94,4 @@ See [[Open Questions]].
 - Full Kouvas column definitions.
 
 ---
-*Last session: 2026-06-16 ([[Session 2026-06-16]]) — supplier stack built: Cielo, Mutina, Fantini dossiers + collections references, two conduit hubs ([[Conduit - Plus Interiors]], [[Conduit - Filon IKE]]), Kronos conduit consolidated, Supplier/Brand indexes + product maps wired. Prior: Hermes capture-queue reframe + lint ([[Session 2026-06-15b]]), the Kronos pilot ([[Session 2026-06-15]]), the 2026-06-14 foundation build. Update this file at the end of every session before committing.*
+*Last session: 2026-06-16 ([[Session 2026-06-16]]) — supplier stack built: Cielo, Mutina, Fantini dossiers + collections references, two conduit hubs ([[Conduit - Plus Interiors]], [[Conduit - Filon IKE]]), Kronos conduit consolidated, Supplier/Brand indexes + product maps wired; plus enrichment scaffolding (a standing *Famous for & specializations* slot + [[Supplier Enrichment Queue]]). Prior: Hermes capture-queue reframe + lint ([[Session 2026-06-15b]]), the Kronos pilot ([[Session 2026-06-15]]), the 2026-06-14 foundation build. Update this file at the end of every session before committing.*
