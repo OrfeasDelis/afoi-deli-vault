@@ -29,10 +29,12 @@ tags:
 - [ ] **P2 polish (audit, remaining):** [[Weekly Review]] + daily notes → mark dormant until the data layer exists · tag question ([[Obsidian Tips and Tricks]] dead tag-search) · `created`/`updated` on every dossier for [[Supplier Enrichment Queue]] · ERD `PEOPLE`/`PAYMENTS` gap · remaining orphans beyond the named set · full [[README_START_HERE]] rewrite · [[Vault Integrity Audit]] TODO (`/vault-audit` skill + write-time lint rules).
 
 ## Priority 0.5 — Materials knowledge layer (ACTIVE — resume next session)
-*Batch 1 shipped 2026-06-16d, then paused for your steer. Run [[Materials Research Workflow]]. Full context: [[Session 2026-06-16d]] · index: [[Afoi Deli — Materials Intelligence]].*
+*Batch 1 shipped 2026-06-16d, then paused for steer. Architecture extended 2026-06-17 to three tiers ([[Architecture Decision Records|ADR-0005]]). Run [[Materials Research Workflow]]. Context: [[Session 2026-06-16d]] · [[Session 2026-06-17]] · index: [[Afoi Deli — Materials Intelligence]].*
 
+- [ ] **🔧 Install Python + poppler (DO FIRST — tooling, 2026-06-18).** This machine has only the Microsoft Store `python` stub and no **poppler** (`pdftoppm`/`pdftotext`), so the Read tool can't render PDFs and the Word-COM fallback is too slow for big catalogues. Install real **Python 3** + **poppler** on PATH — unblocks all PDF/TDS ingestion (and the Pierre Vive pilot below). Orfeas + Claude.
 - [ ] **Decide 3 things first** — (1) approve the [[Materials Schema]] + [[Material - Porcelain Stoneware]] pattern before it's replicated ~20×; (2) batch size; (3) the **~22 split** (Countertop → sintered-stone / engineered-quartz / natural-stone; split a `stainless-steel` note off Brass).
-- [ ] **Next deep batch** — Large-Format Porcelain Slab → Glass Mosaic → Sanitary Ceramic → SaphirKeramik (then the medium/light materials).
+- [ ] **Next deep batch (class tier)** — Large-Format Porcelain Slab → Glass Mosaic → Sanitary Ceramic → SaphirKeramik (then the medium/light materials).
+- [ ] **Pilot the collection tier** — [[Collection Schema]] now includes the **editorial cluster** (`aesthetic`/`seo_keywords` + narrative for content/SEO/social). Validate on **Kronos Pierre Vive** — catalogue PDF already staged at `Downloads/PierreVive.pdf` (attempted 2026-06-17, blocked on the Python/poppler tooling above) → build the first `Collection - Kronos Pierre Vive` note → reframe Kronos's Collections Reference into the ingested ✅ / not-yet ⬚ roster.
 - [ ] **Still to build** — Dataview "Materials Index" + `.base`; the verification ledger; cross-link materials into the 13 supplier dossiers; migrate each material's prose out of the MOC into its atomic note.
 - [ ] **Resolve the `needs_check`** on [[Material - Porcelain Stoneware]] — which stocked brands are full-body vs glazed; which 20 mm outdoor ranges are carried.
 
@@ -87,6 +89,7 @@ tags:
 
 - [ ] **Kronos catalogue & asset ingestion** — pull collection PDFs/photos into Google Drive, link back from Obsidian; pilot for an all-suppliers template. Plan ready: [[Kronos — Catalogue & Asset Ingestion]]. Blocked on **Google Drive write access for the worker** (service-account vs OAuth decision). Manual option works now for top-quoted collections.
 - [ ] **Cielo / Mutina / Fantini catalogue & asset ingestion** — catalogue + technical PDFs already linked in [[Cielo — Collections Reference]], [[Mutina — Collections Reference]], [[Fantini — Collections Reference]]; pull into Drive when worker write-access lands (same pattern as [[Kronos — Catalogue & Asset Ingestion]]).
+- [ ] **Google Drive collection feeder (uncertain — captured 2026-06-17)** — Orfeas uploads catalogue/TDS PDFs to the shared Drive folder; Claude (now) or the Python worker (later) ingests collections from there — **on prompt** ("ingest what's new in Drive") or on a **watch/auto** trigger. Depends on the worker's **Drive access** (service-account vs OAuth — the *same* parked decision as the asset-ingestion items above). Until decided, feed PDFs by **attaching them in chat** or **dropping them in the supplier's `_sources/`** — see the ingestion modes in [[Materials Research Workflow]]. Not yet decided; do not build unprompted.
 - [ ] **Loop engineering** — revisit only when Afoi Deli OS has a test suite and automated verification (the 14-step loop doc). Premature until then.
 - [ ] **QMD search layer** — add as the retrieval layer only once the index file stops being enough (vault grows past a few hundred dense pages). Karpathy names it as the documented option.
 

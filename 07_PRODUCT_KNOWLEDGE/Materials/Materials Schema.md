@@ -135,8 +135,13 @@ Every material note follows the seed's proven section order (so the layer reads 
 4. Upsert into `materials` on `material_id`.
 5. `key_suppliers` wikilinks resolve to the `suppliers` dimension by brand name → closes the **product → supplier → material** graph.
 
+## The collection tier (where line specifics live)
+
+This contract governs the **class** tier. A material's `formats_mm` / `thickness_mm` / `finishes` here are **typical examples, not the authoritative catalogue** — the real, divergent per-line specifics (Kronos Pierre Vive's exact formats, finish wording, TDS values) live one tier down in [[Collection Schema]] (`Collection - <Supplier> <Name>` notes), which reference a material via `material_id`. Three tiers: **class → collection → SKU**. See [[Architecture Decision Records|ADR-0005]].
+
 ## Links
 
+- Instance-tier contract → [[Collection Schema]]
 - The index this contract serves → [[Afoi Deli — Materials Intelligence]]
 - DB side → [[Database Master Schema]] · stack → [[Python Worker Map]] · [[Automation Masterplan]]
 - Vault law → [[CLAUDE]] · [[Obsidian Usage Rules]] · [[RAG Knowledge Base Rules]]
