@@ -28,6 +28,14 @@ tags:
 - [x] **P1 sweep** *(2026-06-16)*: n8n→Python-worker done across all 10 live-prescription notes (no live n8n remains) · orphans wired ([[The Selection Engine]] ← Doctrine + Sales Map · [[Order Workflow 0-4]] ← Operations Map · [[Profitability Engine]] + [[Credit and Due Date Calendar]] ← Management Dashboard · [[Strategic Axes]] ← Home Dashboard · [[SEO Topic Map]] ← Strategic Axes) + [[The Material Atelier]] created (seed) · frontmatter governance fixed at source + all existing instances · cold notes refreshed not retired ([[Roadmap]], [[Open Questions]], ADR-0004, [[Collaboration Home]] Dataview) · async capture shipped ([[Research Queue]]) + [[Circles]] written + [[Inbox]] dormant.
 - [ ] **P2 polish (audit, remaining):** [[Weekly Review]] + daily notes → mark dormant until the data layer exists · tag question ([[Obsidian Tips and Tricks]] dead tag-search) · `created`/`updated` on every dossier for [[Supplier Enrichment Queue]] · ERD `PEOPLE`/`PAYMENTS` gap · remaining orphans beyond the named set · full [[README_START_HERE]] rewrite · [[Vault Integrity Audit]] TODO (`/vault-audit` skill + write-time lint rules).
 
+## Priority 0.5 — Materials knowledge layer (ACTIVE — resume next session)
+*Batch 1 shipped 2026-06-16d, then paused for your steer. Run [[Materials Research Workflow]]. Full context: [[Session 2026-06-16d]] · index: [[Afoi Deli — Materials Intelligence]].*
+
+- [ ] **Decide 3 things first** — (1) approve the [[Materials Schema]] + [[Material - Porcelain Stoneware]] pattern before it's replicated ~20×; (2) batch size; (3) the **~22 split** (Countertop → sintered-stone / engineered-quartz / natural-stone; split a `stainless-steel` note off Brass).
+- [ ] **Next deep batch** — Large-Format Porcelain Slab → Glass Mosaic → Sanitary Ceramic → SaphirKeramik (then the medium/light materials).
+- [ ] **Still to build** — Dataview "Materials Index" + `.base`; the verification ledger; cross-link materials into the 13 supplier dossiers; migrate each material's prose out of the MOC into its atomic note.
+- [ ] **Resolve the `needs_check`** on [[Material - Porcelain Stoneware]] — which stocked brands are full-body vs glazed; which 20 mm outdoor ranges are carried.
+
 ## Priority 1 — The people
 *Highest value: the heart of both business and life, entirely in your head, irreplaceable.*
 

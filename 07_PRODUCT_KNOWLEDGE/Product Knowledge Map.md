@@ -10,6 +10,9 @@ status: active
 
 Create the material intelligence layer of the company.
 
+> [!important] The materials layer is now being built.
+> Canonical index → [[Afoi Deli — Materials Intelligence]] · field/ingestion contract → [[Materials Schema]] · atomic notes in `07_PRODUCT_KNOWLEDGE/Materials/` (`Material - <Name>`). This is the "material intelligence layer" this map's purpose names.
+
 ## Core maps
 
 - [[07_PRODUCT_KNOWLEDGE/Tile Knowledge Map]]

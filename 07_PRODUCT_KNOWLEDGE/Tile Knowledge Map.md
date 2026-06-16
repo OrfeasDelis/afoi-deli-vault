@@ -7,6 +7,11 @@ status: draft
 
 # Tile Knowledge Map
 
+> [!info] The material spec layer
+> The deep, typed, sourced material notes for tiles live in `07_PRODUCT_KNOWLEDGE/Materials/`, indexed by [[Afoi Deli — Materials Intelligence]] and governed by [[Materials Schema]]. This map stays the *category/attribute* view; the atomic notes carry the verified specs.
+> - **Porcelain stoneware** → [[Material - Porcelain Stoneware]] *(deep, verified)*
+> - *(building out: Large-Format Porcelain Slab, Glazed Ceramic, Glass Mosaic — see the index)*
+
 ## Categories
 
 - Porcelain stoneware
