@@ -25,6 +25,9 @@ Unified operating + knowledge system for **both** Afoi Deli Floor + Bath (ΑΦΟ
 
 ## 2. Current structure (high level)
 
+> [!warning] Known drift — flagged by the [[2026-06-16-vault-audit|2026-06-16 audit]]; remediation is next session's Priority 0.
+> The list below still names `15_PERSONAL_LIFE` / `16_IDEAS_AND_VISION` / `18_KNOWLEDGE`, which **do not exist on disk** — only `17_JOURNAL` does — and it predates `_meta/`. Treat it as *pending reconciliation*, not source of truth, until the audit P0s are cleared. The canonical folder index will be [[Vault Map]] once corrected.
+
 - `00_COMMAND_CENTER` dashboards / priorities / decisions / inbox
 - `01_COMPANY_CORE` identity, brand, business model, people, strategy — **+ [[Afoi Deli — Operating Doctrine]]**
 - `02_OPERATIONS_OS` 12 SOPs (order flow, Kouvas, POs, warehouse, finance)
@@ -47,6 +50,7 @@ Unified operating + knowledge system for **both** Afoi Deli Floor + Bath (ΑΦΟ
 - `97_CSV_SCHEMAS` 10 import headers (no data yet)
 - `98_TEMPLATES` 11+ note templates
 - `99_SYSTEM` vault map + usage rules
+- `_meta/audits` vault audit reports + the [[Vault Integrity Audit]] charter *(new, 2026-06-16)*
 - **Root:** [[The Heart]] — foundational note, above structure.
 
 ## 3. Conventions to always honor
@@ -66,6 +70,7 @@ Unified operating + knowledge system for **both** Afoi Deli Floor + Bath (ΑΦΟ
 
 ## 5. Active threads / in progress
 
+- [ ] **▶ NEXT SESSION — Priority 0: act on the [[2026-06-16-vault-audit|2026-06-16 vault audit]].** Source-of-truth drift is the headline: reconcile [[Vault Map]] + this file's §2 to disk (resolve the `15/16/18` phantom folders), declare one source of truth for the schema-vs-CSV data contract, and apply the drop-in `CLAUDE.md` + [[Session Protocol]] fixes from the audit Appendix. Then the P1 sweep. Recurring practice now charted in [[Vault Integrity Audit]].
 - [x] Collaboration + memory layer established.
 - [x] Git + private GitHub repo.
 - [x] Foundation notes shipped: [[The Heart]], [[Afoi Deli — Operating Doctrine]], [[Supplier - Kronos]].
@@ -95,4 +100,4 @@ See [[Open Questions]].
 - Full Kouvas column definitions.
 
 ---
-*Last session: 2026-06-16 ([[Session 2026-06-16]]) — supplier stack built: Cielo, Mutina, Fantini dossiers + collections references, two conduit hubs ([[Conduit - Plus Interiors]], [[Conduit - Filon IKE]]), Kronos conduit consolidated, Supplier/Brand indexes + product maps wired; plus enrichment scaffolding (a standing *Famous for & specializations* slot + [[Supplier Enrichment Queue]]) and the **Scavolini** kitchen ingestion. Prior: Hermes capture-queue reframe + lint ([[Session 2026-06-15b]]), the Kronos pilot ([[Session 2026-06-15]]), the 2026-06-14 foundation build. Update this file at the end of every session before committing.*
+*Last session: 2026-06-16b ([[Session 2026-06-16b]]) — **deep vault audit** ([[2026-06-16-vault-audit]]) + recurring [[Vault Integrity Audit]] charter; next session's Priority 0 is acting on the audit. Prior same day: 2026-06-16 ([[Session 2026-06-16]]) — supplier stack built: Cielo, Mutina, Fantini dossiers + collections references, two conduit hubs ([[Conduit - Plus Interiors]], [[Conduit - Filon IKE]]), Kronos conduit consolidated, Supplier/Brand indexes + product maps wired; plus enrichment scaffolding (a standing *Famous for & specializations* slot + [[Supplier Enrichment Queue]]) and the **Scavolini** kitchen ingestion. Prior: Hermes capture-queue reframe + lint ([[Session 2026-06-15b]]), the Kronos pilot ([[Session 2026-06-15]]), the 2026-06-14 foundation build. Update this file at the end of every session before committing.*

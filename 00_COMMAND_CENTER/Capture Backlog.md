@@ -19,6 +19,14 @@ tags:
 
 ---
 
+## Priority 0 — Vault integrity (do this first, next session)
+*The [[2026-06-16-vault-audit|2026-06-16 audit]] found the vault's account of itself has drifted from disk. Reconcile the source-of-truth before stacking more knowledge on top. Recurring practice: [[Vault Integrity Audit]].*
+
+- [ ] **P0 — reconcile structure to disk:** correct [[Vault Map]] + [[Vault State Memory]] §2 to the real folders; decide the `15_PERSONAL_LIFE` / `16_IDEAS_AND_VISION` / `18_KNOWLEDGE` phantom folders (create or retire) and repoint every reference (incl. the Priority 1/3/4 items below).
+- [ ] **P0 — one source of truth for the data contract:** declare schema `.md` vs `.csv` precedence in [[Database Master Schema]]; reconcile the Orders + Invoices/Payments drift.
+- [ ] **P0 — fix the contract's self-contradictions:** apply the drop-in `CLAUDE.md §9 / §5 / §3 / §7 / §1 / §6` + [[Session Protocol]] `cd`-path edits from the audit Appendix.
+- [ ] **P1 sweep:** finish the n8n→Python-worker sweep (~15 live notes) as one owned task · wire the orphans ([[The Selection Engine]], [[Order Workflow 0-4]], [[Profitability Engine]]) + create [[The Material Atelier]] · frontmatter governance at the source (templates + workflow) · decide maintain-or-retire on [[Roadmap]] / [[Open Questions]] / ADRs / [[Collaboration Home]] · ship a real async-capture surface.
+
 ## Priority 1 — The people
 *Highest value: the heart of both business and life, entirely in your head, irreplaceable.*
 
