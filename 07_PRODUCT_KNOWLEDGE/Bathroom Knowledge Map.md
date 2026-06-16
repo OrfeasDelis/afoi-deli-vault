@@ -42,3 +42,11 @@ status: draft
 - Drain slope
 - Pressure mismatch
 - Delayed special finishes
+
+## Suppliers we carry (exemplars)
+
+The houses behind these categories — see each dossier for collections, lead-time reality, and the conduit it arrives through.
+
+- **Sanitary ware — basins, WCs, bathtubs, furniture** → [[Supplier - Cielo]] (via [[Conduit - Plus Interiors]])
+- **Faucets & showers** → [[Supplier - Fantini]] (via [[Conduit - Plus Interiors]])
+- **Bespoke gres washbasins, tops & tubs** → [[Supplier - Kronos]] (K-LAB)

@@ -45,3 +45,9 @@ status: draft
 - Large slab bathroom applications
 - Best materials for boutique hotels
 - What architects should check before specifying tiles
+
+## Suppliers we carry (exemplars)
+
+- **Porcelain stoneware — full collection range** → [[Supplier - Kronos]] (via [[Conduit - Plus Interiors]])
+- **Design / editorial porcelain tile** → [[Supplier - Mutina]] (via [[Conduit - Filon IKE]])
+- *(seed suppliers awaiting dossiers: Florim, Atlas Concorde, ABK, Emilgroup, 41zero42, Sant'Agostino — see [[Supplier Master Index]])*

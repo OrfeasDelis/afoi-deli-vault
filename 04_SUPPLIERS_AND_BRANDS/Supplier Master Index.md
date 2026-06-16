@@ -18,20 +18,37 @@ Use:
 Supplier - Supplier Name
 ```
 
-Examples:
+Each supplier lives in its own folder: `Suppliers/<Name>/Supplier - <Name>.md`. Short `[[Supplier - <Name>]]` wikilinks resolve by filename regardless of folder — prefer them over full paths.
 
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Florim]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Scavolini]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Fantini]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Fima Carlo Frattini]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Atlas Concorde]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - ABK]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Emilgroup]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - 41zero42]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Sant'Agostino]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Antonio Lupi]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Mutina]]
-- [[04_SUPPLIERS_AND_BRANDS/Suppliers/Supplier - Kronos]]
+## Suppliers
+
+> [!info] Depth legend — ● full dossier (Kronos depth) · ◐ seed/stub awaiting research.
+
+**Populated (full dossier + collections reference):**
+
+- ● [[Supplier - Kronos]] — tile / porcelain stoneware · via [[Conduit - Plus Interiors]]
+- ● [[Supplier - Cielo]] — bathroom / sanitary ware · via [[Conduit - Plus Interiors]]
+- ● [[Supplier - Mutina]] — design porcelain tile · via [[Conduit - Filon IKE]]
+- ● [[Supplier - Fantini]] — faucets / taps · via [[Conduit - Plus Interiors]]
+
+**Seed / stub (awaiting the Kronos treatment — see [[Supplier Research Workflow]]):**
+
+- ◐ [[Supplier - Florim]]
+- ◐ [[Supplier - Scavolini]]
+- ◐ [[Supplier - Fima Carlo Frattini]]
+- ◐ [[Supplier - Atlas Concorde]]
+- ◐ [[Supplier - ABK]]
+- ◐ [[Supplier - Emilgroup]]
+- ◐ [[Supplier - 41zero42]]
+- ◐ [[Supplier - Sant'Agostino]]
+- ◐ [[Supplier - Antonio Lupi]]
+
+## Conduits (representative offices)
+
+The independent rep offices our houses arrive through. The brand is what we care about; the conduit is the channel (see each note's power-geometry warning).
+
+- [[Conduit - Plus Interiors]] — Tzanidis: Kronos, Cielo, Fantini (+ Effe, Opificio Ceramiche)
+- [[Conduit - Filon IKE]] — Alexandros Simos: Mutina (+ its subbrands)
 
 ## Supplier intelligence checklist
 

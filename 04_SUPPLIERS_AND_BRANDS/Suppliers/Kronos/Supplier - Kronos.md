@@ -32,7 +32,7 @@ The relationship is **close, but deliberately discreet** — not from hypocrisy,
 
 ## Commercial profile
 
-- **Main contact / Agency:** [[#The conduit Plus Interiors Tzanidis|Plus Interiors — Kostas Tzanidis]] (independent representative office)
+- **Main contact / Agency:** [[Conduit - Plus Interiors|Plus Interiors — Kostas Tzanidis]] (independent representative office)
 - **Email:** info@kronosceramiche.com (general) — *(rep contact via Plus Interiors below)*
 - **Website:** https://kronosceramiche.com (multilingual: IT/EN/FR/DE/NL)
 - **Legal entity:** KRONOS 2 CERAMICHE SPA — Via Giardini 62, 41042 Fiorano Modenese (MO), Italy. Tel +39 0536 927711. P.IVA 01935150365. Located in the Sassuolo/Fiorano ceramic district.
@@ -102,18 +102,9 @@ Hospitality-heavy: ÄNG (bar/restaurant), Parilio Hotel, Al Gatto Verde, Quellen
 ## The conduit: Plus Interiors (Tzanidis)
 
 > [!info] Representative — replaceable conduit, real relationship
-> Kronos reaches us through the independent office **Plus Interiors**, run by **Kostas Tzanidis**, his wife **Alexandra Kalogeropoulou**, and now their son **George Tzanidis** (a generational mirror — roughly your age; succession happening on both sides at once).
-
-**The founding act (~10–15 years ago):** your father, [[The Heart|Kostas]], gave Tzanidis the hint to chase representation of **Cielo** (sanitary ware) — then little-known, now a flagship that majorly raised Tzanidis's level. He created the circumstances; loyalty followed as a *consequence* of generosity that was also shrewd. ([[The Heart|"Create the circumstances so others ask — never ask."]])
-
-**Plus Interiors' portfolio:** Kronos, Cielo, [[Supplier - Fantini|Fantini]], Effe, Opificio Ceramiche — the heavy, exclusive, aesthetic-led houses.
-
-**Character:** genuine material expertise, real guidance, always willing to help. (The "heavy brand, forgiven for being a little late" character fits Kostas Tzanidis himself, too.)
-
-> [!warning] The power geometry — never forget
-> The office takes a **% of sales** as income, but the brands could in principle be sold direct. The representative's position is therefore **structurally replaceable** — *in most cases they need us more than we need them.* Friends up to a point; commercial past it, and if a line is crossed it gets a quiet reality check.
+> Kronos reaches us through the independent office **Plus Interiors** (Kostas Tzanidis), which also carries [[Supplier - Cielo|Cielo]] and [[Supplier - Fantini|Fantini]]. The full profile — the people, the founding Cielo act, and the power-geometry warning — now lives in its own note: **[[Conduit - Plus Interiors]]**.
 >
-> **What we care about is Kronos, not Tzanidis.** A relationship that works does not need to be meddled with — stay warm in practice — but file the truth: the conduit is optional, the brand is not. And when problems arise, the client turns to **Afoi Deli** first, not Tzanidis and not even Kronos. (See [[Afoi Deli — Operating Doctrine#The responsibility doctrine]].)
+> The one line to never forget: **what we care about is Kronos, not Tzanidis.** The conduit is optional, the brand is not; when problems arise the client turns to **Afoi Deli** first, not Tzanidis and not even Kronos. (See [[Conduit - Plus Interiors]] · [[Afoi Deli — Operating Doctrine#The responsibility doctrine]].)
 
 ## Automation potential
 
@@ -125,5 +116,5 @@ Hospitality-heavy: ÄNG (bar/restaurant), Parilio Hotel, Al Gatto Verde, Quellen
 ## Links
 
 - Doctrine → [[Afoi Deli — Operating Doctrine]] · root → [[The Heart]]
-- Brands through the same office → [[Supplier - Fantini]] (Cielo, Effe, Opificio — add notes as they earn pages)
+- Through the same office → [[Conduit - Plus Interiors]] · [[Supplier - Cielo]] · [[Supplier - Fantini]]
 - Index → [[Supplier Master Index]] · [[Brand Master Index]]

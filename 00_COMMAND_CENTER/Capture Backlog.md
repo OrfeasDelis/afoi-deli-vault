@@ -1,7 +1,7 @@
 ---
 type: backlog
 created: 2026-06-14
-updated: 2026-06-14
+updated: 2026-06-16
 status: active
 tags:
   - command-center
@@ -30,9 +30,9 @@ tags:
 ## Priority 2 — Core suppliers (identity brands)
 *Perishable, commercially load-bearing. Same treatment as [[Supplier - Kronos]].*
 
-- [ ] **Cielo** — sanitary ware; the founding Tzanidis story; flagship.
-- [ ] **Mutina** — identity brand, premium tile.
-- [ ] **Fantini** — taps/faucets, through Plus Interiors.
+- [x] **Cielo** — sanitary ware; the founding Tzanidis story; flagship. → [[Supplier - Cielo]] + [[Cielo — Collections Reference]] *(2026-06-16)*
+- [x] **Mutina** — identity brand, premium tile. → [[Supplier - Mutina]] + [[Mutina — Collections Reference]]; conduit [[Conduit - Filon IKE]] *(2026-06-16)*
+- [x] **Fantini** — taps/faucets, through Plus Interiors. → [[Supplier - Fantini]] + [[Fantini — Collections Reference]] *(2026-06-16)*
 - [ ] Then the rest of the heavy houses as they earn pages (Salvatori, Antonio Lupi, Atlas Concorde, Florim…).
 
 ## Priority 3 — Open the personal rooms
@@ -66,6 +66,7 @@ tags:
 *Captured, deliberately deferred — do NOT pull these forward.*
 
 - [ ] **Kronos catalogue & asset ingestion** — pull collection PDFs/photos into Google Drive, link back from Obsidian; pilot for an all-suppliers template. Plan ready: [[Kronos — Catalogue & Asset Ingestion]]. Blocked on **Google Drive write access for the worker** (service-account vs OAuth decision). Manual option works now for top-quoted collections.
+- [ ] **Cielo / Mutina / Fantini catalogue & asset ingestion** — catalogue + technical PDFs already linked in [[Cielo — Collections Reference]], [[Mutina — Collections Reference]], [[Fantini — Collections Reference]]; pull into Drive when worker write-access lands (same pattern as [[Kronos — Catalogue & Asset Ingestion]]).
 - [ ] **Loop engineering** — revisit only when Afoi Deli OS has a test suite and automated verification (the 14-step loop doc). Premature until then.
 - [ ] **QMD search layer** — add as the retrieval layer only once the index file stops being enough (vault grows past a few hundred dense pages). Karpathy names it as the documented option.
 
