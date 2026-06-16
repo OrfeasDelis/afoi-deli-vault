@@ -55,6 +55,14 @@ The most *art-directed* tile house we carry. Where a commercial factory sells fo
 3. **Cultural platform** — "Mutina for Art" (since 2016), the **Editions** decorative-object line (2021), and immersive **Casa Mutina** living-space showrooms (Modena, Milan) instead of trade booths.
 4. **Luxury positioning** — admitted to **Fondazione Altagamma** (Made-in-Italy excellence) as a Design Member in **2024**.
 
+## Famous for & specializations
+
+> [!info] Famous for (public)
+> Designer-authored porcelain — **Azulej, Déchirer, Pico, Phenomenon** and the **Tierras** "Mediterranean earth" range; the art-direction model itself is what Mutina is known for.
+
+> [!question] (your knowledge)
+> **Our hero SKUs** — which collections actually sell for us (best-sellers, high-margin, and any difficult / avoid). · **Our specialization with them** — where Mutina is the right call and where it isn't. · **Lead-time reality per hero line.**
+
 ## Company, ownership & sustainability
 
 - **Founded / relaunched:** **2005** by **Massimo Orsini** (CEO & creative lead), who took over a struggling Fiorano ceramics company; trade press dates the underlying business to ~1973. Urquiola joined 2008, the Bouroullecs 2011.

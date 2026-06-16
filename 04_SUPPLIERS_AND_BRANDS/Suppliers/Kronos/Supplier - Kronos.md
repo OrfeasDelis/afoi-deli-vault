@@ -81,6 +81,14 @@ K-LAB converts industrial porcelain stoneware slabs into one-off, made-to-measur
 
 *Relevance:* overlaps directly with the gres-as-bespoke-object idea behind The Material Atelier; worth studying as a service model even beyond stock sales.
 
+## Famous for & specializations
+
+> [!info] Famous for (public)
+> Large-format porcelain gres and the **"Material Board"** mix-and-match looks (wood / stone / concrete / metal); **K-LAB** bespoke gres fabrication is the standout.
+
+> [!question] (your knowledge)
+> **Our hero SKUs** — which collections actually sell for us (best-sellers, high-margin, and any difficult / avoid). · **Our specialization with them** — where Kronos is the right call and where it isn't. · **Lead-time reality per hero line.**
+
 ## Outdoor & technical systems
 
 - Outdoor paving for terraces, pools, gardens, ventilated building facades.

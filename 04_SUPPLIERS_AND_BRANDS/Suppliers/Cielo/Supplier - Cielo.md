@@ -60,6 +60,14 @@ The reasons Cielo is an identity brand, not a commodity supplier:
 3. **"Cultura delle mani"** — hand-finishing that allows near-bespoke personalisation.
 4. **Design-award validation** — Red Dot, German Design Award, Good Design Award, ADI Design Index across many collections; a deep external-designer roster (Andrea Parisio & Giuseppe Pezzano, Karim Rashid, Claudio Silvestrin, 5.5 designstudio, Marco Piva, Matteo Thun, Paolo D'Arrigo).
 
+## Famous for & specializations
+
+> [!info] Famous for (public)
+> Coloured, hand-finished sanitaryware — the **Extrà** ultra-thin (~5 mm) ceramic and the **Le Terre / Le Acque** colour palettes; the **I Catini** bowl basins (Red Dot) are a signature.
+
+> [!question] (your knowledge)
+> **Our hero SKUs** — which lines actually sell for us (best-sellers, high-margin, and any difficult / avoid). · **Our specialization with them** — where Cielo is the right call and where it isn't. · **Lead-time reality per hero line.**
+
 ## Company, ownership & sustainability
 
 - **Founded:** operating company dated **1997** (`likely` — LinkedIn/Kompass); brand created by **Alessio Coramusi**, descendant of a Civita Castellana family of master ceramicists tracing to the early 1900s (artisanal lineage → modern brand).

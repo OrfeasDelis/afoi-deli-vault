@@ -59,6 +59,14 @@ The premium **taps & fittings** house in our range — the jewellery of the bath
 3. **Deep PVD & material programme** — ~13 PVD finishes, marble/stone handles; lead-free brass / eco stainless.
 4. **Experiential brand** — **Casa Fantini-Lake Time** hotel (architect Piero Lissoni, 2017) as a living showcase; the social "**100 Fontane: Fantini for Africa**" water programme (Burundi), partly funded by I Balocchi sales.
 
+## Famous for & specializations
+
+> [!info] Famous for (public)
+> Design faucets — **I Balocchi** (the first coloured taps), the **ABOUTWATER / Boffi** line, **AK/25** (Compasso d'Oro 2020); and the deep **PVD-finish** programme.
+
+> [!question] (your knowledge)
+> **Our hero SKUs** — which series actually sell for us (best-sellers, high-margin, and any difficult / avoid). · **Our specialization with them** — where Fantini is the right call and where it isn't. · **Lead-time reality per finish / series** (PVD is the long pole).
+
 ## Company, ownership & sustainability
 
 - **Founded:** **1947** by brothers **Giovanni & Ersilio Fantini** in Pella; design "in the company's DNA" from the start (milestone: **I Balocchi**, 1976 — the first coloured taps). CEO **Daniela Fantini**.

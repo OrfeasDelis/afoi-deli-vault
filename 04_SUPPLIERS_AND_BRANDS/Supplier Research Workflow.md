@@ -87,6 +87,7 @@ Frontmatter: `type: supplier`, `supplier_name`, `country`, `category`, `represen
   > [!question] (your knowledge) Main contact / agency / conduit · payment terms · real discount ceiling · loading habits · packaging quirks · normal vs. special lead time · common mistakes on their proformas · relationship status & power geometry
 - **Product range & collections** — public, summarised; detail lives in the reference note (link it). Include the look taxonomy and product families.
 - **Distinctive service / strategic angle** — public (e.g. a K-LAB equivalent), with a note on strategic relevance.
+- **Famous for & specializations** — a short public "famous for" line (hero collections, signature tech) in an `[!info]` callout, then a labelled `[!question] (your knowledge)` for our hero SKUs / best-sellers / high-margin / difficult lines, our specialization with the house, and lead-time reality per hero line. *(Standing enrichment slot — every dossier carries it, so deepening is fill-in-the-blank.)*
 - **Company, ownership & sustainability** — public: history, group, certifications, manufacturing.
 - **Reference projects** — public.
 - **Showrooms & distribution** — public.

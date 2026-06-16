@@ -24,6 +24,8 @@ Each supplier lives in its own folder: `Suppliers/<Name>/Supplier - <Name>.md`. 
 
 > [!info] Depth legend — ● full dossier (Kronos depth) · ◐ seed/stub awaiting research.
 
+**To fill in later:** [[Supplier Enrichment Queue]] surfaces every blank still pending across all dossiers (private `[!question]` fields, `(to populate)` stubs, `needs_check` facts).
+
 **Populated (full dossier + collections reference):**
 
 - ● [[Supplier - Kronos]] — tile / porcelain stoneware · via [[Conduit - Plus Interiors]]
