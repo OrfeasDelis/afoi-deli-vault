@@ -17,6 +17,12 @@ The control room for how **Orfeas + Claude** build this vault and the future app
 - [[Open Questions]] — live list of decisions to resolve.
 - [[Architecture Decision Records]] — dated record of system choices.
 
+## Working modes
+How a session runs depends on what it's for:
+- **Build** — the default working session · [[Session Protocol]].
+- **Health check** — reconcile vault drift/orphans/links/schema (read-only) · [[Vault Integrity Audit]] → `/vault-audit`.
+- **Strategic brainstorm** — step back and think *with* Orfeas about where the OS really stands and what's next (read-only, discuss-only) · [[Strategic Brainstorm Protocol]] → `/os-brainstorm`.
+
 ## Craft & infrastructure
 - [[Obsidian Tips and Tricks]] — interconnecting knowledge and notes.
 - [[Obsidian Plugin Setup]] — Dataview, Templater, Obsidian Git.
