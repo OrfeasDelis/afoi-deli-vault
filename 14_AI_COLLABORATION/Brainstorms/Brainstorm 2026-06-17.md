@@ -54,4 +54,4 @@ The spine, sequenced, with dependency logic explicit:
 - **[[Vault State Memory]] (proposed, at the next build session):** record the state shift — spine = Root A; materials = deferred fast-follow; next thread = the tracer.
 
 ## Commit ref
-- `brainstorm: operational spine is the lead — explain reality first (2026-06-17)` — hash recorded below post-commit: **a0a5dc4**
+- `brainstorm: operational spine is the lead — explain reality first (2026-06-17)` — commit **25a95b9** (log + [[Capture Backlog]] Priority 0.1).
