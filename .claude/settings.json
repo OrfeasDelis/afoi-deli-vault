@@ -1,0 +1,17 @@
+{
+  "model": "claude-opus-4-8",
+  "permissions": {
+    "allow": [
+      "Edit(/_meta/audits/**)",
+      "Write(/_meta/audits/**)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push --force-with-lease:*)"
+    ]
+  }
+}
