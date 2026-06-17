@@ -66,6 +66,7 @@ The vault owns the **material** and **collection** tiers (the dimension). The **
 | `finishes` | list<string> | **yes** | `finishes` | `text[]` (enum) | yes |
 | `rectified` | boolean | no | `rectified` | `boolean` | yes |
 | `colors` | list<string> | no | `colors` | `text[]` | yes |
+| `graphic_versions` | list<string> | no | `graphic_versions` | `text[]` | yes |
 | `slip_din51130` | list<string> | **yes** | `slip_din51130` | `text[]` (enum) | yes |
 | `slip_din51097` | list<string> | **yes** | `slip_din51097` | `text[]` (enum) | yes |
 | `dcof_min` | number | no | `dcof_min` | `numeric` | yes |
@@ -91,6 +92,7 @@ The vault owns the **material** and **collection** tiers (the dimension). The **
 > - **`look`** — `wood` · `stone` · `marble` · `concrete` · `metal` · `terrazzo` · `resin` · `solid-colour` · `fabric` · `decor` · `mosaic`
 > - **`aesthetic`** — `mineral` · `raw` · `refined` · `warm` · `cool` · `natural` · `organic` · `tactile` · `weathered` · `brutalist` · `classic` · `contemporary` · `minimal` · `dramatic` · `serene` · `luxe` · `industrial` · `mediterranean` · `nordic` · `monastic` · `earthy` · `timeless` · `bold` · `soft` *(extensible — add deliberately, like the other vocabs)*
 > - **`price_tier`** (internal) — `entry` · `mid` · `premium` · `icon` *(usually `needs_check` until you set it)*
+> - **`graphic_versions`** (free, raw — no controlled vocab yet) — for lines that offer multiple **faces / graphics per colour**, a third axis distinct from both **finish** (surface) and **colour**: e.g. Kronos Pierre Vive's **Noble** (clean) vs **Ancienne** (weathered), plus named sub-graphics / laying programmes (Trace, Vintage). Capture the brand's literal words. *(Added 2026-06-17 from the Pierre Vive pilot — keep graphic-version terms here, never in `finishes_raw`, which is the surface axis only.)*
 
 ## Per-finish / per-format detail → the note body
 

@@ -23,6 +23,7 @@ source: https://afoideli.gr/
 > - **Method (re-runnable):** [[Materials Research Workflow]] — the repeatable skill. Raw inputs preserved verbatim in `Materials/_sources/` (the deep-research prompt + this file's seed draft).
 > - **Field/ingestion contract:** [[Materials Schema]] — typed frontmatter, controlled vocabularies, Supabase mapping.
 > - **Done (verified, atomic):** [[Material - Porcelain Stoneware]].
+> - **Collections ingested (instance tier, born on ingestion):** [[Collection - Kronos Pierre Vive|Kronos Pierre Vive]] — the first collection note, 2026-06-17, against [[Collection Schema]] (the three-tier model now validated end-to-end).
 > - **Next batch (deep):** Large-Format Porcelain Slab → Glass Mosaic → Sanitary Ceramic → SaphirKeramik.
 > - **Open decisions for Orfeas** (see [[Session 2026-06-16d]]): (1) approve the Schema + Porcelain pattern; (2) batch size; (3) the ~22 split — Countertop → `sintered-stone`/`engineered-quartz`/`natural-stone`, and a `stainless-steel` note (QuadroDesign) split off from Brass.
 > - **Naming:** atomic notes are `[[Material - <Name>]]`; the bare `[[Material name]]` links below are the seed's intended-graph and get repointed to the prefixed note as each is built.

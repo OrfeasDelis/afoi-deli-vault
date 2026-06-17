@@ -7,7 +7,7 @@ representation_model: independent_office
 strategic_importance: identity_brand
 status: active
 created: 2026-06-07
-updated: 2026-06-15
+updated: 2026-06-17
 confidence: likely
 aliases:
   - Kronos Ceramiche
@@ -55,7 +55,7 @@ The relationship is **close, but deliberately discreet** — not from hypocrisy,
 
 Fifteen indoor floor/wall collections plus three outdoor/large-format lines. By look:
 
-- **Stone:** Pierre Vive (newest), Nativa (travertine), Piasentina Stone, Le Reverse, Carrière du Kronos, Rocks (porphyry, outdoor-suited)
+- **Stone:** [[Collection - Kronos Pierre Vive|Pierre Vive]] (newest — full collection dossier), Nativa (travertine), Piasentina Stone, Le Reverse, Carrière du Kronos, Rocks (porphyry, outdoor-suited)
 - **Wood:** Essence (oak), Les Bois, Woodside (indoor+outdoor)
 - **Concrete / clay:** Materia, Terra Crea, Prima Materia, Evolution (Nordic minimal)
 - **Metal:** Metallique

@@ -1,7 +1,7 @@
 ---
 type: backlog
 created: 2026-06-14
-updated: 2026-06-16
+updated: 2026-06-17
 status: active
 tags:
   - command-center
@@ -31,10 +31,10 @@ tags:
 ## Priority 0.5 — Materials knowledge layer (ACTIVE — resume next session)
 *Batch 1 shipped 2026-06-16d, then paused for steer. Architecture extended 2026-06-17 to three tiers ([[Architecture Decision Records|ADR-0005]]). Run [[Materials Research Workflow]]. Context: [[Session 2026-06-16d]] · [[Session 2026-06-17]] · index: [[Afoi Deli — Materials Intelligence]].*
 
-- [ ] **🔧 Install Python + poppler (DO FIRST — tooling, 2026-06-18).** This machine has only the Microsoft Store `python` stub and no **poppler** (`pdftoppm`/`pdftotext`), so the Read tool can't render PDFs and the Word-COM fallback is too slow for big catalogues. Install real **Python 3** + **poppler** on PATH — unblocks all PDF/TDS ingestion (and the Pierre Vive pilot below). Orfeas + Claude.
+- [x] **🔧 PDF tooling — DONE (2026-06-17b).** This machine has **real Python 3.12** + **PyMuPDF (fitz) 1.26.7**, which renders PDF pages to images the Read tool views (`pdftotext`/Xpdf covers the text layer). **poppler not needed** — PyMuPDF replaces `pdftoppm`. Proven on the Pierre Vive catalogue; all PDF/TDS ingestion unblocked.
 - [ ] **Decide 3 things first** — (1) approve the [[Materials Schema]] + [[Material - Porcelain Stoneware]] pattern before it's replicated ~20×; (2) batch size; (3) the **~22 split** (Countertop → sintered-stone / engineered-quartz / natural-stone; split a `stainless-steel` note off Brass).
 - [ ] **Next deep batch (class tier)** — Large-Format Porcelain Slab → Glass Mosaic → Sanitary Ceramic → SaphirKeramik (then the medium/light materials).
-- [ ] **Pilot the collection tier** — [[Collection Schema]] now includes the **editorial cluster** (`aesthetic`/`seo_keywords` + narrative for content/SEO/social). Validate on **Kronos Pierre Vive** — catalogue PDF already staged at `Downloads/PierreVive.pdf` (attempted 2026-06-17, blocked on the Python/poppler tooling above) → build the first `Collection - Kronos Pierre Vive` note → reframe Kronos's Collections Reference into the ingested ✅ / not-yet ⬚ roster.
+- [x] **Pilot the collection tier — DONE (2026-06-17b).** Built the vault's first collection note [[Collection - Kronos Pierre Vive]] against [[Collection Schema]] (incl. the editorial cluster); reframed [[Kronos — Collections Reference]] into the ✅/⬚ roster; ran a 3-lens adversarial verification and fixed every finding; **added a `graphic_versions` field** to the schema. Remaining (not blockers): line `needs_check` (slip/DCOF/PEI — no scheda tecnica is published, pull from the price list/rep), the exact PV-code↔format↔colour mapping, afoideli.gr presence, and the **selling voice** (Orfeas's to sharpen).
 - [ ] **Still to build** — Dataview "Materials Index" + `.base`; the verification ledger; cross-link materials into the 13 supplier dossiers; migrate each material's prose out of the MOC into its atomic note.
 - [ ] **Resolve the `needs_check`** on [[Material - Porcelain Stoneware]] — which stocked brands are full-body vs glazed; which 20 mm outdoor ranges are carried.
 

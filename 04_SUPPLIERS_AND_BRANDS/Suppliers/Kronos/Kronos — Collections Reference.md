@@ -6,7 +6,7 @@ country: Italy
 category: porcelain stoneware
 status: active
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-06-17
 confidence: verified
 source: https://kronosceramiche.com/collections/
 tags:
@@ -24,12 +24,17 @@ tags:
 > [!warning] Cross-reference confidence (read before trusting the afoideli column)
 > afoideli.gr is a JavaScript WooCommerce store, so presence was checked here via **web search only** (2026-06-15). That yields reliable **positives** (a surfaced product page definitely exists) but **unreliable negatives** — "unverified" means *not found via search*, NOT *absent*. Our site also sometimes renames a collection or appends the brand (e.g. "Nativa Kronos"). Definitive presence/absence needs the **WooCommerce Store API** (`/wp-json/wc/store/v1/products?search=<name>`), run from your side — see the parked Store-API spec in [[Automation Backlog]]. Treat unverified rows as TODO, not as gaps in our range.
 
+> [!note] Roster status (the ✅/⬚ checklist — [[Architecture Decision Records|ADR-0005]])
+> Collections are **born on ingestion**: when a source is fed, the line gets its own `Collection - Kronos <Name>` note (specs live there, against [[Collection Schema]]) and is marked **✅ ingested** here; everything else is **⬚ not-yet** and stays a roster row. This reference is now the **index/checklist**, not the home of the specs.
+> - **✅ Ingested (1):** [[Collection - Kronos Pierre Vive|Pierre Vive]]
+> - **⬚ Not yet (17):** Materia · Nativa · Piasentina Stone · Essence · Terra Crea · Le Reverse · Prima Materia · Metallique · Carrière du Kronos · Les Bois · Evolution · Talco · Rocks · Woodside · Ske 2.0 · Block 2.0 · Maxi
+
 ## Indoor floor & wall collections (15)
 
-### Pierre Vive — *stone* (newest)
-A homage to natural stone with authentic stone texture; four colour variants + two graphic versions (loire noble, orval noble seen). Hand-made mason look. 6/9/20mm.
+### Pierre Vive — *stone* (newest) — ✅ ingested
+**Full dossier → [[Collection - Kronos Pierre Vive]]** (born on ingestion, 2026-06-17). 4 colourways (Brionne · Morvan · Orval · Loire) × 2 graphics (Noble · Ancienne), 6/9/20 mm, Natural + Grip, 120×280 → 20×20 plus mosaics / Modulo / Ancienne Vintage. Specs now live in the collection note against [[Collection Schema]].
 - Page: https://kronosceramiche.com/collections/pierre-vive/
-- Brochure: https://kronosceramiche.com/src/uploads/sites/3/2025/10/PierreVive.pdf
+- Brochure: https://kronosceramiche.com/src/uploads/sites/3/2025/10/PierreVive.pdf — **archived** at `Kronos/_sources/PierreVive.pdf`
 - On afoideli.gr: unverified — confirm via Store API
 
 ### Materia — *concrete*
