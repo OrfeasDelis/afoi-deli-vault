@@ -35,7 +35,7 @@ tags:
 **Full dossier → [[Collection - Kronos Pierre Vive]]** (born on ingestion, 2026-06-17). 4 colourways (Brionne · Morvan · Orval · Loire) × 2 graphics (Noble · Ancienne), 6/9/20 mm, Natural + Grip, 120×280 → 20×20 plus mosaics / Modulo / Ancienne Vintage. Specs now live in the collection note against [[Collection Schema]].
 - Page: https://kronosceramiche.com/collections/pierre-vive/
 - Brochure: https://kronosceramiche.com/src/uploads/sites/3/2025/10/PierreVive.pdf — **archived** at `Kronos/_sources/PierreVive.pdf`
-- On afoideli.gr: unverified — confirm via Store API
+- On afoideli.gr: **not listed** (confirmed 2026-06-17 via WooCommerce Store API — other Kronos lines present, Pierre Vive absent; newest line, **add to site**)
 
 ### Materia — *concrete*
 Elegant modern reinterpretation of concrete. Nine colourways: gesso, cemento, sandalo, seta, cenere, tortora, incenso, pesca, oliva. Natural + grip; decors (edelis, hari, linova, trama); Eco Materia mosaics (recycled glass). 6/9/20mm, up to 120x280.
