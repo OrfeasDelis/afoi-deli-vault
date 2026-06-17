@@ -39,7 +39,7 @@ It is a *discussion*, not a deliverable. Don't run it to produce a document — 
 
 ## The mode (guardrails — non-negotiable)
 
-1. **Read-only / discuss-only.** Nothing is created, edited, or committed during the session — the `/os-brainstorm` skill enforces this by restricting its tools to read. This **overrides `CLAUDE.md §8` / [[Session Protocol]]'s end-of-session writes**: no Vault State Memory update, no session log, no commit as an automatic tail. Capturing outcomes is a *separate, deliberate* follow-up Orfeas chooses (see below).
+1. **Read-only / propose-only on the knowledge base.** The session edits, creates, or deletes **no vault content note** and implements nothing. Its *one* write is its own **dated brainstorm log** in `14_AI_COLLABORATION/Brainstorms/` — committed and pushed like a session — exactly as `/vault-audit` stays read-only on notes yet writes its report to `_meta/audits/`. It does **not** auto-update [[Vault State Memory]] or file decisions into the Roadmap/ADRs/Backlog; those are *promotions* Orfeas acts on separately (see the trail below). This is the only respect in which it departs from `CLAUDE.md §8` — it writes its log, not the build-session state.
 2. **Think *with* him, not *for* him.** Real back-and-forth, maximum reasoning depth, questions one or two at a time — not a wall of conclusions.
 3. **Lean on the audit; don't re-derive it.** The deterministic health layer (drift, orphans, links, schema) is already tracked in `_meta/audits/STATE.md` — cite and extend it. Spend original reasoning on the *strategic* layer the audit only gestures at (its **F7 — ship-coupling**).
 4. **Use the 5-layer model as the reality scaffold** (Knowledge/Obsidian → Data/Supabase → Automation/Python worker → Interface/webapp → AI Agent). "What exists vs. what is specified" is largely "which layers actually run." Today: Layer 1.
@@ -55,18 +55,30 @@ It is a *discussion*, not a deliverable. Don't run it to produce a document — 
 3. **Discussion** — anchored on three questions in order: *what does "real" mean → where are we reaching → what are the load-bearing next steps?*
 4. **Converge** — a sequenced **skeleton** of essential next steps with explicit dependency logic. Emerges from the talk; not front-loaded.
 
-## Where the outcomes go (deliberately, afterward)
+## The brainstorm trail (like the session trail)
 
-Because the session writes nothing, anything worth keeping is captured as a **separate, chosen step** once the discussion settles — routed the normal way:
+We will brainstorm often, so each run leaves a dated **brainstorm log** in `14_AI_COLLABORATION/Brainstorms/` — the brainstorm equivalent of a session log. They accumulate and are auto-listed here, newest first:
+
+```dataview
+LIST
+FROM "14_AI_COLLABORATION/Brainstorms"
+SORT file.name DESC
+```
+
+Each log (from [[Template - Brainstorm Log]]) records: scope, the situation-report snapshot, **the real discussion turns** (what got challenged, what moved), the converged skeleton, and the **proposed promotions**. The log is written and committed by the `/os-brainstorm` skill at Exit; the folder is born on the first run. *(Empty above until then.)*
+
+## Where the outcomes go (promotions — deliberately, afterward)
+
+The log *captures* the thinking; **filing binding outcomes is a separate, chosen step** Orfeas takes — the brainstorm never does it itself. The log proposes; he disposes:
 
 - A binding decision → a new row in [[Architecture Decision Records]].
 - A re-sequenced plan → [[Roadmap]] (and retire what it supersedes).
 - A concrete next action → [[Capture Backlog]].
 - A new live question → [[Open Questions]].
-- The state shift → [[Vault State Memory]] at the next *working* (non-brainstorm) session.
+- The state shift → [[Vault State Memory]] at the next *build* session.
 
-That separation is the point: the brainstorm is where the thinking is free; filing is a decision Orfeas makes with the thinking already done.
+That separation is the point: the brainstorm is where the thinking is free and the trail is kept; promotion into doctrine is a decision Orfeas makes with the thinking already done.
 
 ---
 
-*Linked: [[Collaboration Home]] (hub) · [[Session Protocol]] (sibling ritual) · [[Vault Integrity Audit]] (the health counterpart) · [[The Heart]] · [[Vault State Memory]]. Runner: `/os-brainstorm`. Nothing here is final.*
+*Linked: [[Collaboration Home]] (hub) · [[Session Protocol]] (sibling ritual) · [[Vault Integrity Audit]] (the health counterpart) · [[The Heart]] · [[Vault State Memory]]. Runner: `/os-brainstorm`. Trail: `14_AI_COLLABORATION/Brainstorms/`. Nothing here is final.*

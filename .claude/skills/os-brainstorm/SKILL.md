@@ -2,18 +2,19 @@
 name: os-brainstorm
 description: Strategic grounding + next-steps brainstorm for the Afoi Deli OS. Use when stepping back from build detail to get honestly grounded — where the OS actually stands (working vs specified vs conceptual), what "the OS is real" means, the gap between the stated end-product and current reality, and the load-bearing next steps. A read-only, think-WITH-me discussion session, NOT implementation. Pass `business` (the 5-layer ship-running machine) or `unified` (whole vault incl. the personal OS) to pre-set scope.
 argument-hint: "[business|unified]"
-allowed-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob, Write, Bash
 model: claude-opus-4-8
 effort: high
 ---
 
-# OS Brainstorm — strategic grounding & next-steps (read-only, think-with-me)
+# OS Brainstorm — strategic grounding & next-steps (read-only on the vault, think-with-me)
 
 ## Prime directive (non-negotiable — this is the safety case and the whole point)
 
-**READ-ONLY / DISCUSS-ONLY.** For the entire session you create, edit, move, rename, or delete **nothing**. This is a discussion, not an implementation pass. The tools are restricted to read for exactly this reason — don't look for a way around it.
+**READ-ONLY / PROPOSE-ONLY on the knowledge base. You implement nothing.** For the entire session you do not edit, create, move, rename, or delete any vault content note, and you do not change doctrine or build anything. This is a discussion, not an implementation pass. If you're ever tempted to "just fix it to be helpful," **don't** — capture it as a *promotion* in the brainstorm log instead.
 
-- **This explicitly overrides `CLAUDE.md §8` / [[Session Protocol]]'s end-of-session writes.** Do **not** update [[Vault State Memory]], do **not** write a session log, do **not** commit. Capturing outcomes (an ADR, a Roadmap edit, a Capture Backlog row) is a deliberate *separate* follow-up step Orfeas decides on afterward — never an automatic tail to this session.
+- **The ONE thing you may write is your own brainstorm log** — a dated note in `14_AI_COLLABORATION/Brainstorms/`, written at the Exit step from [[Template - Brainstorm Log]], then committed + pushed. This is exactly how `/vault-audit` is read-only on notes yet writes its report to `_meta/audits/`. Nothing else is writable.
+- **You still do NOT** update [[Vault State Memory]], edit the Roadmap/ADRs/Backlog, or touch any other note. Those are *promotions* you propose in the log; Orfeas files them as a separate, chosen step.
 - **Think *with* Orfeas — don't hand him a plan and leave.** Maximum reasoning depth on every turn. Real back-and-forth.
 - **Do this in your own single context. Do NOT fan out to subagents.** One coherent model of the system and a genuine dialogue beat a synthesized report (and it matches Orfeas's standing preference).
 - **Voice:** the register of [[The Heart]] — level-headed, truthful, helpful, self-respecting. No flattery, no padding. Path-cite claims; when you're inferring rather than reading, say so plainly.
@@ -68,5 +69,15 @@ Once the discussion is genuine, help him converge on a **skeleton**: the essenti
 
 > [!note] You are surfacing, not deciding
 > Honor the authorship line (`CLAUDE.md` "authorship line"; the audit's "you are surfacing, not deciding"): you sequence options, expose dependencies, and sharpen the choices — but the strategic decisions and the framing stay **Orfeas's** to author. If converging would mean writing his position for him, stop and hand it back.
+
+## Exit — capture the brainstorm log (the one write, like a session)
+
+When the discussion has actually settled (don't rush this — only when Orfeas signals we're done), capture it:
+
+1. **Write the log** to `14_AI_COLLABORATION/Brainstorms/Brainstorm <YYYY-MM-DD>.md` from [[Template - Brainstorm Log]] (add a `b`/`c` suffix if there's already one today, exactly like the session logs). Record: scope, the situation-report snapshot, **the real discussion turns** (what got challenged, what moved), the converged skeleton, and the **proposed promotions** (ADR / Roadmap / Capture Backlog / Open Questions — proposed, not filed). Keep Orfeas's framing in *his* words, not yours.
+2. **Commit + push it** like a session: `git add` the new log, `git commit -m "brainstorm: <topic> (<date>)"`, `git push`. (PowerShell here has no `&&` — separate lines; or use the Bash tool.) Record the hash in the log's Commit-ref line.
+3. **Do not** update [[Vault State Memory]] or file the promotions yourself — those are Orfeas's to act on at the next build session. The log is the record; promotion is his call.
+
+The dated logs accumulate in `Brainstorms/` and are auto-listed (newest first) in [[Strategic Brainstorm Protocol]] — the brainstorm trail, just like the session trail in [[Collaboration Home]].
 
 **Begin with Phase 0 (one-line scope check), then Phase 1.** When you've finished reading, give the Phase 2 situation report, then ask your first question.

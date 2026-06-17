@@ -9,8 +9,8 @@ confidence: verified
 
 How every working session with Claude runs, so memory is never lost and the repo stays clean.
 
-> [!note] Session modes — two read-only variants skip the END writes
-> This protocol governs **build** sessions. Two variants are deliberately **read-only / discuss-only** and **override the END-of-session writes below** (no Vault State Memory update, no log, no commit as an automatic tail): the **health check** ([[Vault Integrity Audit]] → `/vault-audit`) and the **strategic brainstorm** ([[Strategic Brainstorm Protocol]] → `/os-brainstorm`). Their outcomes are filed afterward as a separate, chosen step.
+> [!note] Session modes — two variants are read-only on vault content
+> This protocol governs **build** sessions. Two variants are deliberately **read-only / propose-only on the knowledge base** — they implement nothing and edit no content note. Each writes only **its own record** and commits it: the **health check** ([[Vault Integrity Audit]] → `/vault-audit`) → a report in `_meta/audits/`; the **strategic brainstorm** ([[Strategic Brainstorm Protocol]] → `/os-brainstorm`) → a dated log in `14_AI_COLLABORATION/Brainstorms/` (a brainstorm trail, like this folder's session trail). Neither does the build-session **Vault State Memory** update below — their outcomes are *promotions* Orfeas files afterward as a separate, chosen step.
 
 ## START of session (Claude does this first)
 1. Read [[Vault State Memory]] (the source of truth for "where we are").
