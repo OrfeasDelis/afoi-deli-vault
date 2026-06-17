@@ -36,10 +36,10 @@ The relationship is **close, but deliberately discreet** — not from hypocrisy,
 - **Email:** info@kronosceramiche.com (general) — *(rep contact via Plus Interiors below)*
 - **Website:** https://kronosceramiche.com (multilingual: IT/EN/FR/DE/NL)
 - **Legal entity:** KRONOS 2 CERAMICHE SPA — Via Giardini 62, 41042 Fiorano Modenese (MO), Italy. Tel +39 0536 927711. P.IVA 01935150365. Located in the Sassuolo/Fiorano ceramic district.
-- **Price list folder:** *(to populate)*
-- **Catalogue folder:** *(to populate)*
-- **Discount:** Inelastic. Premium-priced vs. larger "commercial" brands. Realistic ceiling **~+2% additional** even on big projects.
-- **Payment terms:** *(to populate)*
+- **Price list folder:** `_sources/Kronos Listino Prezzi 2026.pdf` (official *Listino Prezzi 2026*, 108 pp, ingested 2026-06-17). List prices in €/m² (€/pz for trims); the **buy-side cascade + worked net** is in [[#Pricing — discount cascade, terms & conditions confidential buy-side|Pricing]] below.
+- **Catalogue folder:** `_sources/` — per-collection catalogues (e.g. `PierreVive.pdf`); detail in [[Kronos — Collections Reference]].
+- **Discount:** standard trade discount is a **cascade off list** (base −70% · modules −60−10 · decors −60−10−5; see [[#Pricing — discount cascade, terms & conditions confidential buy-side|Pricing]]). On top of that, *negotiation* is inelastic — premium-priced vs. larger "commercial" brands, realistic extra ceiling **~+2%** even on big projects.
+- **Payment terms:** **90 days** on standard orders · **120 days** on stock orders (verified, Orfeas 2026-06-17). Feeds [[Credit and Due Date Calendar]].
 - **Normal lead time:** Good in general; availability almost always strong.
 - **Special item lead time:** Occasional understandable delays — and as a "heavy" brand with exquisite items, a degree of lateness is *forgiven* because the product earns the patience.
 - **Loading habits:** *(to populate)*
@@ -48,6 +48,34 @@ The relationship is **close, but deliberately discreet** — not from hypocrisy,
 - **Best collections:** Highlighted lines (2026) — see [[#Product range collections|Product range]] below.
 - **Related projects:** *(to populate — link [[06_PROJECTS_AND_CASES]] cases that used Kronos)*
 - **Notes:** Expert material knowledge and guidance available through the rep; always willing to help.
+
+## Pricing — discount cascade, terms & conditions confidential buy-side
+
+> [!danger] Confidential — buy-side / never client- or public-facing
+> The figures below are our **cost structure** — the deepest commercial secret. They live in the private vault by decision (Orfeas 2026-06-17). **Never** surface net cost, the discount cascade, or supplier terms in a quote, on the website, or in any client-facing output — quotes show **sell** prices only. See `CLAUDE.md §4` (approval gates) and the full chain in [[Cost & Quote Build]].
+
+### Standard discount — a cascade off list (*sconti in cascata*)
+
+List prices are the official *Listino Prezzi 2026* (`_sources/Kronos Listino Prezzi 2026.pdf`). Our **net buy cost** = list × the cascade for the item's tier. The discounts **compound** (each applies to what's left after the previous), and the tier is assigned **per item** but by a rule that holds **across every collection** (verified, Orfeas 2026-06-17):
+
+| Tier | Items | Cascade | Net = list × | Off list |
+|---|---|---|---|---|
+| **Base tiles** | plain field tiles (the bulk of any collection) | −70% | **0.300** | 70.0% |
+| **Module configs** | mix-dimension / *modulo* laying sets | −60% −10% | 0.40 × 0.90 = **0.360** | 64.0% |
+| **Decors** | mosaics, baguette, 3D, listellos, trim | −60% −10% −5% | 0.40 × 0.90 × 0.95 = **0.342** | 65.8% |
+
+> [!example] Worked example — Pierre Vive (Noble, base tier)
+> 120×280 slab list **€132.00/m²** → net **€39.60/m²** · 120×120 list €95.00 → net **€28.50** · 60×120 list €87.00 → net **€26.10**. *(× 0.30; before pallets/transport/quantity — that landed step lives in [[Cost & Quote Build]].)*
+
+Net is only the **first** step: landed cost then adds pallet/packaging, transport and quantity effects; the quote adds margin on top. Full chain: [[Cost & Quote Build]] → feeds [[Profitability Engine]].
+
+### Payment / credit
+- **90 days** on standard orders · **120 days** on stock orders. Drives supplier credit-exposure + due-date logic in [[Credit and Due Date Calendar]].
+
+### General sale conditions (Listino 2026 — *Condizioni di vendita*)
+- **Order cancellation** of already-prepared (ready-to-load) goods: **20%** of order value charged.
+- **Returns:** must be **approved by Kronos management**; goods intact and in **original packaging**, checked on arrival; credit allowance **never above 80%** of invoiced value (20% handling fee).
+- All items sold **only in full boxes** (*a scatole complete*); shade variation (V1–V4) and 3/5/7 mm joint guidance per the listino legend.
 
 ## Product range & collections
 
@@ -117,7 +145,7 @@ Hospitality-heavy: ÄNG (bar/restaurant), Parilio Hotel, Al Gatto Verde, Quellen
 ## Automation potential
 
 - Proforma parsing: *(to populate)*
-- Price checking: *(to populate)*
+- Price checking: **enabled by the 2026 listino + the discount cascade.** A proforma line reconciles if `line €/m² ≈ list × tier-cascade` (base ×0.300 · module ×0.360 · decor ×0.342); flag any line off its expected net. This is the Proforma Checker's price-rule source ([[AI Agent Roles]]).
 - Loading/DTS parsing: *(to populate)*
 - Product catalogue extraction: *(to populate)*
 

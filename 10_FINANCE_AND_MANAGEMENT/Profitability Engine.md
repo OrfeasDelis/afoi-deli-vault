@@ -11,6 +11,9 @@ automation_priority: high
 
 See profit before operational mistakes consume it.
 
+> [!info] Upstream cost build
+> `supplier_cost_total` here is the **landed** cost — built from list → net (discount cascade) → landed in [[Cost & Quote Build]]. This note tracks the **margin** once that cost and the sell price are set; the cost derivation lives there.
+
 ## Per order fields
 
 ```yaml

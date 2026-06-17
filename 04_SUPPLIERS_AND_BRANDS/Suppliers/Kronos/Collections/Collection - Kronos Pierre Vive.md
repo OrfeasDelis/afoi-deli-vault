@@ -239,8 +239,24 @@ Read from the catalogue range pages (pp. 29–31) at 300 dpi. **Colourway rule (
 
 **Laying schemes** (catalogue p. 31): *Bordo Rettificato* (rectified edge) and *Bordo Vintage* (aged edge); a 3-format scheme (60×60 43 % · 40×80 19 % · 80×80 38 %), a Vintage scheme, and Modulo 120 (60×60 50 % + Modulo 120 50 %), in 9 mm and 20 mm 2.0.
 
-> [!note] Residual `needs_check` (price-list confirmation)
-> The matrix is read directly from the catalogue and the colourway rule is verified across all rows. A small number of edge cells (e.g. whether Ancienne 60×120 also has a Grip variant, the exact 40×40/20×20 Vintage code blocks) can carry ±1 ambiguity — confirm against the official **price list** when these seed the OS `products` table.
+> [!note] Price-list confirmation — 2026 Listino
+> Codes are now cross-checked against the official **Kronos Listino Prezzi 2026** (`Kronos/_sources/Kronos Listino Prezzi 2026.pdf`): the **Noble page is confirmed** — PV001–004 (120×280), PV006–009 / PV206–209 (120×120 std/grip), PV011–014 / PV176–179 (60×120 std/grip), PV016–019 (60×120 Trace). The Ancienne / Vintage / 20 mm 2.0 / mosaic code blocks still carry ±1 edge ambiguity until those listino pages are walked — confirm before seeding the OS `products` table.
+
+### List pricing — 2026 (Noble, base tier)
+
+> [!info] List €/m² — the **sell basis**, not our cost
+> From the *Listino Prezzi 2026*. These are **list** prices; our net cost and the full cost-to-quote chain are buy-side and live in [[Supplier - Kronos]] / [[Cost & Quote Build]] — never quote from net.
+
+| Format | Thickness | Surface | List €/m² |
+|---|---|---|---|
+| 120×280 | 6 mm | Noble | **132,00** |
+| 120×120 | 9 mm | Noble | **95,00** |
+| 120×120 | 9 mm | Noble Grip | 97,00 |
+| 60×120 | 9 mm | Noble | **87,00** |
+| 60×120 | 9 mm | Noble Grip | 90,00 |
+| 60×120 | 9 mm | Noble Trace | 90,00 |
+
+*(All four colourways — Loire / Orval / Morvan / Brionne — share the same list price within a format/surface. Ancienne, 20 mm 2.0, modulo and mosaic prices: pending the remaining listino pages.)*
 
 ## Applications
 

@@ -26,6 +26,16 @@ responsible_person:
 notes:
 ```
 
+## Supplier credit terms (known)
+
+The payment window per supplier — drives `due_date` (= invoice_date + term) and supplier credit-exposure.
+
+| Supplier | Standard orders | Stock orders | Source |
+|---|---|---|---|
+| [[Supplier - Kronos\|Kronos]] | **90 days** | **120 days** | verified, Orfeas 2026-06-17 |
+
+*Add each house as its terms are confirmed (via [[Supplier Enrichment Queue]]). Cost-side derivation of the invoice amounts: [[Cost & Quote Build]].*
+
 ## Views to create later
 
 - Due this week
