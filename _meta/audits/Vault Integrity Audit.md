@@ -80,6 +80,7 @@ Run from the vault root, phased — read before judging:
 | Date | Scope | Headline verdict | Report |
 |---|---|---|---|
 | 2026-06-16 | Full structural + philosophical (first audit) | Healthy business-intel core; **P0 = source-of-truth drift** (two disagreeing indexes + phantom folders `15/16/18` + dual data contract). Doctrine spine + supplier system + session ritual are excellent and protected. | [[2026-06-16-vault-audit]] |
+| 2026-06-17 | First on-command `/vault-audit` (routine pass) | **Healthy, no P0.** Contested n8n item **settled → sweep complete** (no live note prescribes n8n); only an inverted `CLAUDE.md §7` freshness flag remained (P1) — fixed this run. 7/7 critic-confirmed, 0 false-positives. | [[2026-06-17-vault-audit]] |
 
 ---
 

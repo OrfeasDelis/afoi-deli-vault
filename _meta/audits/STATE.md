@@ -18,7 +18,7 @@ tags:
 > [!abstract] What this is
 > The **forward-looking ledger** of the vault audit system. It complements its two siblings: [[Vault Integrity Audit]] holds the *why/how* (charter: the 8 checks + method), the dated `_meta/audits/<date>-vault-audit.md` reports hold *each run*, and **this file holds the running account** — the latest snapshot and the live state of every finding (Open / Done / Rejected / Deferred). The `/vault-audit` skill reads this first (to avoid re-litigating Rejected findings) and updates it last.
 
-**Last session:** 2026-06-17 — audit system installed (skill + critic + settings + this ledger) via Phase-0 read-only recon. **No `/vault-audit` run yet** — the working sections below populate on the first run.
+**Last session:** 2026-06-17 — **first `/vault-audit` run executed** ([[2026-06-17-vault-audit]]). Verdict: **healthy, no P0.** Settled the Contested n8n item (→ Done: sweep complete). 7/7 findings critic-confirmed, 0 false-positives. Open list now populated below.
 
 ---
 
@@ -46,19 +46,25 @@ tags:
 ---
 
 ## Open
-*Confirmed findings awaiting Orfeas's action. Populated by the first `/vault-audit` run — empty until then.*
+*Confirmed findings awaiting Orfeas's action. From [[2026-06-17-vault-audit]] (7/7 critic-confirmed).*
 
-- _— none yet —_
+- **F1 (P1) — Soften the inverted §7 freshness flag.** The n8n sweep is complete, but `CLAUDE.md §7` still describes it as pending ("~15 live notes … tracked as one owned task"). Replace with a one-line historical note; optionally trim §1's n8n clause. *Touches the contract — Orfeas approves.* Effort: S.
+- **F2 (P2) — `98_TEMPLATES/Template - ADR.md` L4** emits `status: proposed` (invalid). Set YAML to `status: idea`/`seed`. Effort: XS.
+- **F3 (P2) — `98_TEMPLATES/Template - Project.md` L12** emits an empty `status:`. Default it (`status: idea`) or make it a Templater prompt. Effort: XS.
+- **F4 (P2) — 2 genuine content orphans.** Wire `08_AUTOMATION_AND_AI/AI Agent Roles.md` from [[Automation Masterplan]]/[[Python Worker Map]]; resolve `04_SUPPLIERS_AND_BRANDS/Supplier Note System.md` (redundant template-in-content-wing → merge into `Template - Supplier` or relocate). Effort: S.
+- **F6 (P2, carried) — `README_START_HERE.md` rewrite** still pending (pre-pivot 4-layer framing; mitigated by its banner + `CLAUDE.md §9`). Already a [[Capture Backlog]] P2. Effort: M.
+- **F7 (standing gap, Orfeas's call — not a defect) — ship-coupling hollow.** No real order/quote/client notes; [[The Selection Engine]] cites a client + project that don't exist. Close it or stay in reference-build — a decision, not a bug.
 
 ## Done
 *Findings resolved (with the date + how).*
 
-- **2026-06-16 audit P0 (structure↔index drift) — cleared.** Per [[Vault State Memory]] and verified on disk: phantom `15/16/18` resolved, 22 folders match [[Vault Map]], canonical index consolidated, schema governance settled. *(Pre-seed from recon; confirm against the [[2026-06-16-vault-audit]] report on next run.)*
+- **2026-06-16 audit P0 (structure↔index drift) — cleared.** Per [[Vault State Memory]] and verified on disk: phantom `15/16/18` resolved, 22 folders match [[Vault Map]], canonical index consolidated, schema governance settled. *(Confirmed against the [[2026-06-16-vault-audit]] report by the 2026-06-17 run — structure↔disk is clean.)*
+- **Contested n8n question — SETTLED 2026-06-17 in favor of [[Vault State Memory]]: the sweep is COMPLETE.** The 2026-06-17 run grepped every live (non-session/audit) note: zero notes prescribe n8n as current — all occurrences are negations, historical records (ADR-0004), or freshness guards; the 6 SOPs the prior audit named contain no n8n strings. *The only residue is the inverted §7 flag, now tracked as Open F1.* (See [[2026-06-17-vault-audit]] F1.)
 
-## Contested — reconcile on first run
+## Contested — reconcile on next run
 *Sources disagree; the audit exists to settle these. Not yet Done, not a confirmed Open finding.*
 
-- **n8n → Python-worker sweep: COMPLETE or still live?** [[Vault State Memory]] reports the sweep *complete* (n8n removed 2026-06-14); but `CLAUDE.md §7` and the [[2026-06-16-vault-audit]] still flag n8n as *prescribed* in ~15 live notes. This is precisely the source-of-truth / doctrine-freshness conflict checks #2–#3 exist to catch. The first `/vault-audit` run should grep the vault, decide which source is true, and move this to Done or Open.
+- _— none open. The n8n item was settled 2026-06-17 (moved to Done above). —_
 
 ## Rejected
 *False positives — do not resurface. Each names why it is not real.*

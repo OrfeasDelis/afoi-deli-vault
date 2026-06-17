@@ -106,7 +106,7 @@ When asked to lint (or at natural milestones):
 ## 7. Freshness flags — read before trusting old doctrine
 
 > [!warning] Known stale areas (verify, don't inherit blindly)
-> - **n8n is still named as the *current* automation layer in ~15 live notes** — live prescriptions an implementer would follow, not incidental mentions: [[Roadmap]] Phase 3, [[Home Dashboard]] axis 5, [[Strategic Axes]] axis 5, the automation sections of [[Kouvas System]] / [[Supplier PO Creation SOP]] / [[Order Workflow 0-4]], [[Database Master Schema]]'s target line, and [[Hermes Obsidian Codex Interface]]. The settled architecture is **Supabase Postgres + Python worker, no n8n** (see [[Automation Masterplan]] and [[Python Worker Map]]). Replace every n8n prescription with the worker. Tracked as one owned task in [[Capture Backlog]] (P1) — scoped work, not a perpetual flag.
+> - **Settled automation stack: Supabase Postgres + Python worker — no n8n.** The n8n→worker doctrine sweep finished 2026-06-16 (audit P1-A) and was **verified complete by the [[2026-06-17-vault-audit]]**: no live note prescribes n8n anymore — only negations and historical references (session logs, [[Architecture Decision Records|ADR-0004]]) remain. See [[Automation Masterplan]] / [[Python Worker Map]]. *This is a settled pointer, not an open task — if you ever find a note prescribing n8n as current, it's a regression: flag it.*
 > - Several supplier notes remain `memory_seed`. [[Supplier - Kronos]] is `likely`. Promote others as they're verified.
 
 ---
