@@ -21,10 +21,10 @@ The vault accretes — sources ingested, dossiers deepened, schemas extended. Th
 
 This is the strategic complement to the health audit:
 
-| | Reconciles | Asks | Runner |
-|---|---|---|---|
-| **`/vault-audit`** | vault **health** — drift, orphans, links, schema, ritual | *Is the record true, findable, durable?* | [[Vault Integrity Audit]] |
-| **`/os-brainstorm`** | strategic **completeness** — vision vs reality, sequencing | *Is the OS real, and what makes it real next?* | this note |
+|                      | Reconciles                                                 | Asks                                           | Runner                    |
+| -------------------- | ---------------------------------------------------------- | ---------------------------------------------- | ------------------------- |
+| **`/vault-audit`**   | vault **health** — drift, orphans, links, schema, ritual   | *Is the record true, findable, durable?*       | [[Vault Integrity Audit]] |
+| **`/os-brainstorm`** | strategic **completeness** — vision vs reality, sequencing | *Is the OS real, and what makes it real next?* | this note                 |
 
 A vault can pass the audit (healthy, coherent, well-linked) and still fail the brainstorm (a rich library that has never run a real order). Keep the two questions separate.
 
