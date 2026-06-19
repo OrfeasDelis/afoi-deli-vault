@@ -33,6 +33,9 @@ tags:
 ## Priority 0.1 — Make the operational spine real (Root A — the tracer) `[#1 · NEXT SESSION via /goal]`
 *From the first `/os-brainstorm` ([[Brainstorm 2026-06-17]]). Orfeas decided the spine is **Root A — the operational everyday** ("Definitely A… do best what I currently do better — the everyday workflow"), and converged on one rule: **"I need to explain reality. Everything else is derived and adjusted to this."** This now leads; Materials (Root B, below) is the deferred fast-follow. **Refined 2026-06-18 ([[Session 2026-06-18]]): unit + method decided below; this is the #1 action for the next session, to be run via the `/goal` command.***
 
+> [!note] In progress — 2026-06-19 (this session)
+> `/goal` confirmed **not** a registered command → ran the **manual guided walk** (the planned fallback). Orfeas brought a pre-built **artifact reconstruction** (`Order Lifecycle — Ground-Truth Capture (Tracer v0.1)`, in `Downloads`) — the *artifact-reading half* done as homework. The **interview half** (the answers only Orfeas holds) is now underway, captured live in **[[Order Lifecycle — Ground-Truth Capture]]**: batches **A + B + C settled**, **D–G open** — **paused 2026-06-19, resume at batch D tomorrow**.
+
 > [!important] The move is an instance, not more knowledge
 > Root A does not advance by pouring in more knowledge (materials / schema / soul are all either Root B, already-guessed, or already-done). It advances by running **one real thing** through the vault. The vault is currently a *specification with no instance* — schemas + SOPs written without a real order in hand (audit **F7**; [[Database Master Schema]] CSVs hold zero rows).
 
