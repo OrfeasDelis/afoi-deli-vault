@@ -25,6 +25,7 @@ How a session runs depends on what it's for:
 
 ## Craft & infrastructure
 - [[Afoi Deli — The Realm]] — a star-map of the whole vault (the architecture, workflow & logic as a cosmos; interactive HTML + embedded SVG).
+- [[Afoi Deli — Operations Cockpit]] — a picture of the OS **interface** (Layer 4): "the bridge" where the ship is run day to day (interactive HTML; The Realm's register applied to a working product).
 - [[Obsidian Tips and Tricks]] — interconnecting knowledge and notes.
 - [[Obsidian Plugin Setup]] — Dataview, Templater, Obsidian Git.
 

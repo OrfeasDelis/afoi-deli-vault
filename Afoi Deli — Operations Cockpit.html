@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ΑΦΟΙ ΔΕΛΗ — Operations Cockpit · The Bridge</title>
+<style>
+  :root{
+    /* inherited from The Realm */
+    --void:#06060c; --void2:#0b0a14; --void3:#100c1a; --void4:#14101f;
+    --crimson:#ff2647; --crimson-deep:#b00d2c; --crimson-glow:#ff3a5e;
+    --cyan:#5ad6ff; --violet:#9a6cff; --gold:#e6c074; --mint:#59e6b0;
+    --ink:#ece7f3; --muted:#8b859c; --faint:#5b566b;
+    /* macro-state encoding */
+    --daily:#ff2647; --prwto:#e6c074; --deftero:#5ad6ff; --paradosi:#59e6b0;
+    --line:rgba(255,255,255,.07); --line2:rgba(154,108,255,.16);
+    --card:rgba(16,12,26,.62); --glass:rgba(10,9,18,.72);
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:'Helvetica Neue',Arial,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;height:100%;}
+  body{
+    background:var(--void); color:var(--ink); font-family:var(--sans);
+    font-size:14px; line-height:1.4; overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* ambient backdrop — restrained Realm haze under a product surface */
+  body::before{content:"";position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(60% 50% at 18% 8%, rgba(255,38,71,.10), transparent 60%),
+      radial-gradient(55% 55% at 92% 0%, rgba(90,214,255,.07), transparent 60%),
+      radial-gradient(80% 70% at 50% 120%, rgba(154,108,255,.10), transparent 60%),
+      radial-gradient(120% 90% at 50% 40%, #100c1a 0%, #0a0812 48%, #050409 100%);}
+  body::after{content:"";position:fixed;inset:0;z-index:-1;opacity:.04;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  ::-webkit-scrollbar{width:9px;height:9px;}
+  ::-webkit-scrollbar-thumb{background:rgba(154,108,255,.18);border-radius:10px;}
+  ::-webkit-scrollbar-thumb:hover{background:rgba(154,108,255,.32);}
+  ::-webkit-scrollbar-track{background:transparent;}
+
+  /* ===================== APP SHELL ===================== */
+  .app{display:grid;grid-template-columns:208px 1fr;height:100vh;}
+
+  /* ---------- left rail ---------- */
+  .rail{border-right:1px solid var(--line);display:flex;flex-direction:column;
+    padding:20px 14px 16px;background:linear-gradient(180deg,rgba(12,9,20,.5),rgba(6,6,12,.2));}
+  .brand{display:flex;align-items:baseline;gap:7px;padding:0 6px 2px;}
+  .brand .gr{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:.2em;color:#f4eef8;
+    text-shadow:0 0 18px rgba(255,38,71,.4);}
+  .brand .os{font-size:10px;letter-spacing:.34em;color:var(--crimson);font-weight:700;}
+  .brand-sub{padding:3px 6px 0;font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--faint);font-style:italic;font-family:var(--serif);}
+
+  nav{margin-top:24px;display:flex;flex-direction:column;gap:1px;}
+  nav .grp{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);
+    padding:14px 10px 6px;font-weight:600;}
+  .navitem{display:flex;align-items:center;gap:11px;padding:9px 11px;border-radius:9px;
+    color:var(--muted);font-size:13px;cursor:pointer;transition:.18s;position:relative;}
+  .navitem:hover{background:rgba(154,108,255,.08);color:var(--ink);}
+  .navitem.on{background:rgba(255,38,71,.1);color:#ffd9e0;
+    box-shadow:inset 0 0 0 1px rgba(255,38,71,.22);}
+  .navitem.on::before{content:"";position:absolute;left:-14px;top:50%;transform:translateY(-50%);
+    width:3px;height:18px;border-radius:3px;background:var(--crimson);box-shadow:0 0 10px var(--crimson);}
+  .navitem .ic{width:16px;text-align:center;font-size:13px;opacity:.85;}
+  .navitem .ct{margin-left:auto;font-size:10.5px;color:var(--faint);background:rgba(255,255,255,.05);
+    padding:1px 7px;border-radius:20px;}
+  .navitem.on .ct{color:#ffd9e0;background:rgba(255,38,71,.16);}
+
+  .layers{margin-top:auto;padding:14px 10px 4px;border-top:1px solid var(--line);}
+  .layers h5{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin:0 0 10px;}
+  .layer{display:flex;align-items:center;gap:9px;font-size:11px;color:var(--muted);margin:7px 0;}
+  .layer .ld{width:7px;height:7px;border-radius:50%;box-shadow:0 0 8px currentColor;}
+  .layer .lst{margin-left:auto;font-size:9px;letter-spacing:.05em;color:var(--faint);}
+  .on-live{color:var(--crimson);} .on-prog{color:var(--gold);}
+  .on-spec{color:var(--cyan);} .on-con{color:var(--faint);}
+
+  /* ---------- workspace ---------- */
+  .work{display:grid;grid-template-rows:auto auto 1fr auto;height:100vh;min-width:0;}
+
+  /* top bar */
+  .topbar{display:flex;align-items:center;gap:18px;padding:15px 26px;border-bottom:1px solid var(--line);}
+  .crumb{display:flex;align-items:baseline;gap:10px;}
+  .crumb h1{margin:0;font-family:var(--serif);font-size:20px;font-weight:600;color:#f6f0fa;letter-spacing:.02em;}
+  .crumb .tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--crimson);
+    border:1px solid rgba(255,38,71,.3);padding:3px 9px;border-radius:20px;}
+  .crumb .where{font-size:11px;color:var(--faint);font-style:italic;font-family:var(--serif);}
+  .search{margin-left:8px;flex:0 1 320px;display:flex;align-items:center;gap:9px;
+    background:rgba(10,9,18,.6);border:1px solid var(--line);border-radius:10px;padding:8px 13px;color:var(--faint);}
+  .search input{all:unset;flex:1;font-family:var(--sans);font-size:12.5px;color:var(--ink);}
+  .search .kbd{font-size:10px;border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--faint);}
+  .top-right{margin-left:auto;display:flex;align-items:center;gap:14px;}
+  .greet{text-align:right;}
+  .greet b{font-size:12.5px;color:var(--ink);} .greet small{display:block;font-size:10px;color:var(--faint);}
+  .bell{position:relative;font-size:16px;color:var(--muted);cursor:pointer;}
+  .bell .n{position:absolute;top:-6px;right:-8px;font-size:8.5px;background:var(--crimson);color:#fff;
+    border-radius:20px;padding:1px 5px;font-weight:700;box-shadow:0 0 8px rgba(255,38,71,.6);}
+  .orb{width:38px;height:38px;border-radius:50%;cursor:pointer;display:grid;place-items:center;
+    background:radial-gradient(circle at 38% 32%,#ffd0d8,#ff2647 52%,#7c0a20);
+    box-shadow:0 0 0 1px rgba(255,120,140,.4),0 0 22px rgba(255,38,71,.55);
+    animation:pulse 3.4s ease-in-out infinite;font-size:15px;}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 1px rgba(255,120,140,.4),0 0 18px rgba(255,38,71,.45);}
+    50%{box-shadow:0 0 0 1px rgba(255,160,175,.55),0 0 30px rgba(255,38,71,.7);}}
+
+  /* command line + legend */
+  .subbar{display:flex;align-items:center;gap:16px;padding:11px 26px;border-bottom:1px solid var(--line);}
+  .command{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--cyan);opacity:.9;}
+  .command b{color:#cfeaff;font-style:normal;font-weight:600;}
+  .legend{margin-left:auto;display:flex;gap:16px;font-size:10.5px;color:var(--muted);}
+  .legend span{display:flex;align-items:center;gap:5px;}
+
+  /* ===================== BOARD ===================== */
+  .content{display:grid;grid-template-columns:1fr 326px;min-height:0;}
+  .board{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:18px 20px;overflow:auto;min-width:0;}
+  .col{display:flex;flex-direction:column;min-width:0;}
+  .colhead{padding:0 4px 12px;border-bottom:1px solid var(--line);margin-bottom:13px;position:relative;}
+  .colhead::before{content:"";position:absolute;left:4px;top:2px;width:26px;height:3px;border-radius:3px;
+    background:var(--c);box-shadow:0 0 12px var(--c);}
+  .colhead .nm{display:flex;align-items:baseline;gap:8px;margin-top:12px;}
+  .colhead .code{font-family:var(--serif);font-size:14.5px;color:#f4eef8;letter-spacing:.04em;}
+  .colhead .cnt{font-size:11px;color:var(--c);font-weight:700;background:rgba(255,255,255,.04);
+    border-radius:20px;padding:1px 8px;}
+  .colhead .meta{display:flex;justify-content:space-between;margin-top:5px;font-size:10px;color:var(--faint);}
+  .colhead .desc{color:var(--muted);text-transform:uppercase;letter-spacing:.16em;}
+  .stack{display:flex;flex-direction:column;gap:11px;overflow:auto;padding:2px;}
+
+  .card{background:var(--card);border:1px solid var(--line);border-left:2px solid var(--c);
+    border-radius:11px;padding:12px 13px 11px;cursor:pointer;transition:.2s;position:relative;
+    backdrop-filter:blur(4px);}
+  .card:hover{transform:translateY(-2px);border-color:rgba(154,108,255,.4);
+    box-shadow:0 14px 34px rgba(0,0,0,.5),0 0 0 1px rgba(154,108,255,.12);}
+  .card .r1{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;}
+  .card .cl{font-family:var(--serif);font-size:14px;color:#f3eef8;letter-spacing:.02em;line-height:1.2;}
+  .card .pill{flex:0 0 auto;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;
+    color:var(--mint);background:rgba(89,230,176,.1);border:1px solid rgba(89,230,176,.28);}
+  .card .pill.warn{color:var(--gold);background:rgba(230,192,116,.1);border-color:rgba(230,192,116,.3);}
+  .card .pill.low{color:var(--crimson-glow);background:rgba(255,38,71,.1);border-color:rgba(255,38,71,.3);}
+  .card .sum{font-size:11.5px;color:var(--muted);margin:7px 0 9px;line-height:1.4;}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;}
+  .chip{font-size:10px;color:#cdc6dc;background:rgba(154,108,255,.1);border:1px solid rgba(154,108,255,.18);
+    padding:2px 8px;border-radius:6px;}
+  .chip.mat{color:var(--gold);background:rgba(230,192,116,.08);border-color:rgba(230,192,116,.2);}
+  .card .r3{display:flex;align-items:center;gap:8px;font-size:10.5px;color:var(--faint);}
+  .sig{display:flex;gap:7px;font-size:12px;}
+  .sig span{cursor:default;}
+  .who{margin-left:auto;display:flex;align-items:center;gap:6px;}
+  .av{width:19px;height:19px;border-radius:50%;display:grid;place-items:center;font-size:9px;font-weight:700;
+    color:#1a1320;background:linear-gradient(135deg,#e6c074,#caa24f);}
+  .av.b{background:linear-gradient(135deg,#9a6cff,#6e49c4);color:#f3eef8;}
+  .av.c{background:linear-gradient(135deg,#5ad6ff,#3a9ec4);color:#08131a;}
+  .progress{height:3px;border-radius:3px;background:rgba(255,255,255,.06);margin-top:10px;overflow:hidden;}
+  .progress i{display:block;height:100%;background:var(--c);box-shadow:0 0 8px var(--c);}
+  .stockflag{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);}
+
+  /* ===================== RIGHT RAIL ===================== */
+  .today{border-left:1px solid var(--line);padding:18px 18px 8px;overflow:auto;
+    background:linear-gradient(180deg,rgba(12,9,20,.35),transparent);}
+  .today h3{margin:0 0 13px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);}
+  .kpis{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:20px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 12px;}
+  .kpi .v{font-family:var(--serif);font-size:20px;color:#f4eef8;line-height:1;}
+  .kpi .v small{font-size:12px;color:var(--muted);}
+  .kpi .k{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:6px;}
+  .kpi.accent .v{color:var(--crimson-glow);} .kpi.good .v{color:var(--mint);}
+  .kpi .delta{font-size:10px;margin-top:3px;} .up{color:var(--mint);} .down{color:var(--crimson-glow);}
+
+  .gate{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px 13px;margin-bottom:10px;
+    position:relative;}
+  .gate.hot{border-color:rgba(255,38,71,.3);box-shadow:0 0 0 1px rgba(255,38,71,.08);}
+  .gate .gk{display:flex;align-items:center;gap:7px;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--crimson);margin-bottom:7px;}
+  .gate .gk .draftedby{margin-left:auto;color:var(--faint);letter-spacing:.06em;text-transform:none;font-style:italic;
+    font-family:var(--serif);font-size:10px;}
+  .gate .gt{font-size:12.5px;color:#eee7f4;line-height:1.45;margin-bottom:5px;}
+  .gate .gt b{color:#fff;}
+  .gate .gsub{font-size:10.5px;color:var(--muted);margin-bottom:11px;line-height:1.4;}
+  .gate .acts{display:flex;gap:7px;}
+  .gbtn{font-family:var(--sans);font-size:11px;letter-spacing:.02em;padding:6px 13px;border-radius:8px;cursor:pointer;
+    border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted);transition:.18s;}
+  .gbtn:hover{color:var(--ink);border-color:var(--line2);}
+  .gbtn.primary{color:#ffd9e0;border-color:rgba(255,38,71,.45);background:rgba(255,38,71,.1);}
+  .gbtn.primary:hover{box-shadow:0 0 16px rgba(255,38,71,.2);}
+
+  /* ===================== HERMES BAR ===================== */
+  .hermes{display:flex;align-items:center;gap:13px;padding:13px 24px;border-top:1px solid var(--line);
+    background:linear-gradient(180deg,transparent,rgba(255,38,71,.04));}
+  .hermes .horb{width:30px;height:30px;border-radius:50%;flex:0 0 auto;
+    background:radial-gradient(circle at 38% 32%,#ffd0d8,#ff2647 55%,#7c0a20);
+    box-shadow:0 0 16px rgba(255,38,71,.5);display:grid;place-items:center;font-size:13px;}
+  .hermes .field{flex:1;display:flex;align-items:center;gap:10px;background:rgba(10,9,18,.6);
+    border:1px solid var(--line);border-radius:11px;padding:11px 15px;color:var(--faint);font-size:13px;}
+  .hermes .field .ph{font-style:italic;font-family:var(--serif);}
+  .qchips{display:flex;gap:7px;}
+  .qchip{font-size:10.5px;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:5px 11px;
+    cursor:pointer;transition:.18s;white-space:nowrap;}
+  .qchip:hover{color:var(--cyan);border-color:rgba(90,214,255,.4);}
+
+  /* ribbon */
+  .ribbon{position:fixed;bottom:0;left:208px;right:0;z-index:7;display:flex;justify-content:center;
+    pointer-events:none;}
+  .ribbon span{transform:translateY(-58px);background:rgba(8,7,15,.82);border:1px solid var(--line2);
+    border-radius:20px;padding:5px 15px;font-size:10px;color:var(--muted);letter-spacing:.04em;
+    backdrop-filter:blur(8px);font-style:italic;font-family:var(--serif);}
+  .ribbon b{color:var(--gold);font-style:normal;}
+
+  /* ===================== DRAWER ===================== */
+  .scrim{position:fixed;inset:0;background:rgba(3,3,8,.55);opacity:0;pointer-events:none;transition:.4s;z-index:20;
+    backdrop-filter:blur(2px);}
+  .scrim.open{opacity:1;pointer-events:auto;}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:540px;max-width:94vw;z-index:21;
+    background:linear-gradient(180deg,rgba(16,11,26,.97),rgba(7,6,13,.99));
+    border-left:1px solid var(--line2);box-shadow:-30px 0 80px rgba(0,0,0,.6);
+    transform:translateX(105%);transition:transform .5s cubic-bezier(.22,1,.36,1);
+    overflow-y:auto;padding:30px 32px 40px;}
+  .drawer.open{transform:translateX(0);}
+  .drawer .x{position:absolute;top:20px;right:22px;font-size:22px;color:var(--muted);cursor:pointer;line-height:1;}
+  .drawer .x:hover{color:var(--crimson);}
+  .dr-badge{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--crimson);border:1px solid rgba(255,38,71,.3);border-radius:20px;padding:4px 11px;margin-bottom:14px;}
+  .drawer h2{margin:0 0 3px;font-family:var(--serif);font-size:25px;color:#f6f0fa;font-weight:600;}
+  .drawer .dmeta{font-size:12px;color:var(--muted);margin-bottom:4px;}
+  .drawer .dmeta b{color:var(--gold);font-weight:600;}
+  .dr-note{font-size:12px;font-style:italic;font-family:var(--serif);color:var(--cyan);margin:10px 0 22px;line-height:1.5;}
+
+  .sec{margin-bottom:24px;}
+  .sec h4{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin:0 0 12px;}
+
+  .lines{border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .lrow{display:grid;grid-template-columns:1fr auto auto;gap:10px;padding:9px 12px;font-size:12px;
+    border-bottom:1px solid var(--line);align-items:center;}
+  .lrow:last-child{border-bottom:0;}
+  .lrow .lc{color:#e6e0f0;} .lrow .lc small{display:block;color:var(--faint);font-size:10px;margin-top:2px;}
+  .lrow .lq{color:var(--muted);font-size:11px;text-align:right;}
+  .lrow .ldest{font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:6px;}
+  .d-client{color:var(--mint);background:rgba(89,230,176,.1);}
+  .d-sample{color:var(--cyan);background:rgba(90,214,255,.1);}
+  .lrow.head{background:rgba(255,255,255,.03);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);}
+
+  /* margin chain */
+  .chain{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:4px;}
+  .cnode{flex:0 0 auto;min-width:78px;background:var(--card);border:1px solid var(--line);border-radius:9px;
+    padding:9px 11px;text-align:center;}
+  .cnode .ck{font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);}
+  .cnode .cv{font-family:var(--serif);font-size:16px;color:#f0eaf8;margin-top:3px;}
+  .cnode.sell{border-color:rgba(89,230,176,.4);} .cnode.sell .cv{color:var(--mint);}
+  .cnode.net{border-color:rgba(255,38,71,.3);} .cnode.net .cv{color:var(--crimson-glow);}
+  .carr{flex:0 0 auto;display:grid;place-items:center;padding:0 3px;color:var(--faint);font-size:11px;min-width:46px;}
+  .carr small{display:block;font-size:8.5px;color:var(--muted);text-align:center;line-height:1.2;}
+
+  /* kouvas funnel */
+  .funnel{display:flex;align-items:center;gap:0;}
+  .fstep{flex:1;text-align:center;position:relative;}
+  .fstep .fdot{width:16px;height:16px;border-radius:50%;margin:0 auto 7px;border:2px solid var(--faint);
+    background:var(--void);display:grid;place-items:center;font-size:9px;color:var(--void);}
+  .fstep.done .fdot{border-color:var(--mint);background:var(--mint);color:#04140d;}
+  .fstep.now .fdot{border-color:var(--gold);box-shadow:0 0 12px rgba(230,192,116,.5);animation:pulse 2.6s infinite;}
+  .fstep .fl{font-size:9.5px;color:var(--muted);letter-spacing:.02em;line-height:1.3;}
+  .fstep .fd{font-size:9px;color:var(--faint);margin-top:3px;}
+  .fstep.done .fl{color:#dcd6e8;}
+  .fbar{position:absolute;top:7px;left:50%;width:100%;height:2px;background:var(--faint);z-index:-1;}
+  .fstep.done .fbar{background:var(--mint);}
+
+  /* payment gate */
+  .pay{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 15px;}
+  .pay .ph{display:flex;justify-content:space-between;font-size:12px;color:#e6e0f0;margin-bottom:10px;}
+  .pay .ph b{color:var(--mint);}
+  .paybar{height:9px;border-radius:6px;background:rgba(255,255,255,.06);overflow:hidden;display:flex;}
+  .paybar i{display:block;height:100%;}
+  .paybar .got{background:linear-gradient(90deg,#59e6b0,#3fbf90);}
+  .paybar .gated{background:repeating-linear-gradient(45deg,rgba(255,38,71,.25),rgba(255,38,71,.25) 5px,transparent 5px,transparent 10px);}
+  .pay .pn{font-size:10.5px;color:var(--muted);margin-top:10px;line-height:1.5;}
+  .pay .pn b{color:var(--crimson-glow);}
+
+  .megasoft{display:flex;align-items:center;gap:9px;margin-top:14px;font-size:11px;color:var(--muted);
+    border:1px dashed var(--line2);border-radius:9px;padding:9px 12px;}
+  .megasoft .mc{font-family:monospace;color:var(--cyan);background:rgba(90,214,255,.08);padding:2px 7px;border-radius:5px;}
+
+  @media (max-width:1180px){.content{grid-template-columns:1fr;}.today{display:none;}}
+  @media (max-width:920px){.rail{display:none;}.app{grid-template-columns:1fr;}.ribbon{left:0;}
+    .board{grid-template-columns:repeat(2,1fr);} }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;}}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ===================== LEFT RAIL ===================== -->
+  <aside class="rail">
+    <div class="brand"><span class="gr">ΑΦΟΙ ΔΕΛΗ</span><span class="os">OS</span></div>
+    <div class="brand-sub">the bridge</div>
+
+    <nav>
+      <div class="grp">Run the ship</div>
+      <div class="navitem on"><span class="ic">⬡</span> Operations <span class="ct">47</span></div>
+      <div class="navitem"><span class="ic">▤</span> Orders <span class="ct">312</span></div>
+      <div class="navitem"><span class="ic">⛁</span> ΚΟΥΒΑΣ <span class="ct">108</span></div>
+      <div class="navitem"><span class="ic">◷</span> Deliveries</div>
+      <div class="grp">Know the ship</div>
+      <div class="navitem"><span class="ic">▦</span> Suppliers <span class="ct">14</span></div>
+      <div class="navitem"><span class="ic">◈</span> Materials</div>
+      <div class="navitem"><span class="ic">▲</span> Finance</div>
+      <div class="navitem"><span class="ic">◆</span> Projects</div>
+      <div class="navitem"><span class="ic">✦</span> Hermes</div>
+    </nav>
+
+    <div class="layers">
+      <h5>OS layers</h5>
+      <div class="layer"><span class="ld on-live">●</span> Knowledge <span class="lst on-live">live</span></div>
+      <div class="layer"><span class="ld on-prog">●</span> Data <span class="lst on-prog">building</span></div>
+      <div class="layer"><span class="ld on-prog">●</span> Worker <span class="lst on-prog">building</span></div>
+      <div class="layer"><span class="ld on-spec">●</span> Interface <span class="lst on-spec">this view</span></div>
+      <div class="layer"><span class="ld on-con">●</span> Agent <span class="lst on-con">spec</span></div>
+    </div>
+  </aside>
+
+  <!-- ===================== WORKSPACE ===================== -->
+  <div class="work">
+
+    <!-- top bar -->
+    <header class="topbar">
+      <div class="crumb">
+        <h1>Operations</h1>
+        <span class="tag">Cockpit</span>
+        <span class="where">/ the everyday</span>
+      </div>
+      <div class="search">
+        <span>⌕</span><input placeholder="Search orders, clients, suppliers, SKUs…" />
+        <span class="kbd">⌘K</span>
+      </div>
+      <div class="top-right">
+        <div class="greet"><b>Good evening, Orfeas</b><small>Sat · 20 Jun 2026 · 21:48</small></div>
+        <div class="bell">◔<span class="n">5</span></div>
+        <div class="orb" title="Ask Hermes">✦</div>
+      </div>
+    </header>
+
+    <!-- command line + legend -->
+    <div class="subbar">
+      <div class="command"><b>Today —</b> what needs ordering, confirming, or releasing?</div>
+      <div class="legend">
+        <span>⚠ proforma mismatch</span>
+        <span>⏳ sales-hold</span>
+        <span>💧 payment-gated</span>
+        <span>☄ the tracer</span>
+        <span>✓ paid</span>
+      </div>
+    </div>
+
+    <!-- board + right rail -->
+    <div class="content">
+
+      <!-- ===== macro-state board ===== -->
+      <section class="board">
+
+        <!-- 00.DAILY -->
+        <div class="col" style="--c:var(--daily)">
+          <div class="colhead">
+            <div class="nm"><span class="code">00 · DAILY</span><span class="cnt">9</span></div>
+            <div class="meta"><span class="desc">actionable now</span><span>€84k</span></div>
+          </div>
+          <div class="stack">
+
+            <div class="card" onclick="openDrawer()">
+              <div class="r1"><div class="cl">ΣΚΙΝΤΖΗ ΕΛΠΙΔΑ</div><div class="pill">31%</div></div>
+              <div class="sum">3 lines to order · least-advanced line at 0</div>
+              <div class="chips"><span class="chip">Kronos</span><span class="chip mat">Pierre Vive</span><span class="chip">Cielo</span></div>
+              <div class="r3">
+                <div class="sig"><span title="The tracer — first ground-truth order">☄</span></div>
+                <span>deposit 40% in</span>
+                <div class="who"><span class="av" title="Salesperson">ΕΛ</span></div>
+              </div>
+              <div class="progress"><i style="width:18%"></i></div>
+            </div>
+
+            <div class="card">
+              <div class="r1"><div class="cl">ΠΑΠΑΔΟΠΟΥΛΟΣ Α.</div><div class="pill">27%</div></div>
+              <div class="sum">PO drafted · ready for orders@ desk</div>
+              <div class="chips"><span class="chip">Fantini</span><span class="chip">Mutina</span></div>
+              <div class="r3">
+                <div class="sig"><span title="Awaiting PO send">▣</span></div>
+                <span>Dimitris / Vicky</span>
+                <div class="who"><span class="av b">ΝΤ</span></div>
+              </div>
+              <div class="progress"><i style="width:12%"></i></div>
+            </div>
+
+            <div class="card">
+              <div class="r1"><div class="cl stockflag">Έκθεση · Περιστέρι</div><div class="pill warn">sample</div></div>
+              <div class="sum">Showroom samples — free from supplier</div>
+              <div class="chips"><span class="chip mat">Kronos decors</span></div>
+              <div class="r3">
+                <div class="sig"><span title="No client — destination = showroom">◌</span></div>
+                <span>destination · showroom</span>
+                <div class="who"><span class="av c">OΔ</span></div>
+              </div>
+              <div class="progress"><i style="width:8%"></i></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 01.ΠΡΩΤΟ -->
+        <div class="col" style="--c:var(--prwto)">
+          <div class="colhead">
+            <div class="nm"><span class="code">01 · ΠΡΩΤΟ</span><span class="cnt">6</span></div>
+            <div class="meta"><span class="desc">held · ΑΝΑΜΟΝΗ</span><span>€61k</span></div>
+          </div>
+          <div class="stack">
+
+            <div class="card">
+              <div class="r1"><div class="cl">GOLDEN HALL</div><div class="pill">34%</div></div>
+              <div class="sum">Sales-hold — client to confirm slab finish</div>
+              <div class="chips"><span class="chip">Kronos</span><span class="chip mat">large slab</span></div>
+              <div class="r3">
+                <div class="sig"><span title="Sales-hold — blocks 0→1">⏳</span></div>
+                <span>owner · sales</span>
+                <div class="who"><span class="av b">ΕΚ</span></div>
+              </div>
+              <div class="progress"><i style="width:26%;background:var(--prwto)"></i></div>
+            </div>
+
+            <div class="card">
+              <div class="r1"><div class="cl">ΒΑΣΙΛΕΙΟΥ Κ/ΚΗ</div><div class="pill">29%</div></div>
+              <div class="sum">Awaiting site measurements before order</div>
+              <div class="chips"><span class="chip">Cielo</span><span class="chip">Fantini</span></div>
+              <div class="r3">
+                <div class="sig"><span title="Sales-hold">⏳</span></div>
+                <span>held 3 days</span>
+                <div class="who"><span class="av">ΕΛ</span></div>
+              </div>
+              <div class="progress"><i style="width:22%;background:var(--prwto)"></i></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 02.ΔΕΥΤΕΡΟ -->
+        <div class="col" style="--c:var(--deftero)">
+          <div class="colhead">
+            <div class="nm"><span class="code">02 · ΔΕΥΤΕΡΟ</span><span class="cnt">21</span></div>
+            <div class="meta"><span class="desc">on order</span><span>€118k</span></div>
+          </div>
+          <div class="stack">
+
+            <div class="card">
+              <div class="r1"><div class="cl">ΔΗΜΗΤΡΙΟΥ Μ.</div><div class="pill low">22%↓</div></div>
+              <div class="sum">Proforma price ≠ agreed on 2 codes</div>
+              <div class="chips"><span class="chip">Kronos</span></div>
+              <div class="r3">
+                <div class="sig"><span title="Proforma mismatch — margin at risk">⚠</span></div>
+                <span>renegotiate</span>
+                <div class="who"><span class="av b">ΝΤ</span></div>
+              </div>
+              <div class="progress"><i style="width:54%;background:var(--deftero)"></i></div>
+            </div>
+
+            <div class="card">
+              <div class="r1"><div class="cl">ΛΑΜΠΡΟΥ ΟΕ</div><div class="pill">30%</div></div>
+              <div class="sum">Proforma confirmed · awaiting loading</div>
+              <div class="chips"><span class="chip">Cielo</span><span class="chip">Mutina</span></div>
+              <div class="r3">
+                <div class="sig"><span title="Confirmed">✓</span></div>
+                <span>ELXIS · DTS set</span>
+                <div class="who"><span class="av c">ΒΚ</span></div>
+              </div>
+              <div class="progress"><i style="width:72%;background:var(--deftero)"></i></div>
+            </div>
+
+            <div class="card">
+              <div class="r1"><div class="cl stockflag">Στοκ · Φαουσέτες</div><div class="pill warn">stock</div></div>
+              <div class="sum">Stock procurement — no client · own credit terms</div>
+              <div class="chips"><span class="chip">Fantini</span></div>
+              <div class="r3">
+                <div class="sig"><span title="Stock — null client">⛁</span></div>
+                <span>on order</span>
+                <div class="who"><span class="av">ΔΗ</span></div>
+              </div>
+              <div class="progress"><i style="width:48%;background:var(--deftero)"></i></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 03.ΠΡΟΣ ΠΑΡΑΔΟΣΗ -->
+        <div class="col" style="--c:var(--paradosi)">
+          <div class="colhead">
+            <div class="nm"><span class="code">03 · ΠΡΟΣ ΠΑΡΑΔΟΣΗ</span><span class="cnt">11</span></div>
+            <div class="meta"><span class="desc">ready</span><span>€49k</span></div>
+          </div>
+          <div class="stack">
+
+            <div class="card">
+              <div class="r1"><div class="cl">ΚΟΥΡΗΣ ΑΕ</div><div class="pill warn">hold</div></div>
+              <div class="sum">All received — balance gates release</div>
+              <div class="chips"><span class="chip">Kronos</span><span class="chip">Cielo</span></div>
+              <div class="r3">
+                <div class="sig"><span title="Payment-gated — paid &lt; owed">💧</span></div>
+                <span>€7.4k due</span>
+                <div class="who"><span class="av b">ΕΚ</span></div>
+              </div>
+              <div class="progress"><i style="width:88%;background:var(--paradosi)"></i></div>
+            </div>
+
+            <div class="card">
+              <div class="r1"><div class="cl">ΑΝΤΩΝΙΟΥ Κ.</div><div class="pill">33%</div></div>
+              <div class="sum">Fully paid · delivery Mon 22 Jun</div>
+              <div class="chips"><span class="chip">Mutina</span><span class="chip">Fantini</span></div>
+              <div class="r3">
+                <div class="sig"><span title="Fully paid">✓</span><span title="Rebate due to architect on full payment">◆</span></div>
+                <span>rebate · architect</span>
+                <div class="who"><span class="av c">ΒΚ</span></div>
+              </div>
+              <div class="progress"><i style="width:100%;background:var(--paradosi)"></i></div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ===== right rail ===== -->
+      <aside class="today">
+        <h3>Today</h3>
+        <div class="kpis">
+          <div class="kpi"><div class="v">47</div><div class="k">orders in flight</div><div class="delta up">▲ 4 today</div></div>
+          <div class="kpi"><div class="v"><small>€</small>312k</div><div class="k">value in flight</div><div class="delta">—</div></div>
+          <div class="kpi good"><div class="v">29%</div><div class="k">avg gross margin</div><div class="delta up">▲ 1.2pt</div></div>
+          <div class="kpi accent"><div class="v"><small>€</small>58k</div><div class="k">payables · 7 days</div><div class="delta down">3 suppliers</div></div>
+        </div>
+
+        <h3>Needs your eye <span style="color:var(--crimson)">· 5</span></h3>
+
+        <div class="gate hot">
+          <div class="gk">⚠ Client communication <span class="draftedby">Hermes drafted</span></div>
+          <div class="gt">Delay notice → <b>ΔΗΜΗΤΡΙΟΥ Μ.</b></div>
+          <div class="gsub">Proforma availability slipped 8 days. Draft holds the under-promise tone — your approval before it sends.</div>
+          <div class="acts"><span class="gbtn primary">Review draft</span><span class="gbtn">Edit</span></div>
+        </div>
+
+        <div class="gate hot">
+          <div class="gk">⚠ Margin protection</div>
+          <div class="gt">Proforma <b>#…0698</b> — price ≠ agreed</div>
+          <div class="gsub">2 codes above agreed net. Renegotiate or re-issue before confirming.</div>
+          <div class="acts"><span class="gbtn primary">Open proforma</span><span class="gbtn">Accept variance</span></div>
+        </div>
+
+        <div class="gate">
+          <div class="gk">▣ Orders desk <span class="draftedby">Hermes drafted</span></div>
+          <div class="gt">PO ready → <b>orders@afoideli.gr</b></div>
+          <div class="gsub">Kronos · Pierre Vive ×3 lines · routed to Dimitris / Vicky.</div>
+          <div class="acts"><span class="gbtn primary">Send</span><span class="gbtn">Review</span></div>
+        </div>
+
+        <div class="gate">
+          <div class="gk">▲ Price change</div>
+          <div class="gt">Quote sell-price <b>+4%</b> on slab line</div>
+          <div class="gsub">Against margin policy — approval gate (CLAUDE §4).</div>
+          <div class="acts"><span class="gbtn primary">Approve</span><span class="gbtn">Decline</span></div>
+        </div>
+
+        <div class="gate">
+          <div class="gk">💧 Release</div>
+          <div class="gt">Hold delivery — <b>ΚΟΥΡΗΣ ΑΕ</b></div>
+          <div class="gsub">€7.4k balance due before release. Paid ≥ delivered invariant.</div>
+          <div class="acts"><span class="gbtn">Request payment</span></div>
+        </div>
+      </aside>
+
+    </div><!-- /content -->
+
+    <!-- ===== Hermes command bar ===== -->
+    <footer class="hermes">
+      <div class="horb">✦</div>
+      <div class="field"><span class="ph">Ask Hermes — draft a PO, verify a proforma, find an order, build a quote…</span></div>
+      <div class="qchips">
+        <span class="qchip">Check proforma</span>
+        <span class="qchip">Draft delay notice</span>
+        <span class="qchip">Today's POs</span>
+        <span class="qchip">Margin · ΣΚΙΝΤΖΗ</span>
+      </div>
+    </footer>
+
+  </div><!-- /work -->
+</div><!-- /app -->
+
+<!-- status-honest ribbon -->
+<div class="ribbon"><span><b>Vision mock</b> — a picture of Layer 4 (the interface). Illustrative data; the OS data layer holds 0 rows today. Buy-side figures are demo (CLAUDE §4).</span></div>
+
+<!-- ===================== ORDER DRAWER ===================== -->
+<div class="scrim" id="scrim" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <span class="x" onclick="closeDrawer()">✕</span>
+  <div class="dr-badge">☄ The tracer · 00.DAILY</div>
+  <h2>ΣΚΙΝΤΖΗ ΕΛΠΙΔΑ</h2>
+  <div class="dmeta">Order ΣΚΙΝΤΖΗ · spine of the ground-truth capture · salesperson <b>Ελένη</b></div>
+  <div class="dr-note">“Explain reality first; everything else is derived and adjusted to this.” The first real order walked end-to-end — quote → order → procurement → loading → delivery → payable.</div>
+
+  <!-- lines -->
+  <div class="sec">
+    <h4>Order lines</h4>
+    <div class="lines">
+      <div class="lrow head"><span>Code · item</span><span>Qty</span><span>Dest</span></div>
+      <div class="lrow"><span class="lc">PV-Noble 120×280<small>Kronos · Pierre Vive — porcelain slab</small></span><span class="lq">36 m²</span><span class="ldest d-client">client</span></div>
+      <div class="lrow"><span class="lc">Catino basin<small>Cielo — sanitary ceramic</small></span><span class="lq">2 pc</span><span class="ldest d-client">client</span></div>
+      <div class="lrow"><span class="lc">Mixer set<small>Fantini — faucet · coordinated satellite</small></span><span class="lq">2 pc</span><span class="ldest d-client">client</span></div>
+      <div class="lrow"><span class="lc">Decor sample<small>Kronos — free showroom sample</small></span><span class="lq">1 pc</span><span class="ldest d-sample">sample</span></div>
+    </div>
+  </div>
+
+  <!-- margin chain -->
+  <div class="sec">
+    <h4>Margin chain — list → net → landed → sell <span style="color:var(--faint)">· illustrative €/m²</span></h4>
+    <div class="chain">
+      <div class="cnode"><div class="ck">List</div><div class="cv">132</div></div>
+      <div class="carr">→<small>cascade ×0.30</small></div>
+      <div class="cnode net"><div class="ck">Net cost</div><div class="cv">40</div></div>
+      <div class="carr">→<small>+transport +pallet</small></div>
+      <div class="cnode"><div class="ck">Landed</div><div class="cv">46</div></div>
+      <div class="carr">→<small>+ target margin</small></div>
+      <div class="cnode sell"><div class="ck">Sell</div><div class="cv">67</div></div>
+      <div class="carr">=<small>gross</small></div>
+      <div class="cnode sell"><div class="ck">Margin</div><div class="cv">31%</div></div>
+    </div>
+  </div>
+
+  <!-- kouvas funnel -->
+  <div class="sec">
+    <h4>ΚΟΥΒΑΣ — procurement funnel (supplier subsheet)</h4>
+    <div class="funnel">
+      <div class="fstep done"><div class="fbar"></div><div class="fdot">✓</div><div class="fl">order_sent</div><div class="fd">18 Jun</div></div>
+      <div class="fstep done"><div class="fbar"></div><div class="fdot">✓</div><div class="fl">proforma_received</div><div class="fd">19 Jun</div></div>
+      <div class="fstep now"><div class="fbar"></div><div class="fdot"></div><div class="fl">proforma_confirmed</div><div class="fd">verifying</div></div>
+      <div class="fstep"><div class="fbar"></div><div class="fdot"></div><div class="fl">released_for_loading</div><div class="fd">—</div></div>
+    </div>
+  </div>
+
+  <!-- payment gate -->
+  <div class="sec">
+    <h4>Payment gate</h4>
+    <div class="pay">
+      <div class="ph"><span>Deposit <b>40%</b> received</span><span>balance gates delivery</span></div>
+      <div class="paybar"><i class="got" style="width:40%"></i><i class="gated" style="width:60%"></i></div>
+      <div class="pn">Merchant-sized deposit covers the supplier prepayment and stays ahead of partial deliveries. Invariant: <b>paid ≥ delivered</b>. Full payment also fires the architect rebate.</div>
+    </div>
+    <div class="megasoft">⛁ AR mirror · MEGASOFT client code <span class="mc">SK-1042</span> — invoices, payments &amp; delivery notes reconcile here.</div>
+  </div>
+
+</div>
+
+<script>
+  const scrim = document.getElementById('scrim');
+  const drawer = document.getElementById('drawer');
+  function openDrawer(){ scrim.classList.add('open'); drawer.classList.add('open'); }
+  function closeDrawer(){ scrim.classList.remove('open'); drawer.classList.remove('open'); }
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeDrawer(); });
+</script>
+</body>
+</html>

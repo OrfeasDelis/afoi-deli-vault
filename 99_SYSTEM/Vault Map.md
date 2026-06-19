@@ -49,3 +49,4 @@ Start with the dashboards ([[Capture Backlog]]) and [[Vault State Memory]]. Don'
 
 > [!tip] See it as a cosmos
 > For a visual overview of the whole vault — folders, the order workflow, and the 5-layer OS as a dark star-map — see [[Afoi Deli — The Realm]]. This table is the canonical *index*; The Realm is its *picture*.
+> And for a picture of the **interface itself** (Layer 4) — the operations cockpit / "the bridge" where the ship is run — see [[Afoi Deli — Operations Cockpit]].
