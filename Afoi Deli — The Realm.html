@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ΑΦΟΙ ΔΕΛΗ — The Realm</title>
+<style>
+  :root{
+    --void:#06060c; --void2:#0b0a14; --void3:#100c1a;
+    --crimson:#ff2647; --crimson-deep:#b00d2c; --crimson-glow:#ff3a5e;
+    --cyan:#5ad6ff; --violet:#9a6cff; --gold:#e6c074;
+    --ink:#ece7f3; --muted:#8b859c; --faint:#5b566b;
+    --live:#ff2647; --progress:#e6c074; --spec:#5ad6ff; --concept:#6e6886;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;height:100%;background:var(--void);overflow:hidden;
+    font-family:'Helvetica Neue',Arial,system-ui,sans-serif;color:var(--ink);}
+  #stage{position:fixed;inset:0;background:
+     radial-gradient(120% 90% at 50% 42%, #14101f 0%, #0a0812 45%, #050409 100%);}
+  svg#map{position:absolute;inset:0;width:100%;height:100%;display:block;}
+
+  /* ---------- typography / chrome ---------- */
+  header#title{position:absolute;top:26px;left:50%;transform:translateX(-50%);
+    text-align:center;pointer-events:none;z-index:5;}
+  header#title h1{margin:0;font-family:Georgia,'Times New Roman',serif;
+    font-size:34px;font-weight:600;letter-spacing:.42em;color:#f4eef8;
+    text-shadow:0 0 22px rgba(255,38,71,.55),0 0 60px rgba(255,38,71,.25);}
+  header#title .sub{margin-top:8px;font-size:11px;letter-spacing:.34em;
+    text-transform:uppercase;color:var(--muted);font-style:italic;font-family:Georgia,serif;}
+
+  .panelbox{position:absolute;background:rgba(10,9,18,.72);
+    border:1px solid rgba(154,108,255,.18);border-radius:14px;
+    backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);
+    box-shadow:0 18px 50px rgba(0,0,0,.6);z-index:6;}
+
+  /* legend */
+  #legend{top:24px;left:24px;padding:14px 16px;width:194px;}
+  #legend h4,#osconsole h4{margin:0 0 10px;font-size:10px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--faint);font-weight:600;}
+  .lg{display:flex;align-items:center;gap:9px;margin:7px 0;font-size:12px;color:var(--ink);}
+  .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto;box-shadow:0 0 10px currentColor;}
+  .lg small{color:var(--muted);font-size:10.5px;}
+
+  /* OS console */
+  #osconsole{bottom:24px;left:24px;padding:14px 16px 16px;width:330px;
+    transition:opacity .4s, transform .4s;}
+  #osconsole.dim{opacity:.42;}
+  .layer{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:12px;}
+  .layer .ld{width:9px;height:9px;border-radius:50%;box-shadow:0 0 9px currentColor;flex:0 0 auto;}
+  .layer .nm{color:var(--ink);min-width:96px;font-weight:600;letter-spacing:.02em;}
+  .layer .st{color:var(--muted);font-size:10.5px;letter-spacing:.04em;}
+  #osconsole .principle{margin-top:12px;padding-top:11px;border-top:1px solid rgba(255,255,255,.07);
+    font-size:10.5px;font-style:italic;color:var(--faint);line-height:1.5;font-family:Georgia,serif;}
+
+  /* quest banner */
+  #quest{bottom:28px;left:50%;transform:translateX(-50%);padding:11px 22px;
+    border-radius:30px;border:1px solid rgba(255,38,71,.35);
+    background:rgba(28,8,16,.62);font-size:12px;letter-spacing:.05em;z-index:6;
+    display:flex;align-items:center;gap:11px;}
+  #quest .star{color:var(--crimson);text-shadow:0 0 12px var(--crimson);font-size:15px;}
+  #quest b{color:#ffd9e0;font-weight:600;}
+  #quest small{color:var(--muted);}
+
+  /* controls */
+  #controls{top:24px;right:24px;display:flex;flex-direction:column;gap:9px;z-index:6;align-items:flex-end;}
+  .btn{font-family:inherit;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);background:rgba(12,10,20,.72);border:1px solid rgba(154,108,255,.2);
+    padding:9px 13px;border-radius:9px;cursor:pointer;transition:.25s;backdrop-filter:blur(6px);}
+  .btn:hover{color:var(--ink);border-color:rgba(90,214,255,.5);box-shadow:0 0 18px rgba(90,214,255,.18);}
+  .btn.on{color:#ffd9e0;border-color:rgba(255,38,71,.5);box-shadow:0 0 18px rgba(255,38,71,.2);}
+
+  /* tooltip */
+  #tooltip{position:absolute;z-index:8;pointer-events:none;opacity:0;transform:translateY(4px);
+    transition:opacity .18s,transform .18s;max-width:230px;padding:9px 12px;border-radius:10px;
+    background:rgba(8,7,15,.92);border:1px solid rgba(154,108,255,.3);box-shadow:0 8px 26px rgba(0,0,0,.6);}
+  #tooltip .tt-n{font-size:12.5px;font-weight:600;letter-spacing:.06em;color:#f4eef8;}
+  #tooltip .tt-t{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.45;font-style:italic;font-family:Georgia,serif;}
+
+  /* detail panel */
+  #panel{top:0;right:0;height:100%;width:392px;max-width:92vw;padding:34px 30px 30px;
+    border-radius:0;border-left:1px solid rgba(154,108,255,.22);
+    background:linear-gradient(180deg,rgba(14,9,22,.95),rgba(7,6,13,.97));
+    transform:translateX(105%);transition:transform .5s cubic-bezier(.22,1,.36,1);
+    z-index:9;overflow-y:auto;backdrop-filter:blur(14px);}
+  #panel.open{transform:translateX(0);}
+  #panel .close{position:absolute;top:18px;right:20px;font-size:20px;color:var(--muted);
+    cursor:pointer;line-height:1;transition:.2s;}
+  #panel .close:hover{color:var(--crimson);}
+  #panel .badge{display:inline-block;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;
+    padding:4px 11px;border-radius:20px;margin-bottom:14px;font-weight:600;}
+  #panel h2{margin:0 0 4px;font-family:Georgia,serif;font-size:25px;font-weight:600;color:#f6f0fa;line-height:1.12;}
+  #panel .gk{font-size:13px;color:var(--gold);letter-spacing:.16em;margin-bottom:14px;font-family:Georgia,serif;}
+  #panel .tl{font-size:13px;font-style:italic;color:var(--cyan);margin:0 0 18px;line-height:1.5;font-family:Georgia,serif;}
+  #panel .body{font-size:13.5px;line-height:1.72;color:#d9d3e6;}
+  #panel .body b{color:#fff;font-weight:600;}
+  #panel .quest-line{margin-top:16px;padding:13px 15px;border-radius:11px;
+    background:rgba(255,38,71,.09);border:1px solid rgba(255,38,71,.3);
+    font-size:12.5px;line-height:1.6;color:#ffd9e0;}
+  #panel .quest-line .qk{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--crimson);display:block;margin-bottom:5px;}
+  #panel .notes{margin-top:20px;}
+  #panel .notes h5{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);margin:0 0 10px;}
+  #panel .chip{display:inline-block;font-size:11px;color:var(--muted);background:rgba(154,108,255,.1);
+    border:1px solid rgba(154,108,255,.18);padding:5px 10px;border-radius:7px;margin:0 6px 7px 0;}
+  #panel .ppl{margin-top:16px;font-size:12px;line-height:1.9;color:#cdc6dc;}
+  #panel .ppl b{color:var(--gold);font-weight:600;}
+
+  .hint{position:absolute;bottom:28px;right:28px;font-size:10.5px;color:var(--faint);
+    letter-spacing:.14em;z-index:5;font-style:italic;font-family:Georgia,serif;}
+
+  @media (max-width:760px){
+    header#title h1{font-size:22px;letter-spacing:.3em;}
+    #legend,#osconsole{display:none;}
+    #panel{width:100%;}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;}}
+</style>
+</head>
+<body>
+<div id="stage">
+  <svg id="map" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-label="Afoi Deli — The Realm, a star map of the vault">
+    <defs>
+      <radialGradient id="heartGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffd0d8"/>
+        <stop offset="22%" stop-color="#ff5a78"/>
+        <stop offset="55%" stop-color="#ff2647"/>
+        <stop offset="100%" stop-color="#7c0a20"/>
+      </radialGradient>
+      <radialGradient id="heartHalo" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="rgba(255,40,72,.55)"/>
+        <stop offset="40%" stop-color="rgba(255,40,72,.22)"/>
+        <stop offset="100%" stop-color="rgba(255,40,72,0)"/>
+      </radialGradient>
+      <radialGradient id="neb1" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="rgba(255,38,71,.30)"/><stop offset="100%" stop-color="rgba(255,38,71,0)"/>
+      </radialGradient>
+      <radialGradient id="neb2" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="rgba(90,150,255,.26)"/><stop offset="100%" stop-color="rgba(90,150,255,0)"/>
+      </radialGradient>
+      <radialGradient id="neb3" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="rgba(154,108,255,.24)"/><stop offset="100%" stop-color="rgba(154,108,255,0)"/>
+      </radialGradient>
+      <radialGradient id="vign" cx="50%" cy="46%" r="62%">
+        <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+        <stop offset="72%" stop-color="rgba(0,0,0,0)"/>
+        <stop offset="100%" stop-color="rgba(0,0,0,.72)"/>
+      </radialGradient>
+      <filter id="soft" x="-80%" y="-80%" width="260%" height="260%">
+        <feGaussianBlur stdDeviation="9"/>
+      </filter>
+      <filter id="softbig" x="-120%" y="-120%" width="340%" height="340%">
+        <feGaussianBlur stdDeviation="26"/>
+      </filter>
+      <filter id="grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch"/>
+        <feColorMatrix type="saturate" values="0"/>
+        <feComponentTransfer><feFuncA type="linear" slope="0.06"/></feComponentTransfer>
+      </filter>
+    </defs>
+
+    <!-- nebula haze -->
+    <g id="layer-neb">
+      <ellipse cx="560" cy="320" rx="560" ry="430" fill="url(#neb1)"/>
+      <ellipse cx="1180" cy="560" rx="560" ry="470" fill="url(#neb2)"/>
+      <ellipse cx="840" cy="700" rx="640" ry="420" fill="url(#neb3)"/>
+    </g>
+
+    <!-- starfield (JS populated) -->
+    <g id="stars"></g>
+
+    <!-- OS orbit rings (the engine beneath) -->
+    <g id="osrings" fill="none"></g>
+
+    <!-- order-lifecycle orbital ribbon -->
+    <g id="flow">
+      <path id="flowpath"
+        d="M300,470 C560,640 980,620 1230,470 C1430,330 760,90 470,250 C250,380 1000,720 1140,690 C1100,760 360,720 300,470 Z"
+        fill="none" stroke="rgba(90,214,255,.16)" stroke-width="1.4" stroke-dasharray="3 9"/>
+      <g id="flowdots"></g>
+    </g>
+
+    <!-- comet riding the ribbon -->
+    <g id="comet">
+      <circle r="2.2" fill="#9fe9ff" opacity=".35"><animateMotion dur="26s" repeatCount="indefinite" begin="-1.2s"><mpath href="#flowpath"/></animateMotion></circle>
+      <circle r="3" fill="#5ad6ff" opacity=".5"><animateMotion dur="26s" repeatCount="indefinite" begin="-0.8s"><mpath href="#flowpath"/></animateMotion></circle>
+      <circle r="4" fill="#c7f3ff" opacity=".7"><animateMotion dur="26s" repeatCount="indefinite" begin="-0.4s"><mpath href="#flowpath"/></animateMotion></circle>
+      <circle r="5.4" fill="#ffffff"><animateMotion dur="26s" repeatCount="indefinite"><mpath href="#flowpath"/></animateMotion>
+        <animate attributeName="r" values="5.4;6.6;5.4" dur="2.2s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- regions (JS populated) -->
+    <g id="regions"></g>
+
+    <!-- the heart, central star -->
+    <g id="heart" style="cursor:pointer">
+      <circle cx="800" cy="430" r="220" fill="url(#heartHalo)">
+        <animate attributeName="r" values="210;236;210" dur="4.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".8;1;.8" dur="4.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="430" r="64" fill="url(#heartGrad)" filter="url(#soft)" opacity=".9"/>
+      <circle cx="800" cy="430" r="40" fill="url(#heartGrad)">
+        <animate attributeName="r" values="38;44;38" dur="4.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="430" r="40" fill="none" stroke="#ffe2e8" stroke-width="1" opacity=".5"/>
+      <text x="800" y="525" text-anchor="middle" fill="#ffd9e0" font-family="Georgia,serif"
+        font-size="17" letter-spacing="6" style="text-transform:uppercase;filter:drop-shadow(0 0 10px rgba(255,38,71,.7))">The Heart</text>
+      <text x="800" y="547" text-anchor="middle" fill="#9a8aa0" font-family="Georgia,serif"
+        font-size="10.5" letter-spacing="3" font-style="italic">the source</text>
+    </g>
+
+    <!-- overlays -->
+    <rect x="0" y="0" width="1600" height="900" fill="url(#vign)" pointer-events="none"/>
+    <rect x="0" y="0" width="1600" height="900" filter="url(#grain)" pointer-events="none" opacity=".5" style="mix-blend-mode:overlay"/>
+  </svg>
+
+  <header id="title">
+    <h1>ΑΦΟΙ&nbsp;&nbsp;ΔΕΛΗ</h1>
+    <div class="sub">The Realm · one heart, and the worlds that orbit it</div>
+  </header>
+
+  <div id="legend" class="panelbox">
+    <h4>The light of each world</h4>
+    <div class="lg"><span class="dot" style="color:var(--live);background:var(--live)"></span> Built <small>· it runs</small></div>
+    <div class="lg"><span class="dot" style="color:var(--progress);background:var(--progress)"></span> In progress</div>
+    <div class="lg"><span class="dot" style="color:var(--spec);background:var(--spec)"></span> Specified <small>· not yet lit</small></div>
+    <div class="lg"><span class="dot" style="color:var(--concept);background:var(--concept)"></span> Concept <small>· still dark</small></div>
+  </div>
+
+  <div id="controls">
+    <button class="btn on" id="t-engine">◎ Engine beneath</button>
+    <button class="btn on" id="t-flow">◷ The order's journey</button>
+    <button class="btn" id="t-heart">❤ Read the Heart</button>
+  </div>
+
+  <div id="osconsole" class="panelbox">
+    <h4>The engine beneath — the 5-layer OS</h4>
+    <div class="layer"><span class="ld" style="background:var(--live);color:var(--live)"></span><span class="nm">1 · Knowledge</span><span class="st">Obsidian — LIVE · the only layer running</span></div>
+    <div class="layer"><span class="ld" style="background:var(--spec);color:var(--spec)"></span><span class="nm">2 · Data</span><span class="st">Supabase — specified · 11 schemas, 0 rows</span></div>
+    <div class="layer"><span class="ld" style="background:var(--spec);color:var(--spec)"></span><span class="nm">3 · Automation</span><span class="st">Python worker — specified · no n8n</span></div>
+    <div class="layer"><span class="ld" style="background:var(--concept);color:var(--concept)"></span><span class="nm">4 · Interface</span><span class="st">Webapp — concept · not begun</span></div>
+    <div class="layer"><span class="ld" style="background:var(--concept);color:var(--concept)"></span><span class="nm">5 · AI Agent</span><span class="st">concept · never the source of truth</span></div>
+    <div class="principle">“Obsidian is the memory; the agent is never the source of truth.”</div>
+  </div>
+
+  <div id="quest" class="panelbox">
+    <span class="star">✦</span>
+    <div><span style="color:var(--muted);font-size:10px;letter-spacing:.22em;text-transform:uppercase;">Active quest</span><br>
+    <b>Trace one real order, 0 → 4</b> &nbsp;<small>the Skintzi tracer — the vault's first real operational ground-truth</small></div>
+  </div>
+
+  <div id="tooltip"><div class="tt-n"></div><div class="tt-t"></div></div>
+
+  <aside id="panel" class="">
+    <span class="close" id="panel-close">✕</span>
+    <div id="panel-content"></div>
+  </aside>
+
+  <div class="hint">hover a world · click to enter</div>
+</div>
+
+<script>
+(function(){
+  const SVGNS="http://www.w3.org/2000/svg";
+  const C={live:"#ff2647",progress:"#e6c074",spec:"#5ad6ff",concept:"#6e6886"};
+  const statusLabel={live:"Built · it runs",progress:"In progress",spec:"Specified · not yet lit",concept:"Concept · still dark"};
+
+  /* ---------------- DATA: the worlds ---------------- */
+  const REGIONS=[
+    { id:"supplier", name:"Supplier Highlands", gk:"04 · the gravity center", x:455, y:235, r:60, status:"live",
+      glyph:"⛰", folder:"04",
+      tagline:"The moat is the uplift engine — not the portfolio.",
+      body:"The gravity center of the vault. Value flows <b>from Afoi Deli to the brand</b>, never the reverse — a lesser house, staged in the family aesthetic, becomes more premium than it is anywhere else. Identity houses: <b>Kronos</b> (the worked example — full commercial layer: discount cascade, 90/120-day credit, the Pierre Vive collection), Cielo, Mutina, Fantini, Scavolini — and nine more still in the mist. Conduits (Plus Interiors, Filon IKE) are mediators: structurally <b>replaceable</b>. Representation runs independent office → salaried agent → coordinator/PR → <b>direct factory</b> — the end-state the firm moves toward.",
+      notes:["Supplier - Kronos","Supplier - Cielo","Supplier - Mutina","Supplier - Fantini","Conduit - Plus Interiors","Supplier Master Index"] },
+
+    { id:"order", name:"Order Harbor", gk:"02 · the operational spine", x:1235, y:445, r:54, status:"live",
+      glyph:"⚓", folder:"02",
+      tagline:"Where the order actually moves — and the active quest.",
+      body:"Lines move through five states — <b>0</b> not ordered · <b>1</b> ordered / awaiting · <b>2</b> received · <b>3</b> delivered · <b>4</b> invoiced & closed. The folder macro-state is <b>derived, not guessed</b>: 00.DAILY → 01.ΠΡΩΤΟ → 02.ΔΕΥΤΕΡΟ → 03.ΠΡΟΣ ΠΑΡΑΔΟΣΗ. <b>ΚΟΥΒΑΣ</b> is the universal procurement funnel — one master sheet + 107 supplier subsheets, four dates per line. The <b>proforma</b> is the control point: codes · quantities · price-vs-agreed · availability · lead time · terms · weight. <b>MEGASOFT</b> is the external accounting system of record. POs go out from orders@afoideli.gr (Dimitris, Vicky).",
+      quest:"Trace one real order — Skintzi — end-to-end by hand. One closed instance tests the schema, the SOPs, and surfaces the real bottlenecks. The vault's first true operational ground-truth.",
+      notes:["Order Workflow 0-4","Folder State Machine","Order Lifecycle — Ground-Truth Capture","Proforma Checking SOP","Daily Order Processing SOP"] },
+
+    { id:"showroom", name:"The Showroom", gk:"05 · the conversion", x:298, y:458, r:46, status:"spec",
+      glyph:"❖", folder:"05",
+      tagline:"No-promise selling. Create the circumstances; never ask.",
+      body:"Where the uplift becomes a sale. Driven by what the client actually needs; genuine taste shown at the sample wall; leaning on technical certainty, <b>never on forecasts</b>. The engine has two halves — the <b>staging</b> (taste, discretion: the showroom that makes a brand look expensive) and the <b>conversion</b> (the human gift — Chrysoula — that makes the client say yes). The Selection Engine turns a general brief into a specified, signed scheme. Every client word inherits the Premium Human Email Tone: discreet, earned, never over-promising.",
+      notes:["The Selection Engine","Premium Human Email Tone","Client Intake Checklist","Quote Creation Checklist","Ready For Delivery Message"] },
+
+    { id:"finance", name:"Finance Keep", gk:"10 · the merchant's risk, counted", x:1145, y:690, r:46, status:"spec",
+      glyph:"◈", folder:"10",
+      tagline:"List → net → landed → sell. The merchant carries the in-between.",
+      body:"The pricing chain: <b>list → supplier discount cascade → net → + transport + pallet = landed → + target margin = sell</b>. Credit runs 90 days standard / 120 on stock. Deposits default near <b>40%</b> — merchant-sized, to cover the supplier's prepayment and stay ahead of partial deliveries; <b>payment gates delivery</b>. The architect/designer <b>rebate</b> fires on full payment (person — project — amount). Margin policy itself is reserved for Orfeas to set.",
+      notes:["Cost & Quote Build","Profitability Engine","Credit and Due Date Calendar","Finance and Credit Terms SOP","Management Dashboard"] },
+
+    { id:"atelier", name:"The Atelier Library", gk:"07 · materials intelligence", x:1180, y:200, r:42, status:"progress",
+      glyph:"◊", folder:"07",
+      tagline:"Class → collection → SKU, in three honest tiers.",
+      body:"Materials intelligence in three tiers — <b>class</b> (the material) → <b>collection</b> → <b>SKU</b>. Porcelain Stoneware is the first deep, verified class note (five sources); <b>Kronos Pierre Vive</b> is the first collection (PV001–PV214, born on ingestion). Governed by the Materials &amp; Collection Schemas, re-runnable via the Materials Research Workflow. Holds large-slab knowledge, outdoor &amp; pool, packaging &amp; quantity rules, technical standards &amp; certifications.",
+      notes:["Material - Porcelain Stoneware","Collection - Kronos Pierre Vive","Materials Schema","Collection Schema","Large Slabs Knowledge","Technical Standards and Certifications"] },
+
+    { id:"projects", name:"Projects Field", gk:"06 · where it lands", x:455, y:700, r:42, status:"concept",
+      glyph:"⬡", folder:"06",
+      tagline:"The real cases — where the whole engine meets the ground.",
+      body:"Where it all lands in the real world. <b>Corfu Scavolini Kitchens</b>, <b>Golden Hall Bathrooms</b>, <b>Nur Athens Boutique Hotel</b>, <b>Designer Outlet Athens Bathrooms</b> — tracked on the Projects Dashboard. The architect rebate and project-keyed accounting hang off here.",
+      notes:["Projects Dashboard","Project - Corfu Scavolini Kitchens","Project - Golden Hall Bathrooms","Project - Nur Athens Boutique Hotel","Project - Designer Outlet Athens Bathrooms"] },
+
+    { id:"expansion", name:"Expansion Frontier", gk:"11 · the horizon", x:1418, y:122, r:30, status:"concept",
+      glyph:"✧", folder:"11",
+      tagline:"Bets not yet load-bearing. Explored, not yet built.",
+      body:"The horizon. The <b>AI Construction-Materials Platform</b>, Hotel &amp; Real-Estate strategy, the Outdoor Showroom expansion, a Stock-House e-shop, personal brand &amp; thought leadership, and the <b>Material Atelier</b> (a seed in Ideas &amp; Vision). Deliberately distant — the frontier the merchant reaches toward once the engine beneath is real.",
+      notes:["Expansion Map","AI Construction Materials Platform","Hotel and Real Estate Strategy","Outdoor Showroom Expansion","Stock House Eshop Concept"] },
+
+    { id:"personal", name:"Personal Vale", gk:"12 · 15 · 16 · 17 — the other half", x:790, y:818, r:48, status:"concept",
+      glyph:"☾", folder:"12",
+      tagline:"Orfeas the person — held to the same standard as the firm.",
+      body:"The unified vault's other half. The <b>Personal OS</b> — deep work, health &amp; energy, leadership standards, learning, mindfulness — plus relationships, wellness, personal finance, and Ideas &amp; Vision (the Mnemonic Atelier, Circles). Business and personal are <b>one fabric</b>; read and reasoned across freely. Its moon is the <b>Journal</b> — surfaced and referenced, but <b>author by invitation</b>: Orfeas's own voice, the one place meant to stay his.",
+      notes:["Personal Operating System","Leadership Standards","Deep Work and Focus","Personal Life — Home","Journal","Ideas and Vision — Home"] }
+  ];
+
+  /* flow waypoints along the ribbon (decorative + readable) */
+  const FLOWPTS=[
+    {x:312,y:498, n:"① quote"},
+    {x:1232,y:475, n:"② order 0→1 · PO"},
+    {x:474,y:262, n:"③ proforma · loading"},
+    {x:1010,y:700, n:"④ received 2 · delivered 3"},
+    {x:1138,y:692, n:"⑤ invoiced · paid 4"}
+  ];
+
+  /* the Heart's own panel */
+  const HEART={
+    name:"The Heart", gk:"❤ the source — above the structure", status:"live",
+    tagline:"Your value is an obligation, not a given position.",
+    body:"The doctrine above the folders — the source everything else descends from. Three nested layers: the <b>Merchant</b> (the engine — buys, sells, carries risk), the <b>Steward</b> (holds the whole at a standard), and the <b>Man to be looked up to</b> (vision, as obligation not position). Two maxims held in tension — «Η Αξία σου είναι υποχρέωση, όχι αξίωμα» and «<b>Never forget that we are merchants</b>». The operating expression: <b>create the circumstances so others ask it of you — never ask.</b> Beneath all three layers: family. Kostas built everything with his whole heart given to those he loved — the ruthlessness and the love are the same faculty.",
+    people:[["Kostas","founder · the nerve & the intuition"],["Chrysoula","the closer"],["Orfeas","the successor · the steward"],["Ektoras","brother"],["Eleni","partner"]],
+    notes:["The Heart","Afoi Deli — Operating Doctrine","People and Roles Map"]
+  };
+
+  /* ---------------- BUILD: starfield ---------------- */
+  const stars=document.getElementById("stars");
+  const NSTAR=230;
+  for(let i=0;i<NSTAR;i++){
+    const c=document.createElementNS(SVGNS,"circle");
+    const x=Math.random()*1600, y=Math.random()*900;
+    const rr=Math.random()*Math.random()*1.7+.25;
+    const op=Math.random()*.6+.18;
+    c.setAttribute("cx",x.toFixed(1)); c.setAttribute("cy",y.toFixed(1));
+    c.setAttribute("r",rr.toFixed(2));
+    const tint=Math.random();
+    c.setAttribute("fill", tint>.86?"#9fd8ff":(tint<.12?"#ffc2cd":"#fdf7ff"));
+    c.setAttribute("opacity",op.toFixed(2));
+    if(Math.random()>.55){
+      const a=document.createElementNS(SVGNS,"animate");
+      a.setAttribute("attributeName","opacity");
+      a.setAttribute("values",op.toFixed(2)+";"+(op*0.25).toFixed(2)+";"+op.toFixed(2));
+      a.setAttribute("dur",(Math.random()*5+3).toFixed(1)+"s");
+      a.setAttribute("repeatCount","indefinite");
+      a.setAttribute("begin",(-Math.random()*5).toFixed(1)+"s");
+      c.appendChild(a);
+    }
+    stars.appendChild(c);
+  }
+
+  /* ---------------- BUILD: OS orbit rings ---------------- */
+  const osrings=document.getElementById("osrings");
+  const RINGS=[
+    {r:138, col:C.live,    w:1.4, dash:null,    op:.55},
+    {r:212, col:C.spec,    w:1.1, dash:"5 12",  op:.30},
+    {r:288, col:C.spec,    w:1.0, dash:"4 14",  op:.22},
+    {r:364, col:C.concept, w:0.9, dash:"2 16",  op:.16},
+    {r:442, col:C.concept, w:0.9, dash:"2 20",  op:.12}
+  ];
+  RINGS.forEach((rg,i)=>{
+    const c=document.createElementNS(SVGNS,"circle");
+    c.setAttribute("cx",800); c.setAttribute("cy",430); c.setAttribute("r",rg.r);
+    c.setAttribute("stroke",rg.col); c.setAttribute("stroke-width",rg.w);
+    c.setAttribute("opacity",rg.op);
+    if(rg.dash){
+      c.setAttribute("stroke-dasharray",rg.dash);
+      const a=document.createElementNS(SVGNS,"animate");
+      a.setAttribute("attributeName","stroke-dashoffset");
+      a.setAttribute("from","0"); a.setAttribute("to", i%2?"-200":"200");
+      a.setAttribute("dur",(60+i*22)+"s"); a.setAttribute("repeatCount","indefinite");
+      c.appendChild(a);
+    }
+    osrings.appendChild(c);
+  });
+
+  /* ---------------- BUILD: flow waypoints ---------------- */
+  const flowdots=document.getElementById("flowdots");
+  FLOWPTS.forEach(p=>{
+    const g=document.createElementNS(SVGNS,"g");
+    const c=document.createElementNS(SVGNS,"circle");
+    c.setAttribute("cx",p.x);c.setAttribute("cy",p.y);c.setAttribute("r",3.4);
+    c.setAttribute("fill","#9fe9ff");c.setAttribute("opacity",".85");
+    const t=document.createElementNS(SVGNS,"text");
+    t.setAttribute("x",p.x);t.setAttribute("y",p.y-11);t.setAttribute("text-anchor","middle");
+    t.setAttribute("fill","#7fb9d6");t.setAttribute("font-size","9.5");
+    t.setAttribute("letter-spacing","1.5");t.setAttribute("font-family","'Helvetica Neue',Arial,sans-serif");
+    t.textContent=p.n;
+    g.appendChild(c);g.appendChild(t);flowdots.appendChild(g);
+  });
+
+  /* ---------------- BUILD: regions ---------------- */
+  const regionsG=document.getElementById("regions");
+  REGIONS.forEach(rg=>{
+    const col=C[rg.status];
+    const g=document.createElementNS(SVGNS,"g");
+    g.setAttribute("class","region");
+    g.setAttribute("data-id",rg.id);
+    g.style.cursor="pointer";
+
+    const halo=document.createElementNS(SVGNS,"circle");
+    halo.setAttribute("cx",rg.x);halo.setAttribute("cy",rg.y);halo.setAttribute("r",rg.r*1.9);
+    halo.setAttribute("fill",col);halo.setAttribute("opacity",rg.status==="concept"?.05:.1);
+    halo.setAttribute("filter","url(#softbig)");
+
+    const planet=document.createElementNS(SVGNS,"circle");
+    planet.setAttribute("cx",rg.x);planet.setAttribute("cy",rg.y);planet.setAttribute("r",rg.r);
+    planet.setAttribute("fill","#0c0a16");
+    planet.setAttribute("stroke",col);
+    planet.setAttribute("stroke-width",rg.status==="concept"?1:1.8);
+    if(rg.status==="concept"||rg.status==="spec") planet.setAttribute("stroke-dasharray", rg.status==="concept"?"2 7":"7 6");
+    planet.setAttribute("opacity",rg.status==="concept"?.85:1);
+
+    const inner=document.createElementNS(SVGNS,"circle");
+    inner.setAttribute("cx",rg.x);inner.setAttribute("cy",rg.y);inner.setAttribute("r",rg.r*0.62);
+    inner.setAttribute("fill",col);inner.setAttribute("opacity",rg.status==="concept"?.07:.14);
+
+    const gl=document.createElementNS(SVGNS,"text");
+    gl.setAttribute("x",rg.x);gl.setAttribute("y",rg.y+ rg.r*0.18);gl.setAttribute("text-anchor","middle");
+    gl.setAttribute("font-size",rg.r*0.8);gl.setAttribute("fill",col);gl.setAttribute("opacity",".92");
+    gl.textContent=rg.glyph;
+
+    const nm=document.createElementNS(SVGNS,"text");
+    nm.setAttribute("x",rg.x);nm.setAttribute("y",rg.y+rg.r+22);nm.setAttribute("text-anchor","middle");
+    nm.setAttribute("fill","#ece7f3");nm.setAttribute("font-size","14");nm.setAttribute("letter-spacing","2.5");
+    nm.setAttribute("font-family","'Helvetica Neue',Arial,sans-serif");
+    nm.setAttribute("style","text-transform:uppercase;filter:drop-shadow(0 0 8px rgba(0,0,0,.8))");
+    nm.textContent=rg.name;
+
+    const gk=document.createElementNS(SVGNS,"text");
+    gk.setAttribute("x",rg.x);gk.setAttribute("y",rg.y+rg.r+39);gk.setAttribute("text-anchor","middle");
+    gk.setAttribute("fill","#8b859c");gk.setAttribute("font-size","10");gk.setAttribute("letter-spacing","1.5");
+    gk.setAttribute("font-family","Georgia,serif");gk.setAttribute("font-style","italic");
+    gk.textContent=rg.gk;
+
+    g.appendChild(halo);g.appendChild(inner);g.appendChild(planet);g.appendChild(gl);g.appendChild(nm);g.appendChild(gk);
+
+    // hover pulse on the planet
+    const ap=document.createElementNS(SVGNS,"animate");
+    ap.setAttribute("attributeName","r");
+    ap.setAttribute("values",(rg.r*1.9)+";"+(rg.r*2.05)+";"+(rg.r*1.9));
+    ap.setAttribute("dur",(5+Math.random()*3).toFixed(1)+"s");ap.setAttribute("repeatCount","indefinite");
+    halo.appendChild(ap);
+
+    regionsG.appendChild(g);
+
+    g.addEventListener("mouseenter",e=>showTip(rg,e));
+    g.addEventListener("mousemove",moveTip);
+    g.addEventListener("mouseleave",hideTip);
+    g.addEventListener("click",()=>openRegion(rg));
+  });
+
+  /* ---------------- tooltip ---------------- */
+  const tip=document.getElementById("tooltip");
+  function showTip(rg,e){
+    tip.querySelector(".tt-n").textContent=rg.name;
+    tip.querySelector(".tt-t").textContent=rg.tagline;
+    tip.style.opacity=1;moveTip(e);
+  }
+  function moveTip(e){
+    const pad=16;let x=e.clientX+pad,y=e.clientY+pad;
+    if(x+250>window.innerWidth)x=e.clientX-250;
+    tip.style.left=x+"px";tip.style.top=y+"px";
+  }
+  function hideTip(){tip.style.opacity=0;}
+
+  /* ---------------- detail panel ---------------- */
+  const panel=document.getElementById("panel");
+  const pc=document.getElementById("panel-content");
+  function chips(arr){return '<div class="notes"><h5>Notes in this world</h5>'+arr.map(n=>'<span class="chip">'+n+'</span>').join('')+'</div>';}
+  function openRegion(rg){
+    const col=C[rg.status];
+    let h='<span class="badge" style="color:'+col+';background:'+hexA(col,.12)+';border:1px solid '+hexA(col,.4)+'">'+statusLabel[rg.status]+'</span>';
+    h+='<h2>'+rg.name+'</h2>';
+    h+='<div class="gk">'+rg.gk+'</div>';
+    h+='<p class="tl">“'+rg.tagline+'”</p>';
+    h+='<div class="body">'+rg.body+'</div>';
+    if(rg.quest) h+='<div class="quest-line"><span class="qk">✦ Active quest</span>'+rg.quest+'</div>';
+    h+=chips(rg.notes);
+    pc.innerHTML=h;
+    panel.classList.add("open");
+  }
+  function openHeart(){
+    let h='<span class="badge" style="color:'+C.live+';background:'+hexA(C.live,.12)+';border:1px solid '+hexA(C.live,.4)+'">The source · living</span>';
+    h+='<h2>'+HEART.name+' ❤</h2>';
+    h+='<div class="gk">'+HEART.gk+'</div>';
+    h+='<p class="tl">“'+HEART.tagline+'”</p>';
+    h+='<div class="body">'+HEART.body+'</div>';
+    h+='<div class="ppl">'+HEART.people.map(p=>'<b>'+p[0]+'</b> — '+p[1]).join('<br>')+'</div>';
+    h+=chips(HEART.notes);
+    pc.innerHTML=h;
+    panel.classList.add("open");
+  }
+  document.getElementById("heart").addEventListener("click",openHeart);
+  document.getElementById("heart").addEventListener("mouseenter",e=>{
+    tip.querySelector(".tt-n").textContent="The Heart";
+    tip.querySelector(".tt-t").textContent="The source — above the structure. Click to read it.";
+    tip.style.opacity=1;moveTip(e);
+  });
+  document.getElementById("heart").addEventListener("mousemove",moveTip);
+  document.getElementById("heart").addEventListener("mouseleave",hideTip);
+  document.getElementById("panel-close").addEventListener("click",()=>panel.classList.remove("open"));
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")panel.classList.remove("open");});
+
+  function hexA(hex,a){const n=parseInt(hex.slice(1),16);return "rgba("+(n>>16&255)+","+(n>>8&255)+","+(n&255)+","+a+")";}
+
+  /* ---------------- toggles ---------------- */
+  const tEngine=document.getElementById("t-engine"),
+        tFlow=document.getElementById("t-flow"),
+        tHeart=document.getElementById("t-heart");
+  const osc=document.getElementById("osconsole");
+  tEngine.addEventListener("click",()=>{
+    const on=tEngine.classList.toggle("on");
+    osrings.style.transition="opacity .5s";osrings.style.opacity=on?1:0;
+    osc.style.opacity=on?1:0;osc.style.pointerEvents=on?"auto":"none";
+  });
+  tFlow.addEventListener("click",()=>{
+    const on=tFlow.classList.toggle("on");
+    document.getElementById("flow").style.opacity=on?1:0;
+    document.getElementById("comet").style.opacity=on?1:0;
+    document.getElementById("flow").style.transition="opacity .5s";
+    document.getElementById("comet").style.transition="opacity .5s";
+  });
+  tHeart.addEventListener("click",openHeart);
+
+  /* ---------------- gentle parallax (depth) ---------------- */
+  const layerNeb=document.getElementById("layer-neb");
+  let raf=null;
+  window.addEventListener("mousemove",e=>{
+    if(raf)return;
+    raf=requestAnimationFrame(()=>{
+      const dx=(e.clientX/window.innerWidth-.5), dy=(e.clientY/window.innerHeight-.5);
+      stars.setAttribute("transform","translate("+(dx*-14)+","+(dy*-14)+")");
+      layerNeb.setAttribute("transform","translate("+(dx*-26)+","+(dy*-26)+")");
+      regionsG.setAttribute("transform","translate("+(dx*8)+","+(dy*8)+")");
+      raf=null;
+    });
+  });
+})();
+</script>
+</body>
+</html>
