@@ -46,3 +46,6 @@ aliases:
 ## How to use
 
 Start with the dashboards ([[Capture Backlog]]) and [[Vault State Memory]]. Don't try to perfect everything before using it. The canonical philosophy and voice are [[The Heart]]; where the build actually is, is [[Vault State Memory]].
+
+> [!tip] See it as a cosmos
+> For a visual overview of the whole vault — folders, the order workflow, and the 5-layer OS as a dark star-map — see [[Afoi Deli — The Realm]]. This table is the canonical *index*; The Realm is its *picture*.

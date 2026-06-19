@@ -24,6 +24,7 @@ How a session runs depends on what it's for:
 - **Strategic brainstorm** — step back and think *with* Orfeas about where the OS really stands and what's next (read-only, discuss-only) · [[Strategic Brainstorm Protocol]] → `/os-brainstorm`.
 
 ## Craft & infrastructure
+- [[Afoi Deli — The Realm]] — a star-map of the whole vault (the architecture, workflow & logic as a cosmos; interactive HTML + embedded SVG).
 - [[Obsidian Tips and Tricks]] — interconnecting knowledge and notes.
 - [[Obsidian Plugin Setup]] — Dataview, Templater, Obsidian Git.
 
