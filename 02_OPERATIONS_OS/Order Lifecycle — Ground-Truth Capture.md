@@ -1,7 +1,7 @@
 ---
 type: ground-truth-capture
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-06-21
 status: draft
 confidence: verified
 owner: Orfeas Delis
@@ -18,7 +18,7 @@ related:
 > [!abstract] What this note is
 > The vault's **first real operational ground-truth** — how one real order actually moves through Afoi Deli, captured live from Orfeas in the tracer interview (2026-06-19), Skintzi as the spine. It is **not** an SOP and **not** a schema — it's the *input* both feed on. Where this note and [[Order Workflow 0-4]] (the prior prose ideal) disagree, **this note wins** (it's read from reality).
 >
-> **Status: in progress.** Batches A + B + C are interview-settled below. **D–G remain open** (see the open list) — **paused 2026-06-19, resume at batch D.** The final landing — full S1–S15 merge with Orfeas's Tracer v0.1 draft, the formal schema-diff against the 11 CSVs, repointing the draft's dangling `[[order-fulfillment-workflow-normalized]]` ref to [[Order Workflow 0-4]], and exhibits into `_exhibits/tracer/` — happens once the interview is done.
+> **Status: in progress.** Batches A + B + C + D are interview-settled below. **E–G remain open** (see the open list) — **resume at batch E** (D settled 2026-06-21). The final landing — full S1–S15 merge with Orfeas's Tracer v0.1 draft, the formal schema-diff against the 11 CSVs, repointing the draft's dangling `[[order-fulfillment-workflow-normalized]]` ref to [[Order Workflow 0-4]], and exhibits into `_exhibits/tracer/` — happens once the interview is done.
 
 > [!info] Source draft
 > This supersedes/extends Orfeas's reconstruction `Order Lifecycle — Ground-Truth Capture (Tracer v0.1)` (in `Downloads`, drafted 2026-06-19 from the real workbooks + email artifacts). That draft did the **artifact-reading half**; this note adds the **interview half** — the answers only Orfeas holds.
@@ -74,14 +74,28 @@ Two layers, not one:
 
 ---
 
-## 5. Discoveries (not in the artifact reconstruction)
+## 5. Resolved — Batch D (loading / arrival, S8–S10)
+
+- **The inbound logistics chain (the physical spine, supplier → us):** **ELXIS** (our freight forwarder) works with an **Italian correspondent forwarder** who collects our materials into a **central consolidation centre** in Italy. From there: **loaded → sea freight → Patras** (the usual port of entry) → **truck to ELXIS's Aspropyrgos warehouse** → **truck to our warehouse, Larnakos 11, 121 35 Peristeri.** Two notification paths, either fires: **(a)** the factory/conduit sends *us* the loading details and we forward them to ELXIS, or **(b)** the conduit notifies ELXIS directly on our behalf.
+- **The inbound channel splits by item:** heavy goods (tiles, sanitaryware) ride the **ELXIS sea-consolidation** route above; **taps usually arrive by courier — UPS / DHL — direct.** "Loading" is therefore not one path — light/express items bypass the consolidation chain entirely.
+- **Consolidation economics = a core margin lever — flagged for a dedicated deep-dive.** Whether to load a line **alone vs. wait to consolidate** depends on how the forwarder charges us. A small load is punishing: a **~5 m² order** carries **~€120 pallet + transport**, which alone makes a sellable margin impossible. Rule of thumb: **don't load alone below ~5–10 m²**; ideally wait for more orders from the **same factory** to load together. When an order is too small and can't wait, the two levers are **(i) add extra transport cost to the client**, or **(ii) wait longer and notify a later arrival.** Orfeas: *"one of the most basic parts of our profitability."* **Deep-dive parked** for a future session (the quote/margin ↔ transport-allocation mechanics) — it overlaps batch F's transport-allocation question.
+- **`09.ΠΡΟΓΡΑΜΜΑ ΠΑΡΑΔΟΣΕΩΝ` = the outbound delivery schedule, not an inbound ETA.** Just an Excel sheet of **client name · delivery day · estimated time-of-day** — last-mile scheduling *to* clients. (Corrects the batch-D assumption that `est_warehouse_arrival_date` lives here; it does not — arrival ETA comes off the loading/lead-time side.)
+- **Arrival = the receive event (status 2):** the moment goods **arrive at the warehouse and are checked**, the line is marked **status 2**, **deleted from ΚΟΥΒΑΣ**, and a **sticker with the client's name** goes on top of the client's **"assembled" pallets** (staging/picking by client). The *check* at this step is where batch-E discrepancies (short / over / wrong / broken) surface. Confirms batch B's "removed at status 2."
+- **Lead times + the under-promise buffer — precise table parked for a future session.** Lead time is item-driven: **standard chrome tap 15–30 days** (courier); **special-colour / PVD taps 6–8 weeks**; **coloured sanitaryware ~6 weeks prep + ~1 week to us**; **standard tiles (non-special décors, e.g. *not* Kronos Baguette 3D) 15–20 days.** A **missed loading** (missed ship schedule, or truck full / no factory pickup) **rolls to the next loading**, so a **5–7-day buffer** absorbs the bad case. To the client Orfeas quotes a **range** — **good case ~12–15 d / bad case ~15–20 d** for standard tiles — never a single date (the Heart's *never over-promise* / *create the circumstances*). **Deep-dive parked:** a precise per-category lead-time table.
+
+> [!warning] `needs_check` — Mercareon role unconfirmed
+> Batch D was scoped as **ELXIS + Mercareon**; Orfeas described ELXIS end-to-end but did **not** mention Mercareon. Its role (delivery-slot booking for big retail destinations? inbound? unused now?) is **open** — confirm at the start of the next batch.
+
+---
+
+## 6. Discoveries (not in the artifact reconstruction)
 
 1. **MEGASOFT** — the second system of record (accounting only; see §1).
 2. **The architect/designer rebate** — fires on **full payment** of the order; calc varies case-by-case (% of value / % of margin / per-deal); tracked on a **separate sheet** as `person – project – amount`. Project-keyed → hangs off [[Projects Schema|PROJECTS]]; the architect is a `PERSON` (ERD `PEOPLE` gap).
 
 ---
 
-## 6. Running schema-corrections (against the 11 CSVs + existing notes)
+## 7. Running schema-corrections (against the 11 CSVs + existing notes)
 
 1. `clients.megasoft_code` — new field; FK to MEGASOFT. (Corrects draft's order-level `order_number`.)
 2. **MEGASOFT** = external AR source of truth → `client_invoices`/payments are a mirror; reconciliation point vs Excel rows. Touches [[Database Master Schema]] ERD `PAYMENTS` gap + [[Invoices and Payments Schema]].
@@ -98,16 +112,22 @@ Two layers, not one:
 13. **Split decision** = judgment (client readiness + urgency vs split-loading cost); speed usually wins.
 14. **Line interdependency** — lead/quantity-major code + coordinated satellites; lead unavailability can cascade to re-selection → whole-proforma flag. New concept the line model needs.
 15. **Availability code legend (`DA/AC/TR/PR/OR`) — `needs_check`/unverified** (from the draft, not recognized by Orfeas). Verify against the proforma exhibit.
+16. **Inbound logistics = its own entity.** A `loading` / `shipment` distinct from the order: carrier **ELXIS** + an Italian correspondent forwarder + a consolidation centre; route Italy → sea (**Patras**) → ELXIS **Aspropyrgos** → our **Peristeri** warehouse; two notification paths (we-forward vs. conduit-notifies-ELXIS). **Many lines per loading** (the join that makes consolidation possible). New to the model.
+17. **Transport/consolidation = a margin input, not a flat add-on.** Load-alone threshold **~5–10 m²**; small-load penalty (~€120 on ~5 m²); resolve by **charging the client extra transport** *or* **waiting to consolidate** (later ETA). Transport allocates **per-loading across the pooled lines** → feeds the **S14 margin model** / [[Cost & Quote Build]] / [[Profitability Engine]]. **Future deep-dive** (overlaps batch F).
+18. **`09.ΠΡΟΓΡΑΜΜΑ ΠΑΡΑΔΟΣΕΩΝ` = the outbound client delivery schedule** (`client · delivery_day · est_time_of_day`) — a last-mile utility, **not** the inbound warehouse-arrival ETA. Corrects the batch-D assumption.
+19. **Receive event** — **arrival + check** → line **status 2**, **ΚΟΥΒΑΣ removal**, **client-name sticker on the assembled/staged pallet**. Defines `received_date` + a **staging/assembly** step; the check is the batch-E discrepancy gate.
+20. **Lead-time taxonomy** (chrome tap **15–30 d** courier · special/PVD tap **6–8 wk** · coloured sanitaryware **~6 wk + 1** · standard tiles **15–20 d**) + **missed-loading roll-forward** (~5–7 d buffer). Client is quoted a **good/bad range**, never a single date → feeds `est_arrival` + the **under-promise buffer** ([[The Heart]]). **Future deep-dive: a precise per-category table.**
+21. **Inbound channel splits by item** — **courier (UPS/DHL)** for taps vs. **ELXIS sea-consolidation** for tiles/sanitaryware; channel drives both lead time *and* transport cost. The line/supplier model likely needs an **inbound-channel** attribute.
 
 ---
 
-## 7. Open — remaining interview batches
+## 8. Open — remaining interview batches
 
 - [x] **A · Order sheet** — settled 2026-06-19 (§2).
 - [x] **B · Folders & ΚΟΥΒΑΣ** — settled 2026-06-19 (§3).
 - [x] **C · Proforma** — settled 2026-06-19 (§4).
-- [ ] **D · Loading / arrival** `← NEXT (resume here)` — ELXIS/Mercareon roles + consolidation · `09.ΠΡΟΓΡΑΜΜΑ ΠΑΡΑΔΟΣΕΩΝ` link to `est_warehouse_arrival_date` · client-facing arrival buffer (the under-promise instinct). *(Release-timing is already mostly answered by C3.)*
-- [ ] **E · Receipt / delivery** — discrepancy handling (short/over/wrong/broken) · delivery vs pickup · partial delivery.
+- [x] **D · Loading / arrival** — settled 2026-06-21 (§5). **Two deep-dives parked for future sessions:** (1) transport/consolidation economics ↔ margin (overlaps F); (2) a precise per-category lead-time table. **Open thread:** Mercareon role (`needs_check`, §5 warning).
+- [ ] **E · Receipt / delivery** `← NEXT (resume here)` — discrepancy handling (short/over/wrong/broken) · delivery vs pickup · partial delivery.
 - [ ] **F · Payment / invoice / margin** — payment terms + gating detail · missing-invoice payable · where payable is tracked · transport allocation (the margin math: markup vs margin, transport before/after) · the rebate calc · is margin reviewed today.
 - [ ] **G · Special cases** — returns · breakages · backorder sub-state.
 
