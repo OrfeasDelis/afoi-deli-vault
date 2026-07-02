@@ -1,0 +1,18 @@
+#!/bin/sh
+# repo-analysis freshness reminder after a pull/merge (informational only).
+# Covers pulls made OUTSIDE Claude Code (terminal, Obsidian Git).
+# Setup on a fresh clone: git config core.hooksPath .githooks
+
+changed=$(git diff --name-only ORIG_HEAD..HEAD 2>/dev/null) || exit 0
+
+notes=$(printf '%s\n' "$changed" | grep -E '\.md$' \
+  | grep -vE '^(docs/|README\.md$|\.obsidian/|\.claude/|\.githooks/)' || true)
+
+if [ -n "$notes" ] && ! printf '%s\n' "$changed" | grep -qx 'docs/REPO_ANALYSIS.md'; then
+  count=$(printf '%s\n' "$notes" | wc -l | tr -d ' ')
+  echo "" >&2
+  echo "[repo-analysis] This pull brought $count changed vault note(s); docs/REPO_ANALYSIS.md is now stale." >&2
+  echo "[repo-analysis] Refresh via Claude Code:  claude -p \"/repo-analysis\"   (or run /repo-analysis in a session)" >&2
+  echo "" >&2
+fi
+exit 0

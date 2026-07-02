@@ -1,0 +1,22 @@
+#!/bin/sh
+# repo-analysis freshness check (warn-only — never blocks a push).
+# Covers pushes made OUTSIDE Claude Code (terminal, Obsidian Git).
+# In-session pushes are guarded by .claude/hooks/git-sync-guard.mjs instead.
+# Setup on a fresh clone: git config core.hooksPath .githooks
+
+[ "$SKIP_REPO_ANALYSIS_GUARD" = "1" ] && exit 0
+
+upstream=$(git rev-parse --abbrev-ref --symbolic-full-name '@{u}' 2>/dev/null) || exit 0
+changed=$(git diff --name-only "$upstream"..HEAD 2>/dev/null) || exit 0
+
+notes=$(printf '%s\n' "$changed" | grep -E '\.md$' \
+  | grep -vE '^(docs/|README\.md$|\.obsidian/|\.claude/|\.githooks/)' || true)
+
+if [ -n "$notes" ] && ! printf '%s\n' "$changed" | grep -qx 'docs/REPO_ANALYSIS.md'; then
+  echo "" >&2
+  echo "[repo-analysis] WARNING: you are pushing vault-note changes without a refreshed docs/REPO_ANALYSIS.md." >&2
+  echo "[repo-analysis] Regenerate it via Claude Code:  claude -p \"/repo-analysis\"   (or run /repo-analysis in a session)" >&2
+  echo "[repo-analysis] Pushing anyway (this hook never blocks)." >&2
+  echo "" >&2
+fi
+exit 0

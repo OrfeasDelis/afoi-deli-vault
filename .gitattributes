@@ -1,0 +1,4 @@
+# sh hooks must stay LF — git-for-windows' sh chokes on CRLF shebangs
+.githooks/* text eol=lf
+*.mjs text eol=lf
+*.py text eol=lf

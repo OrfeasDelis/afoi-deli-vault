@@ -10,6 +10,14 @@ Dated record of system/architecture decisions for the vault and future apps. New
 
 ---
 
+## ADR-0006 — Living repo analysis regenerated on every push/pull
+- **Date:** 2026-07-02
+- **Status:** accepted
+- **Context:** Orfeas brought a "Living Repository Analysis" meta-prompt and asked for it to run recurringly on every git push/pull. The vault had no generated, evidence-grounded profile of itself (architecture, business model, workflow trees, relationship map), and the README front door had drifted (audit-flagged). A recurrence mechanism was needed that actually fires — the vault's rituals are otherwise prose-enforced (`CLAUDE.md §6`).
+- **Options considered:** (A) GitHub Action running Claude Code in CI on push — needs an API-key secret, cloud spend, runs outside local auth; (B) a synchronous LLM call inside git hooks — multi-minute hooks, and a pre-push regeneration cannot join the push's own commit; (C) a project skill as the engine + a layered recurrence contract around the existing session ritual.
+- **Decision:** (C). The engine is the **`/repo-analysis` skill** (`.claude/skills/repo-analysis/`, delta by default, `deep` on demand) with a deterministic UTF-8-safe metrics script; output is `docs/REPO_ANALYSIS.md` + a marker-delimited README block. Recurrence is three layers: (1) `CLAUDE.md §8` step 4 — refresh before the end-of-session commit so the analysis rides the same push; (2) a **Claude-harness guard** (`.claude/hooks/git-sync-guard.mjs`, wired in `.claude/settings.json`) that blocks an in-session `git push` whose commits change notes without a refreshed analysis and nudges after pulls that bring note changes; (3) warn-only **`.githooks/`** (`pre-push`, `post-merge`, via `core.hooksPath`) for git use outside Claude Code.
+- **Consequences:** The analysis stays current commit-by-commit and the ritual gains its first hook-backed (not prose-only) enforcement. Costs one delta pass per session. Fresh clones must run `git config core.hooksPath .githooks`. The analysis is Claude-maintained **reference layer** — it describes, never decides (authorship line, `CLAUDE.md §6`).
+
 ## ADR-0001 — Cross-session memory lives inside the vault
 - **Date:** 2026-06-07
 - **Status:** accepted

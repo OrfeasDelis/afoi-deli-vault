@@ -22,6 +22,7 @@ How a session runs depends on what it's for:
 - **Build** — the default working session · [[Session Protocol]].
 - **Health check** — reconcile vault drift/orphans/links/schema (read-only) · [[Vault Integrity Audit]] → `/vault-audit`.
 - **Strategic brainstorm** — step back and think *with* Orfeas about where the OS really stands and what's next (read-only, discuss-only) · [[Strategic Brainstorm Protocol]] → `/os-brainstorm`.
+- **Repo analysis** — regenerate the living repository profile (`docs/REPO_ANALYSIS.md` + README summary; architecture, business model, workflow trees, relationship map as Mermaid) · runs on every push/pull per `CLAUDE.md §8` → `/repo-analysis`.
 
 ## Craft & infrastructure
 - [[Afoi Deli — The Realm]] — a star-map of the whole vault (the architecture, workflow & logic as a cosmos; interactive HTML + embedded SVG).
