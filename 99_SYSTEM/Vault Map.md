@@ -39,7 +39,7 @@ aliases:
 | `98_TEMPLATES` | Reusable note templates |
 | `99_SYSTEM` | Vault rules and maps (this note, [[Obsidian Usage Rules]]) |
 | `_meta` | Vault audit reports + the [[Vault Integrity Audit]] charter |
-| `docs` | Generated repo profile — `REPO_ANALYSIS.md`, the living analysis (Claude-regenerated on every push/pull via `/repo-analysis`; don't hand-edit — see `CLAUDE.md §8`) |
+| `docs` | Generated repo profile suite — `REPO_ANALYSIS.md` + `WORKFLOW_TREE` / `FAMILY_TREE` / `RELATIONSHIP_TREES` + `VISION` (Claude-regenerated on every push/pull via `/repo-analysis`; don't hand-edit — see `CLAUDE.md §8`) |
 
 > [!note] Deliberately not present
 > `18_KNOWLEDGE` was **deferred** (audit P0-1): subjects studied for their own sake live in `12_PERSONAL_OS` for now — see [[Studies and Subjects]] — until the volume justifies its own wing.

@@ -17,7 +17,9 @@ An LLM-maintained second brain following the LLM-Wiki pattern: immutable raw sou
 | Lead thread | The tracer (one real order end-to-end) — batch D of A–G settled |
 | OS build state | Layer 1 of 5 running · 11 CSV data contracts, zero rows |
 
-**Full profile:** [docs/REPO_ANALYSIS.md](docs/REPO_ANALYSIS.md) — architecture, knowledge model, business model, workflow trees, relationship map, prioritized risks. Regenerated on every push/pull (`CLAUDE.md` §8, ADR-0006).
+**Full profile:** [docs/REPO_ANALYSIS.md](docs/REPO_ANALYSIS.md) — architecture, knowledge model, business model, workflow flowcharts, relationship map, prioritized risks. Regenerated on every push/pull (`CLAUDE.md` §8, ADR-0006).
+
+**Companion views** (regenerated with the profile): [Workflow tree](docs/WORKFLOW_TREE.md) · [Family tree](docs/FAMILY_TREE.md) · [Relationship trees](docs/RELATIONSHIP_TREES.md) · [Vision & roadmap](docs/VISION.md)
 <!-- REPO-ANALYSIS:END -->
 
 ## Where to start

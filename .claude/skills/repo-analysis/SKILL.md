@@ -15,7 +15,11 @@ This document is **Claude-maintained reference layer** (CLAUDE.md §6 authorship
 ## Outputs (stable paths — every run overwrites cleanly)
 
 1. `docs/REPO_ANALYSIS.md` — the full profile.
-2. `README.md` — ONLY the block between `<!-- REPO-ANALYSIS:BEGIN -->` and `<!-- REPO-ANALYSIS:END -->` markers is regenerated (at-a-glance + snapshot metrics + pointer to the full profile). **Never touch a byte outside the markers** — the surrounding README text is human-authored.
+2. **The tree suite** — `docs/WORKFLOW_TREE.md` (hierarchical workflow tree; the sequential flowcharts stay in REPO_ANALYSIS §6 — never duplicate them), `docs/FAMILY_TREE.md` (the house of Deli + the lineage of ideas; role-level only), `docs/RELATIONSHIP_TREES.md` (supply ecosystem · people · data contracts · memory spine; numbers stay in REPO_ANALYSIS §2).
+3. `docs/VISION.md` — vision · workflow · novelties · end goal · roadmap, compiled strictly from Orfeas-authored doctrine with citations (it synthesizes, never originates).
+4. `README.md` — ONLY the block between `<!-- REPO-ANALYSIS:BEGIN -->` and `<!-- REPO-ANALYSIS:END -->` markers is regenerated (at-a-glance + snapshot metrics + links to the full suite). **Never touch a byte outside the markers** — the surrounding README text is human-authored.
+
+On delta runs, revise a suite file only where the underlying vault actually changed (e.g. a new supplier → supply-ecosystem tree; a tracer batch → workflow tree + roadmap; a people note → family tree). An untouched domain leaves its file byte-identical.
 
 ## Mode selection
 

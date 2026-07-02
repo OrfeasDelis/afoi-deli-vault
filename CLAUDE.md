@@ -116,7 +116,7 @@ When asked to lint (or at natural milestones):
 1. Update `14_AI_COLLABORATION/Vault State Memory.md`.
 2. Write a session log from [[Template - Session Log]] into `14_AI_COLLABORATION/Sessions/`.
 3. Update Roadmap / Open Questions / Capture Backlog / ADRs if they changed.
-4. **Refresh the living repo analysis** — run the `/repo-analysis` skill (delta mode) so the regenerated `docs/REPO_ANALYSIS.md` + README summary block ride the same commit. This is enforced: the git-sync guard (`.claude/hooks/git-sync-guard.mjs`) blocks a push whose commits change vault notes without a refreshed analysis. (Same rule after a `git pull` that brings note changes — refresh before further work.)
+4. **Refresh the living repo analysis** — run the `/repo-analysis` skill (delta mode) so the regenerated `docs/` suite (`REPO_ANALYSIS.md` + the tree suite `WORKFLOW_TREE`/`FAMILY_TREE`/`RELATIONSHIP_TREES` + `VISION.md`) and the README summary block ride the same commit. This is enforced: the git-sync guard (`.claude/hooks/git-sync-guard.mjs`) blocks a push whose commits change vault notes without a refreshed analysis. (Same rule after a `git pull` that brings note changes — refresh before further work.)
 5. Commit + push:
    ```bash
    git add -A
