@@ -383,7 +383,7 @@ graph LR
 
 ### 2026-07-02 (later same day) · Analysis v1.1 · snapshot 7a06df2
 - **Suite extended on Orfeas's request:** added the companion views — `docs/WORKFLOW_TREE.md` (hierarchical workflow tree), `docs/FAMILY_TREE.md` (the house of Deli + the lineage of ideas), `docs/RELATIONSHIP_TREES.md` (supply ecosystem · people · data contracts · memory spine), and `docs/VISION.md` (vision · workflow · novelties · end goal · roadmap, doctrine-compiled).
-- `/repo-analysis` skill now regenerates the full suite every run; `CLAUDE.md` §8 step 4 and the README marker block updated accordingly; GitHub repo description set from `docs/VISION.md`.
+- `/repo-analysis` skill now regenerates the full suite every run; `CLAUDE.md` §8 step 4 and the README marker block updated accordingly; GitHub repo description set from `docs/VISION.md`; the README front section now opens with "The vision, in brief" — the condensed analytical description inside the generated block.
 - No vault-content change in this increment — same reader evidence as v1; metrics unchanged except README-internal links. Figure policy tightened suite-wide after adversarial review: the walk-in conversion rate is now existence-named (the number stays in `05_SALES_AND_CLIENT_EXPERIENCE/The Selection Engine.md`), not restated.
 
 ### 2026-07-02 · Analysis v1 · snapshot e686ba9 (+ same-day working tree)
