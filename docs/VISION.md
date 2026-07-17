@@ -48,12 +48,12 @@ Beyond the internal OS, the stated long-horizon play: prove the intelligence int
 
 Sequencing as currently decided (Root A leads; `00_COMMAND_CENTER/Capture Backlog.md` Priority 0.1; the older phased `14_AI_COLLABORATION/Roadmap.md` is flagged stale and pending refresh):
 
-1. **Finish the tracer** — batches E (receipt/delivery), F (payment/invoice/margin — absorbing the parked transport-economics deep-dive), G (returns/breakages). One real, closed order fully explained.
-2. **Reconcile the specification to reality** — fold the tracer's schema-corrections list (21 items and counting) into the SOPs and the 11 CSV contracts; land MEGASOFT and the rebates table in `03_DATABASE_DESIGN`.
+1. **The tracer interview is complete (A–G, 2026-07-18)** — one real, closed order fully explained end-to-end. Remaining is its *final landing* into the schema.
+2. **Reconcile the specification to reality (now the #1 action)** — fold the tracer's schema-corrections list (**49 items**) into the SOPs and the 11 CSV contracts; land the newly-surfaced entities in `03_DATABASE_DESIGN` — MEGASOFT + rebates, the inventory/`stock_items` (ΣΚΟΥΠΑ) ledger, a `transport_claim` receivable, the ΔΑ/τιμολόγιο documents model, and Kostas-Excel AP as a second source of truth. (Realized per-order margin is confirmed uncomputed today — the OS's highest-value analytical add.)
 3. **First real rows** — the validated schema receives its first instance data; the ΚΟΥΒΑΣ 5-phase migration starts read-only (document → extract → validate → dashboard → write-back last) (`02_OPERATIONS_OS/Kouvas System.md`).
 4. **Python worker, read-only first** — Kouvas snapshot/dashboard, then the five specified jobs (proforma collector, DTS parser, folder scanner, ready-for-delivery drafts, weekly summary), every external send behind human approval (`08_AUTOMATION_AND_AI/Python Worker Map.md`, `08_AUTOMATION_AND_AI/Automation Backlog.md`).
 5. **Interface** — the cockpit mockup becomes the working Layer-4 surface; client-facing surfaces come deliberately last — the backlog defers them until "after internal data is trusted" (`08_AUTOMATION_AND_AI/Automation Backlog.md`).
 6. **In parallel, the knowledge flywheel** — supplier dossiers to Kronos depth, the ~22 material class notes, collections on ingestion; Root B (the content/SEO output pipe) follows once the spine is real (`14_AI_COLLABORATION/Brainstorms/Brainstorm 2026-06-17.md`).
 7. **The growth axes** stay staged behind the spine: Scavolini kitchens, outdoor showroom, stock-house e-shop (gated on clean data), hotels/real estate, platform, personal brand (`01_COMPANY_CORE/Strategic Axes.md`, `11_EXPANSION_AND_VENTURES/Expansion Map.md`).
 
-*The tracer remains the #1 next action (batch E), per `14_AI_COLLABORATION/Vault State Memory.md`.*
+*The tracer interview is complete (A–G); the #1 next action is now its final landing — the 49-correction schema-diff — per `14_AI_COLLABORATION/Vault State Memory.md`.*
