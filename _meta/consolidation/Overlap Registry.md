@@ -28,7 +28,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** none needed (no unique content) → mark `Supplier Note System` superseded
 - **link_repair_steps:** none (zero inbound)
 - **deletion_eligible_after:** one audit cycle post-supersession
-- **orfeas_decision:** ☐ approve retire · note: both copies are stale vs the real authoring contract in [[Supplier Research Workflow]] §A — see OV-12
+- **orfeas_decision:** ✅ **approved retire (2026-07-19, §17-8) — EXECUTED same day:** supersession banner + `status: complete` applied to `Supplier Note System`; deletion eligible after one audit cycle. Both copies remain stale vs [[Supplier Research Workflow]] §A — OV-12 folds the vocabulary at Pass 4.
 
 ## OV-02 · The folder↔status derivation, stated three ways (two wrong the same way)
 - **notes:** `02_OPERATIONS_OS/Folder State Machine.md` · `02_OPERATIONS_OS/Order Workflow 0-4.md` (§automation interpretation) · `02_OPERATIONS_OS/Operations Map.md` (§folders + §status)
@@ -38,7 +38,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** Pass 4 Layer B rewrites the derivation ONCE (in FSM, per corr. 8: actionable→DAILY / held→ΠΡΩΤΟ + ΤΡΙΤΟ/ΒΑΛΤΟΣ) — the other two point
 - **link_repair_steps:** repoint Daily SOP step 6 (see OV-03)
 - **deletion_eligible_after:** n/a (all three stay; ownership split only)
-- **orfeas_decision:** ☐ approve ownership split (executes inside the tracer landing)
+- **orfeas_decision:** ✅ approved (2026-07-19, §17-8) — ownership split executes inside the tracer landing (Pass 4 Layer B)
 
 ## OV-03 · Daily Order Processing restates FSM + ΚΟΥΒΑΣ mechanics
 - **notes:** `02_OPERATIONS_OS/Daily Order Processing SOP.md` (steps 3-4, 6) · [[Folder State Machine]] · [[Kouvas System]]
@@ -48,7 +48,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** at Layer B, replace restated logic with links
 - **link_repair_steps:** internal links only
 - **deletion_eligible_after:** n/a (note stays)
-- **orfeas_decision:** ☐ approve (rides the tracer landing)
+- **orfeas_decision:** ✅ approved (2026-07-19, §17-8) — rides the tracer landing (Pass 4 Layer B)
 
 ## OV-04 · The payment gate encoded three times — all as the model the tracer overturned
 - **notes:** `02_OPERATIONS_OS/Delivery Scheduling SOP.md` (:18, :44-46) · `02_OPERATIONS_OS/Exception Handling Rules.md` (:28 CLIENT_BALANCE) · `02_OPERATIONS_OS/Finance and Credit Terms SOP.md` (:51)
@@ -58,7 +58,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** Layer B rewrites the rule once (soft gate + invariant + credit-line exception), others point
 - **link_repair_steps:** add references from the two non-owners
 - **deletion_eligible_after:** n/a
-- **orfeas_decision:** ☐ approve owner choice (Finance SOP)
+- **orfeas_decision:** ✅ approved (2026-07-19, §17-8) — owner = the reconciled [[Finance and Credit Terms SOP]]; rewrite at Pass 4 Layer B
 
 ## OV-05 · SOP yaml field-blocks vs the CSV contract
 - **notes:** 7 SOPs carrying pre-CSV yaml sketches (`Daily Order Processing SOP.md:93-108` · `Supplier PO Creation SOP.md:59-67` · `DTS and Loading Date SOP.md:19-34` · `Warehouse Receiving SOP.md:33-44` · `Finance and Credit Terms SOP.md:29-44` · `Order Workflow 0-4.md:25-71` · `Exception Handling Rules.md:33-42`) vs `97_CSV_SCHEMAS/*.csv` (the canonical stored contract per audit P0-2)
@@ -68,7 +68,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** at Layer B, replace each yaml block with a link + keep procedure text
 - **link_repair_steps:** SOP → schema-note links
 - **deletion_eligible_after:** n/a (blocks replaced in place)
-- **orfeas_decision:** ☐ approve pattern (mechanical once approved)
+- **orfeas_decision:** ✅ approved pattern (2026-07-19, §17-8) — yaml blocks → links at Pass 4 Layer B; CSV stays the field contract
 
 ## OV-06 · Porcelain Stoneware prose: MOC residue vs atomic note (drifted copies)
 - **notes:** `07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md:102-124` · `07_PRODUCT_KNOWLEDGE/Materials/Material - Porcelain Stoneware.md:84-152`
@@ -78,7 +78,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** fold the MOC deltas into PS → cut MOC:102-124 to a pointer row; backlog row references PS's needs_check callout
 - **link_repair_steps:** none expected (links target the atomic note already)
 - **deletion_eligible_after:** n/a (section thinning, not file deletion)
-- **orfeas_decision:** ☐ approve — but **gated on the paused Materials decision 1** (approve the pattern first); the other 15 MOC sections are NOT overlaps (only home of that prose — protected)
+- **orfeas_decision:** ✅ approved (2026-07-19, §17-8) — **gate cleared same review: Materials decision 1 = pattern approved (§17-12)**; the porcelain fold executes when Root B resumes (or at a convenient consolidation slot); the other 15 MOC sections are NOT overlaps (only home of that prose — protected)
 
 ## OV-07 · Pierre Vive facts triplicated (list prices · range shape · site absence)
 - **notes:** `Collection - Kronos Pierre Vive.md` (:250-258 · :108 · :285) · `Supplier - Kronos.md` (:67-68 worked example · :86) · `Kronos — Collections Reference.md` (:35 · :38) · [[Vault State Memory]]:58 · [[Capture Backlog]]:66
@@ -88,7 +88,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** annotate derivations; thin VSM:58 to a pointer (also a confidentiality row — see OV-08)
 - **link_repair_steps:** pointer links to the collection note
 - **deletion_eligible_after:** n/a
-- **orfeas_decision:** ☐ approve canonical assignments + ☐ the roster-column question (VSM:77)
+- **orfeas_decision:** ✅ approved canonical assignments (2026-07-19, §17-8; VSM:58 thinned to a pointer same day) + ✅ roster column **KEPT** as the canonical site-presence surface, pilot-scope (§17-11 — settled-line added to the roster; VSM open-decision ticked)
 
 ## OV-08 · Kronos confidential commercial terms outside their canonical home
 - **notes (locations only — values not restated here):** canonical `Supplier - Kronos.md:52-78` §Pricing → restated at `Supplier Enrichment Queue.md:53` · `10_FINANCE_AND_MANAGEMENT/Cost & Quote Build.md:43-59` · `10_FINANCE_AND_MANAGEMENT/Credit and Due Date Calendar.md:35` · `Vault State Memory.md:58 + :88 + :92` · historical session logs (2026-06-17c — historical class, acceptable)
@@ -98,7 +98,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** redact Enrichment Queue :53 + VSM rows to pointers; Cost & Quote Build → REVIEW (reference-not-restate, or declare it a second controlled home)
 - **link_repair_steps:** pointers to §Pricing
 - **deletion_eligible_after:** n/a (redaction, not deletion)
-- **orfeas_decision:** ☐ Cost & Quote Build's status (reference vs controlled second home) — a programme stopping-condition item ("a confidential fact's canonical location is unclear")
+- **orfeas_decision:** ✅ **ruled reference-only (2026-07-19, §17-6) — EXECUTED same day:** CQB's worked figures, the Enrichment Queue :53 restatement, and the VSM rows (:58 entry · §7 revenue line · the 2026-06-17c footer fragment) all redacted to existence-naming pointers; [[Supplier - Kronos]] §Pricing is the sole holder. The revenue figure single-sourced to [[Afoi Deli Master Profile]].
 
 ## OV-09 · Current Priorities vs Capture Backlog (the banned parallel queue)
 - **notes:** `00_COMMAND_CENTER/Current Priorities.md` (frozen 2026-06-07, `review_frequency: weekly` never honored, 1 inbound from historical README_START_HERE) · [[Capture Backlog]] (the ONE queue, ADR-0007 rec. 2)
@@ -108,7 +108,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** MERGE_INTO(Capture Backlog) surviving themes → mark residual historical
 - **link_repair_steps:** repoint the README_START_HERE reference on its rewrite
 - **deletion_eligible_after:** one audit cycle post-merge
-- **orfeas_decision:** ☐ REQUIRED FIRST — is this his authored strategic framing (protect, merge carefully) or scaffold (fold in)? (authorship stopping-condition)
+- **orfeas_decision:** ✅ ruled (2026-07-19, §17-3): **careful line-by-line diff** — surviving themes merge into [[Capture Backlog]]; anything reading authored comes back to Orfeas before absorbing; residual marked historical. Executes at Pass 3.
 
 ## OV-10 · Question registers: Open Questions vs Questions To Resolve vs the future Knowledge Action Register
 - **notes:** `14_AI_COLLABORATION/Open Questions.md` (vault/collab; stale-but-functional) · `00_COMMAND_CENTER/Questions To Resolve.md` (business; dead — holds tracer-answered rows :20/:22 unmarked) · Knowledge Action Register (to be born per the charter, gaps-only)
@@ -118,7 +118,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** annotate tracer-answered rows now → MERGE_INTO(Knowledge Action Register) at its birth → mark QTR historical
 - **link_repair_steps:** Home Dashboard :44-47 repoint (see OV-13)
 - **deletion_eligible_after:** one audit cycle after the Register absorbs it
-- **orfeas_decision:** ☐ confirm which QTR rows he considers answered
+- **orfeas_decision:** ✅ disposition approved (2026-07-19, §17-8); the row-by-row confirmation of tracer-answered QTR items happens with Orfeas during the Pass 3 annotation (still owed — deliberately not guessed)
 
 ## OV-11 · The session ritual defined in three places
 - **notes:** `CLAUDE.md` §§1/6/8 (canonical, hook-backed) · `14_AI_COLLABORATION/Session Protocol.md` (drifted mirror: START omits The Heart + Capture Backlog; END omits the /repo-analysis refresh; :46 carries the challenged waterfall) · `README_START_HERE.md:35-46` (historical parallel boot path)
@@ -128,7 +128,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** sync Protocol to CLAUDE §1/§8 **or** slim it to a pointer; README_START_HERE handled by its planned rewrite (F5)
 - **link_repair_steps:** none
 - **deletion_eligible_after:** n/a
-- **orfeas_decision:** ☐ full synced mirror vs slim pointer (one authoritative ritual text)
+- **orfeas_decision:** ✅ ruled **slim pointer** (2026-07-19, §17-5): CLAUDE.md §§1/6/8 is the one authoritative ritual text; Session Protocol slims to a pointer keeping only its unique working-modes callout. Executes at Pass 3.
 
 ## OV-12 · The dossier slot vocabulary defined three ways
 - **notes:** `Supplier Master Index.md:55-77` (18-item checklist) · `Supplier Enrichment Queue.md:32-39` (6 dimensions) · `Supplier Research Workflow.md:86-99` (the contract the 5 live dossiers actually follow)
@@ -138,7 +138,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** fold definitional lists into the workflow; index + queue keep pointers
 - **link_repair_steps:** pointers
 - **deletion_eligible_after:** n/a
-- **orfeas_decision:** ☐ approve (also settles [[Template - Supplier]]'s reconciliation direction, OV-01)
+- **orfeas_decision:** ✅ approved (2026-07-19, §17-8) — [[Supplier Research Workflow]] §A owns the slot contract; folds at Pass 4 (settles OV-01's reconciliation direction)
 
 ## OV-13 · Hub links routing to dead surfaces
 - **notes:** `00_COMMAND_CENTER/Home Dashboard.md:44-47` (routes exclusively to Weekly Review [to-be-dormant] · Decision Log [empty] · Questions To Resolve [stale] · Inbox [dormant]; links neither the backlog nor the programme) · `14_AI_COLLABORATION/Collaboration Home.md` (omits Capture Backlog; :46 names Roadmap a capture surface)
@@ -147,7 +147,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** none
 - **link_repair_steps:** Home Dashboard → point at Capture Backlog + the programme; Collaboration Home → add the queue link, correct :17/:46
 - **deletion_eligible_after:** n/a
-- **orfeas_decision:** ☐ approve (mechanical)
+- **orfeas_decision:** ✅ approved (2026-07-19, §17-8) — **EXECUTED same day** (§16-C): Home Dashboard's dead block → "Queue & review" (Capture Backlog + programme + VSM, dormant surfaces footnoted); Collaboration Home gained the queue in "Start here", corrected :17 (Roadmap pre-pivot flag) + :46 (capture surfaces).
 
 ## OV-14 · Sequencing voices: Roadmap vs the programme's arc vs the backlog
 - **notes:** `14_AI_COLLABORATION/Roadmap.md` (waterfall phases, phantom Builder's Manual :13, Phase 0 "IN PROGRESS" contradicted by 19 sessions) · [[Consolidation and Enrichment Programme]] (90-day arc) · [[Capture Backlog]] (ranked queue)
@@ -157,7 +157,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** file the instance-first ADR (due — filing condition arrived 2026-07-18) → then rewrite Roadmap or MARK_HISTORICAL
 - **link_repair_steps:** CLAUDE §1 + Session Protocol boot-reads adjust on whichever fork
 - **deletion_eligible_after:** never (historical value); archival only
-- **orfeas_decision:** ☐ REQUIRED — rewrite vs mark-historical (Pass 3's biggest call)
+- **orfeas_decision:** ✅ ruled **REWRITE instance-first** (2026-07-19, §17-2), after ADR-0008 files. Roadmap stays a live boot note; phantom Builder's-Manual claim struck same day (§16-C); a "rewrite pending" banner marks the interim. Executes at Pass 3.
 
 ## OV-15 · "Architecture. Surfaces. Quiet precision." — dual ownership
 - **notes:** `01_COMPANY_CORE/Afoi Deli Master Profile.md:19` · `01_COMPANY_CORE/Brand DNA.md:12+35` (no cross-link either way; both zero-wikilink notes) · echoed `11_EXPANSION_AND_VENTURES/Personal Brand and Thought Leadership.md:29`
@@ -167,7 +167,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** gated on the 2026-06-07-stratum decision (adopt vs archive — see baseline report §Decisions)
 - **link_repair_steps:** cross-link the two notes regardless
 - **deletion_eligible_after:** n/a
-- **orfeas_decision:** ☐ part of the stratum decision — is the line his?
+- **orfeas_decision:** ✅ ruled under the stratum split (2026-07-19, §17-1): [[Brand DNA]] is the canonical home (ownership callout + cross-links applied same day); the line itself awaits Orfeas's re-authoring or explicit claim (voice layer of the split).
 
 ## OV-16 · Customer-type criteria — contested framing
 - **notes:** `01_COMPANY_CORE/Business Model Map.md` ("Customer types" table — marketing framing) · `05_SALES_AND_CLIENT_EXPERIENCE/The Selection Engine.md` §4 (real reads; itself flags the Map as "marketing copy, not real selection rules" :99/:154; its suggested reconciliation link :162 never applied)
@@ -177,7 +177,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** none until the stratum decision; then apply Selection Engine :162's own reconciliation
 - **link_repair_steps:** add the missing Map→Engine link either way
 - **deletion_eligible_after:** n/a
-- **orfeas_decision:** ☐ part of the stratum decision
+- **orfeas_decision:** ✅ ruled under the stratum split (2026-07-19, §17-1): [[The Selection Engine]] canonical for how clients are actually read; the Map's table stays as facts-layer public-facing segmentation; the missing Map→Engine link + Engine :162's own reconciliation apply at Pass 3/4.
 
 ## OV-17 · Conduit relationship facts retold in dossiers
 - **notes:** `Conduit - Plus Interiors.md:46-48` (founding-act story) vs `Supplier - Cielo.md:26+30` (detailed retelling) · `Conduit - Filon IKE.md:36-37` (character) vs `Supplier - Mutina.md:37+40+83`
@@ -187,7 +187,7 @@ Legend — `overlap_type: exact | partial | naming | stale-copy | generated-copy
 - **merge_steps:** trim dossier retellings to linked lines
 - **link_repair_steps:** links already exist
 - **deletion_eligible_after:** n/a
-- **orfeas_decision:** ☐ approve — CAUTION: the Cielo retelling reads authored; confirm it isn't deliberate doctrine-echo before trimming
+- **orfeas_decision:** ✅ approved **with reservation** (2026-07-19, §17-8): trims proceed at execution time, but the **Cielo founding-act passage goes back to Orfeas first** — if it is deliberate doctrine-echo, it stays. Nothing trimmed yet.
 
 ---
 

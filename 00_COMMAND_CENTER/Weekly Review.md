@@ -1,11 +1,15 @@
 ---
 type: review
 created: 2026-06-07
-status: active
+updated: 2026-07-19
+status: seed
 frequency: weekly
 ---
 
 # Weekly Review
+
+> [!note] Dormant (baseline §17 decision 14, 2026-07-19)
+> Designed 2026-06-07, never practiced — and twice decided dormant before this banner existed. It stays a seed **until the OS data layer holds real rows** (orders/lines in the database, not zero-row CSVs): a weekly review only has meaning when there is weekly data to review. Revive it then, rewritten against the real OS. The live steering surfaces today are [[Capture Backlog]] (the ONE queue) and [[Vault State Memory]]. *(Dormancy pattern per [[Inbox]].)*
 
 ## 1. Business reality
 

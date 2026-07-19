@@ -6,6 +6,9 @@ status: active
 
 # Brand DNA
 
+> [!note] Positioning-line ownership (OV-15, ruled 2026-07-19)
+> This note is the **canonical home** of the positioning line *"Architecture. Surfaces. Quiet precision."* — [[Afoi Deli Master Profile]] §Core positioning quotes it. Per the stratum ruling (baseline §17-1, split), the voice layer here awaits Orfeas's re-authoring or explicit claim.
+
 ## Essence
 
 Afoi Deli is not loud luxury.  

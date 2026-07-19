@@ -1,6 +1,6 @@
 # Afoi Deli Vault — Vision & Approach
 
-**Generated 2026-07-19 · snapshot 6bdac9f** by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.**
+**Generated 2026-07-19b · snapshot ff3c968** by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.**
 
 > The authorship line, stated up front: everything below is **compiled from Orfeas-authored doctrine and decisions** — `The Heart.md`, the Operating Doctrine, the strategic axes, the recorded brainstorms and ADRs. This document synthesizes and cites; it does not originate vision. Where it interprets, it says so.
 
@@ -13,7 +13,7 @@ Afoi Deli Floor + Bath is a second-generation Athens family merchant of premium 
 Two convictions shape everything:
 
 1. **The moat is the uplift engine, not the brand portfolio** (`01_COMPANY_CORE/Afoi Deli — Operating Doctrine.md`). Brands are abundant; the scarce asset is the house's capacity — staging plus conversion — to make any carried brand more premium than it is alone. The vault therefore hoards *what only this house knows*: supplier truth, selection craft, process reality, relationship history.
-2. **Business and personal are one fabric** (`The Heart.md`, `CLAUDE.md`). The vault holds the company and the successor in one graph, on the premise that "your company will only become as clear, disciplined, and powerful as your own operating system" (`12_PERSONAL_OS/Personal Operating System.md`). The succession arc — competence → stewardship — is itself an engineering requirement here: the system must make the whole holdable at a standard.
+2. **Business and personal are one fabric** (the operating premise of `CLAUDE.md`, its ruled home; the fabric descends from `The Heart.md`). The vault holds the company and the successor in one graph, on the premise that "your company will only become as clear, disciplined, and powerful as your own operating system" (`12_PERSONAL_OS/Personal Operating System.md`). The succession arc — competence → stewardship — is itself an engineering requirement here: the system must make the whole holdable at a standard.
 
 ## The workflow
 
@@ -56,4 +56,4 @@ Sequencing as currently decided (Root A leads; `00_COMMAND_CENTER/Capture Backlo
 6. **In parallel, the knowledge flywheel** — supplier dossiers to Kronos depth, the ~22 material class notes, collections on ingestion; Root B (the content/SEO output pipe) follows once the spine is real (`14_AI_COLLABORATION/Brainstorms/Brainstorm 2026-06-17.md`).
 7. **The growth axes** stay staged behind the spine: Scavolini kitchens, outdoor showroom, stock-house e-shop (gated on clean data), hotels/real estate, platform, personal brand (`01_COMPANY_CORE/Strategic Axes.md`, `11_EXPANSION_AND_VENTURES/Expansion Map.md`).
 
-*The tracer interview is complete (A–G); the #1 next action is now its final landing — the 49-correction schema-diff, mapped correction-by-correction in `docs/VAULT_BASELINE_2026-07-19.md` §7 — per `14_AI_COLLABORATION/Vault State Memory.md`. As of 2026-07-19 all of the above runs inside the **Consolidation & Enrichment Programme** (ADR-0007, `14_AI_COLLABORATION/Consolidation and Enrichment Programme.md`): baseline → Orfeas's review → execute, with the tracer landing as its Pass 4.*
+*The tracer interview is complete (A–G); the #1 content action is its final landing — the 49-correction schema-diff, mapped correction-by-correction in `docs/VAULT_BASELINE_2026-07-19.md` §7 — per `14_AI_COLLABORATION/Vault State Memory.md`. All of the above runs inside the **Consolidation & Enrichment Programme** (ADR-0007, `14_AI_COLLABORATION/Consolidation and Enrichment Programme.md`); its hard gate — baseline → Orfeas's review → execute — **cleared on 2026-07-19b**: all 15 review decisions ruled, the mechanical batch executed, and the sequence ahead is the ADR batch (ADR-0008 instance-first first) → Pass 3 steering → Pass 4, the tracer landing.*

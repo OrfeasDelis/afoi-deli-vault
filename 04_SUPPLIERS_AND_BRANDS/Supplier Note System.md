@@ -4,9 +4,9 @@ supplier_name:
 country:
 category:
 strategic_importance:
-status: active
+status: complete
 created: 2026-06-07
-updated:
+updated: 2026-07-19
 contacts:
 agency:
 website:
@@ -16,6 +16,9 @@ automation_priority:
 ---
 
 # Supplier - {supplier_name}
+
+> [!warning] Superseded (Overlap Registry OV-01, approved 2026-07-19)
+> This skeleton is an exact duplicate of [[Template - Supplier]] (templates live in `98_TEMPLATES`), and both copies are stale against the real authoring contract in [[Supplier Research Workflow]] §A — which is what the live dossiers actually follow. Do not instantiate from this file. **Deletion eligible after one audit cycle** (no inbound links; audit finding F3 closes with this supersession).
 
 ## Quick view
 

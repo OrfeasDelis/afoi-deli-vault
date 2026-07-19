@@ -5,7 +5,7 @@ company: Afoi Deli Floor + Bath
 legal_name: "ΑΦΟΙ ΔΕΛΗ Ε.Ε."
 location: Athens, Greece
 status: active
-source_confidence: memory_based_needs_verification
+confidence: needs_check
 ---
 
 # Afoi Deli Floor + Bath — Master Profile
@@ -17,6 +17,8 @@ source_confidence: memory_based_needs_verification
 ## Core positioning
 
 > Architecture. Surfaces. Quiet precision.
+
+*(Canonical home of this line: [[Brand DNA]] §Signature phrases — OV-15, 2026-07-19.)*
 
 The company sits between:
 

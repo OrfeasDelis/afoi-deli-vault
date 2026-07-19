@@ -60,9 +60,13 @@ Needed system:
 
 ## Axis 5 — AI operating system
 
-Obsidian becomes the memory layer.  
-The Python worker (on Supabase Postgres) becomes the automation layer.  
-Database/webapp becomes the interface layer.
+The five-layer model (canonical statement: [[Vault State Memory]] §1):
+
+1. **Knowledge** — Obsidian, the memory layer (the only layer running today).
+2. **Data** — Supabase Postgres, structured truth.
+3. **Automation** — the Python worker.
+4. **Interface** — the future webapp (see [[Afoi Deli — Operations Cockpit]]).
+5. **AI Agent** — over knowledge + data, behind the approval gates.
 
 ## Axis 6 — Hotel and real estate intelligence
 

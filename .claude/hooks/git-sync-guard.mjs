@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * git-sync-guard — keeps docs/REPO_ANALYSIS.md living (see .claude/skills/repo-analysis/SKILL.md).
+ * git-sync-guard — keeps the generated docs/ suite living (see .claude/skills/repo-analysis/SKILL.md).
  *
  * Wired in .claude/settings.json:
  *   PreToolUse(Bash)  -> `node .claude/hooks/git-sync-guard.mjs pre`
@@ -18,7 +18,15 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const ANALYSIS_FILE = "docs/REPO_ANALYSIS.md";
+// The full generated suite — every analysis-bearing push must refresh all of it.
+// (Checking only REPO_ANALYSIS.md let the companions go stale: baseline 2026-07-19 §13.)
+const SUITE = [
+  "docs/REPO_ANALYSIS.md",
+  "docs/WORKFLOW_TREE.md",
+  "docs/FAMILY_TREE.md",
+  "docs/RELATIONSHIP_TREES.md",
+  "docs/VISION.md",
+];
 // Meta paths whose changes alone do not make the analysis stale.
 const EXEMPT = [/^docs\//, /^README\.md$/, /^\.obsidian\//, /^\.claude\//, /^\.githooks\//];
 
@@ -52,11 +60,13 @@ function main() {
       return 0; // no upstream / detached — nothing to judge, fail open
     }
     const stale = contentNotes(changed);
-    if (stale.length > 0 && !changed.includes(ANALYSIS_FILE)) {
+    const missing = SUITE.filter((f) => !changed.includes(f));
+    if (stale.length > 0 && missing.length > 0) {
       console.error(
         `[repo-analysis guard] Push blocked: the outgoing commits change ${stale.length} vault note(s) ` +
-          `but ${ANALYSIS_FILE} was not regenerated.\n` +
-          `Run the /repo-analysis skill (delta), commit the refreshed analysis, then push.\n` +
+          `but the generated suite was not fully refreshed (missing: ${missing.join(", ")}).\n` +
+          `Run the /repo-analysis skill (delta) — it refreshes every suite file's header each run — ` +
+          `commit the refreshed suite, then push.\n` +
           `Changed notes include: ${stale.slice(0, 5).join(", ")}${stale.length > 5 ? ", …" : ""}\n` +
           `Emergency bypass: SKIP_REPO_ANALYSIS_GUARD=1 git push`
       );
@@ -75,10 +85,10 @@ function main() {
       return 0;
     }
     const notes = contentNotes(changed);
-    if (notes.length > 0 && !changed.includes(ANALYSIS_FILE)) {
+    if (notes.length > 0 && SUITE.some((f) => !changed.includes(f))) {
       console.error(
         `[repo-analysis guard] The pull brought ${notes.length} changed vault note(s) — ` +
-          `run the /repo-analysis skill (delta) to refresh ${ANALYSIS_FILE} before further work.`
+          `run the /repo-analysis skill (delta) to refresh the docs/ suite before further work.`
       );
       return 2; // PostToolUse: non-blocking, stderr is surfaced to Claude
     }

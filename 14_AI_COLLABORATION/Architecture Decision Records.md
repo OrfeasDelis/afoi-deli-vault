@@ -6,7 +6,7 @@ status: active
 
 # Architecture Decision Records
 
-Dated record of system/architecture decisions for the vault and future apps. Newest first. Use [[Template - ADR]] for new entries. (Business/ops decisions go in `00_COMMAND_CENTER/Decision Log`.)
+Dated record of system/architecture decisions for the vault and future apps. Newest first. Use [[Template - ADR]] for new entries. (Business/ops decisions are recorded in ADR **Consequences**, the dated session logs, and [[Capture Backlog]] annotations — the [[Decision Log]] was retired 2026-07-19, baseline §17-4.)
 
 ---
 

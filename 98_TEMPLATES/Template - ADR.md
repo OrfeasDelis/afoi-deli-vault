@@ -1,7 +1,7 @@
 ---
 type: adr
 created: <% tp.date.now("YYYY-MM-DD") %>
-status: proposed
+status: seed
 ---
 
 ## ADR-XXXX — <decision title>

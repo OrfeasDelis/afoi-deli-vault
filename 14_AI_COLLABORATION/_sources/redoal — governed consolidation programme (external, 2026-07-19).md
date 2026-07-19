@@ -1,3 +1,12 @@
+---
+type: source_archive
+created: 2026-07-19
+status: complete
+---
+
+> [!warning] Immutable raw source — NOT governing doctrine (ADR-0007, 2026-07-19)
+> This is the external programme draft (`redoal.md`) exactly as Orfeas brought it, archived as evidence. The **adopted working charter is [[Consolidation and Enrichment Programme]]**, which reconciled this draft with vault law — do **not** adopt from this file: its six-value confidence vocabulary (the note-level `confidence` enum is unchanged; the six values live at product/SKU tier as `verification_status`), its Knowledge Action Register-as-queue ([[Capture Backlog]] stays the ONE execution queue), or its `canonicality`/`data_classification` frontmatter fields (deferred to a post-baseline ADR). Everything below this banner is verbatim and immutable. *(Banner added by the §16-C mechanical batch — the only vault-side touch this file will ever receive.)*
+
 ```
 AFOI DELI VAULT — GOVERNED CONSOLIDATION, ENRICHMENT AND CONTINUOUS-BUILD
 PROGRAMME

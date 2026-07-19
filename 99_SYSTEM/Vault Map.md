@@ -11,7 +11,7 @@ aliases:
 # Vault Map
 
 > [!important] This is the single canonical folder index.
-> Every other note that needs the taxonomy should **link here**, not restate it — that restating is exactly what drifted (see the [[2026-06-16-vault-audit|2026-06-16 audit]] P0-1). Add, rename, or retire a folder → update *this table* and nothing else needs to duplicate it. The list below matches the folders on disk as of 2026-06-16.
+> Every other note that needs the taxonomy should **link here**, not restate it — that restating is exactly what drifted (see the [[2026-06-16-vault-audit|2026-06-16 audit]] P0-1). Add, rename, or retire a folder → update *this table* and nothing else needs to duplicate it. The list below matches the folders on disk as of 2026-07-19.
 
 ## Folder logic
 
@@ -20,7 +20,7 @@ aliases:
 | `00_COMMAND_CENTER` | Dashboards, priorities, decisions, inbox, reviews · [[Capture Backlog]] |
 | `01_COMPANY_CORE` | Company identity, strategy, business model, people · [[Afoi Deli — Operating Doctrine]] |
 | `02_OPERATIONS_OS` | Core workflows and SOPs (order flow, Kouvas, POs, warehouse, finance) |
-| `03_DATABASE_DESIGN` | ERP/database schema notes (`.md`) — see [[Database Master Schema]]. Source-of-truth precedence vs. the `97_CSV_SCHEMAS` headers is being settled (audit P0-2). |
+| `03_DATABASE_DESIGN` | ERP/database schema notes (`.md`) — see [[Database Master Schema]]. Precedence settled (audit P0-2, 2026-06-16): the `97_CSV_SCHEMAS` headers are the stored contract; these notes annotate. |
 | `04_SUPPLIERS_AND_BRANDS` | Supplier/brand intelligence — the gravity center · [[Supplier Master Index]] / [[Brand Master Index]] |
 | `05_SALES_AND_CLIENT_EXPERIENCE` | Client journey, quotes, emails |
 | `06_PROJECTS_AND_CASES` | Projects, cases, hospitality, kitchens |
@@ -35,10 +35,11 @@ aliases:
 | `15_PERSONAL_LIFE` | *(seed)* Personal life outside the business — relationships, wellness, finance · [[Personal Life — Home]] |
 | `16_IDEAS_AND_VISION` | *(seed)* Creative/venture bets — Mnemonic Atelier, Material Atelier, Circles · [[Ideas and Vision — Home]] |
 | `17_JOURNAL` | Life log, `YYYY-MM-DD`, Orfeas's own voice · [[Journal]] |
-| `97_CSV_SCHEMAS` | Database import headers (`.csv`). Precedence vs. the `03` schema notes: audit P0-2. |
+| `97_CSV_SCHEMAS` | Database import headers (`.csv`) — the canonical stored contract (audit P0-2, 2026-06-16); the `03` notes annotate. |
 | `98_TEMPLATES` | Reusable note templates |
 | `99_SYSTEM` | Vault rules and maps (this note, [[Obsidian Usage Rules]]) |
-| `_meta` | Vault audit reports + the [[Vault Integrity Audit]] charter |
+| `_meta` | Vault audit reports + the [[Vault Integrity Audit]] charter · consolidation registries in `_meta/consolidation/` ([[Overlap Registry]] · [[Canonical Note Registry]] + evidence JSONs) |
+| `scripts` | Deterministic vault tooling — `vault_baseline.py` (registry / link-graph / frontmatter / sensitivity scans for the [[Consolidation and Enrichment Programme]]) |
 | `docs` | Generated repo profile suite — `REPO_ANALYSIS.md` + `WORKFLOW_TREE` / `FAMILY_TREE` / `RELATIONSHIP_TREES` + `VISION` (Claude-regenerated on every push/pull via `/repo-analysis`; don't hand-edit — see `CLAUDE.md §8`) |
 
 > [!note] Deliberately not present

@@ -9,7 +9,7 @@ owner: Orfeas Delis
 # Personal Life — Home
 
 > [!note] Seed wing
-> This is the personal-life half of the unified vault — held to the same seriousness as the business side ([[The Heart]]: business and personal are *one fabric*). It is **seed**: the rooms below are real and open, but most are awaiting their first note. Read and reason across them freely; the [[Journal]] and wellness notes are *author-by-invitation* — surfaced and discussed, not written into unprompted (see [[CLAUDE]] §5).
+> This is the personal-life half of the unified vault — held to the same seriousness as the business side (business and personal are *one fabric* — the operating premise of `CLAUDE.md` §0, ruled its home 2026-07-19; [[The Heart]] is the root the whole fabric descends from). It is **seed**: the rooms below are real and open, but most are awaiting their first note. Read and reason across them freely; the [[Journal]] and wellness notes are *author-by-invitation* — surfaced and discussed, not written into unprompted (see [[CLAUDE]] §5).
 
 ## The rooms
 

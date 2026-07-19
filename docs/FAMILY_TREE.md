@@ -1,6 +1,6 @@
 # Afoi Deli — Family Tree
 
-**Generated 2026-07-02** by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.** Role-level only by rule: the people are described by their documented roles in the business and doctrine, never by personal content (the personal wing is author-by-invitation, `CLAUDE.md` §5).
+**Generated 2026-07-19b · snapshot ff3c968** (body unchanged since 2026-07-02 — no people-layer change) by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.** Role-level only by rule: the people are described by their documented roles in the business and doctrine, never by personal content (the personal wing is author-by-invitation, `CLAUDE.md` §5).
 
 Two family trees live in this repo: the **house of Deli** (the people), and the **lineage of ideas** (what descends from The Heart). Both are drawn from Orfeas-authored doctrine; this file only compiles them.
 

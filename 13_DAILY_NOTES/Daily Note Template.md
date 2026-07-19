@@ -2,6 +2,7 @@
 type: daily_note
 date:
 created: 2026-06-07
+status: seed
 ---
 
 # Daily Note - {date}

@@ -39,9 +39,10 @@ cssclass: dashboard
 6. **Hotel / real estate expansion** — boutique hospitality, design-led material knowledge, Athens positioning.
 7. **Personal mastery** — health, discipline, Italian, leadership, mindfulness, long-term compounding.
 
-## Weekly review links
+## Queue & review
 
-- [[00_COMMAND_CENTER/Weekly Review]]
-- [[00_COMMAND_CENTER/Decision Log]]
-- [[00_COMMAND_CENTER/Questions To Resolve]]
-- [[00_COMMAND_CENTER/Inbox]]
+- [[Capture Backlog]] — the ONE execution queue (what to work on next).
+- [[Consolidation and Enrichment Programme]] — the standing consolidation/enrichment frame (ADR-0007).
+- [[Vault State Memory]] — where the build actually is.
+
+*Dormant/retired surfaces, kept for history: [[Weekly Review]] (dormant until the data layer lives) · [[Decision Log]] (retired — decisions live in ADRs + session logs) · [[Questions To Resolve]] (stale; tracer-annotation pending Pass 3) · [[Inbox]] (dormant).*

@@ -36,27 +36,22 @@ The price of a quoted line is built in five steps. Steps 1–2 are deterministic
 
 ## Worked supplier — Kronos (first one wired)
 
-Discount cascade off the *Listino Prezzi 2026* (full detail + sale conditions live in the dossier: [[Supplier - Kronos]]):
+> [!note] Figures redacted to their canonical home (OV-08 · baseline §17 decision 6, 2026-07-19)
+> This note is **reference-only** for buy-side numbers: the per-tier discount cascade (and its net multipliers), the worked Pierre Vive net examples, and the credit terms live **only** in [[Supplier - Kronos]] §Pricing (danger-classified). What stays here is the method.
 
-| Tier | Cascade | Net = list × |
-|---|---|---|
-| Base tiles | −70% | 0.300 |
-| Module configs (mix dimensions) | −60% −10% | 0.360 |
-| Decors (mosaic / baguette / 3D / listello) | −60% −10% −5% | 0.342 |
+The Kronos shape, without figures: items are assigned a **tier** (base tiles · module configs · decors) by a rule consistent across all Kronos collections; each tier has its own **compounding cascade** (§The chain, step 2) off the *Listino Prezzi 2026* (archived in `Kronos/_sources/`); list prices per line live in the collection notes (e.g. [[Collection - Kronos Pierre Vive]]).
 
-*Tier is assigned per item, by a rule consistent across all Kronos collections.* Example (Pierre Vive, base): 120×280 list €132 → **net €39.60/m²**; 60×120 list €87 → **net €26.10/m²** — before steps 3–5.
-
-**Credit** (affects cash, not margin directly): Kronos 90 days standard / 120 days stock → [[Credit and Due Date Calendar]].
+**Credit** (affects cash, not margin directly): terms in the dossier §Pricing → wiring in [[Credit and Due Date Calendar]].
 
 ## What's decided vs. open
 
-- **Decided:** the 5-step chain; Kronos's cascade + tiers + credit (verified). Real per-SKU prices stay at the OS `products` tier (`buy_price` = list × cascade), not copied into notes — see [[Database Master Schema]]. Collections carry a derived `price_band`, not live prices (the [[Capture Backlog]] "cost as a collection facet" decision, option 1).
+- **Decided:** the 5-step chain; Kronos's cascade + tiers + credit (verified — figures in the dossier §Pricing). Real per-SKU prices stay at the OS `products` tier (`buy_price` = list × cascade), not copied into notes — see [[Database Master Schema]]. Collections carry a derived `price_band`, not live prices (the [[Capture Backlog]] "cost as a collection facet" decision, option 1). **This note is reference-only for figures** (baseline §17 decision 6).
 
 > [!question] Open — Orfeas to author (the policy half)
 > - **Margin policy** — target gross-margin band(s); do they differ by tier (base vs. decor) or by channel (retail vs. project/architect)?
 > - **Transport & pallet allocation** — by weight, by m², or a flat per-order load fee? (Kronos sells only in full boxes; part-pallet handling.)
-> - **Quantity rules** — when does a project size unlock the ~+2% extra Kronos ceiling, and does that pass to the client or hold as margin?
-> - **The +2% negotiation ceiling** vs. the standard cascade — keep separate in the model (cascade = cost basis; +2% = deal-by-deal).
+> - **Quantity rules** — when does a project size unlock the small negotiated extra-discount ceiling (figure in the dossier §Pricing), and does that pass to the client or hold as margin?
+> - **The negotiation ceiling** vs. the standard cascade — keep separate in the model (cascade = cost basis; the ceiling = deal-by-deal).
 
 ## Links
 - Margin tracking → [[Profitability Engine]] · credit/cash → [[Credit and Due Date Calendar]]

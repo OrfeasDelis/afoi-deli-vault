@@ -81,6 +81,7 @@ Run from the vault root, phased — read before judging:
 |---|---|---|---|
 | 2026-06-16 | Full structural + philosophical (first audit) | Healthy business-intel core; **P0 = source-of-truth drift** (two disagreeing indexes + phantom folders `15/16/18` + dual data contract). Doctrine spine + supplier system + session ritual are excellent and protected. | [[2026-06-16-vault-audit]] |
 | 2026-06-17 | First on-command `/vault-audit` (routine pass) | **Healthy, no P0.** Contested n8n item **settled → sweep complete** (no live note prescribes n8n); only an inverted `CLAUDE.md §7` freshness flag remained (P1) — fixed this run. 7/7 critic-confirmed, 0 false-positives. | [[2026-06-17-vault-audit]] |
+| 2026-06-19 | Routine `/vault-audit` (mid-tracer) | **Healthy, no P0/P1.** Two prior findings closed (inverted §7 flag → fixed; `AI Agent Roles` → wired). 4 carried P2 + 1 new watch-item (the MEGASOFT schema-diff, deflated P2→watch). 4/6 critic-confirmed, 1 deflated, 0 false-positives. | [[2026-06-19-vault-audit]] |
 
 ---
 

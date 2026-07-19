@@ -10,7 +10,10 @@ status: active
 Phased plan for building the vault and the future apps. Mirrors the 5 phases in [[Hermes Obsidian Codex Interface]].
 
 > [!note] Refreshed 2026-06-16 (audit P1-D)
-> Updated to the settled **Supabase Postgres + Python worker** stack — n8n removed (see Phase 3). This is the *vault/phases* roadmap; the Afoi Deli **OS build** has its own R0–R3 plan in the Builder's Manual (see [[Vault State Memory]] §4).
+> Updated to the settled **Supabase Postgres + Python worker** stack — n8n removed (see Phase 3). This is the *vault/phases* roadmap; the Afoi Deli **OS build**'s R0–R3 plan (the "Builder's Manual") is **planned, not yet written** — the claim that it already exists was a phantom, struck 2026-07-19 (baseline §4-1).
+
+> [!warning] Ruled 2026-07-19 (baseline §17-2): rewrite pending
+> This note will be **rewritten instance-first** once ADR-0008 files (Pass 3 of the [[Consolidation and Enrichment Programme]]). Until then, read the phases below as pre-pivot sequencing — the demonstrated arc is tracer → landing → enrichment loop → OS build, and [[Capture Backlog]] carries execution priority.
 
 ## Phase 0 — Foundation (IN PROGRESS, 2026-06-07)
 - [x] Collaboration + memory layer (`14_AI_COLLABORATION`).

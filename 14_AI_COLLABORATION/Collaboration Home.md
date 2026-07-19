@@ -11,10 +11,11 @@ The control room for how **Orfeas + Claude** build this vault and the future app
 ## Start here every session
 - [[Vault State Memory]] — the source of truth for current state (read first).
 - [[Session Protocol]] — how each session starts, runs, and ends.
+- [[Capture Backlog]] — the ONE execution queue (a boot-read per `CLAUDE.md §1`).
 
 ## Planning & decisions
 - [[Consolidation and Enrichment Programme]] — the standing consolidation/enrichment frame (ADR-0007): baseline → review → execute; interviews, ingestion, cases, audit v2.
-- [[Roadmap]] — phased plan from memory -> git -> automation -> data -> interface.
+- [[Roadmap]] — the phase framing (pre-pivot; **instance-first rewrite pending** — baseline §17-2, after ADR-0008).
 - [[Open Questions]] — live list of decisions to resolve.
 - [[Architecture Decision Records]] — dated record of system choices.
 
@@ -43,7 +44,7 @@ SORT file.name DESC
 
 ## How to use this space
 1. Talk freely here about future plans — this layer is the protected environment.
-2. Anything we decide gets captured (ADR / Open Questions / Roadmap).
+2. Anything we decide gets captured (ADR / Open Questions / [[Capture Backlog]]).
 3. At session end, memory is updated and pushed to GitHub.
 4. Next session, Claude reloads memory and we continue without losing context.
 

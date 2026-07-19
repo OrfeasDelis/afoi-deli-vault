@@ -1,6 +1,6 @@
 # Afoi Deli — Workflow Tree
 
-**Generated 2026-07-19 · snapshot 6bdac9f** by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.**
+**Generated 2026-07-19b · snapshot ff3c968** by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.**
 
 This is the *hierarchical* view of every documented workflow in the vault: what belongs to what. The *sequential* view — stage-by-stage flowcharts with decision gates — lives in `docs/REPO_ANALYSIS.md` §6 (one source of truth per shape; this file does not duplicate the flowcharts).
 

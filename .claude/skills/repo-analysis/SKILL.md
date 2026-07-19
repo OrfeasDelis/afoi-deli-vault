@@ -19,7 +19,7 @@ This document is **Claude-maintained reference layer** (CLAUDE.md §6 authorship
 3. `docs/VISION.md` — vision · workflow · novelties · end goal · roadmap, compiled strictly from Orfeas-authored doctrine with citations (it synthesizes, never originates).
 4. `README.md` — ONLY the block between `<!-- REPO-ANALYSIS:BEGIN -->` and `<!-- REPO-ANALYSIS:END -->` markers is regenerated. The block is the repo's **editorial-scientific front page**, in this fixed order: generated-notice line (date + Analysis version) → **Abstract** (~180 words, the corpus as an operational-knowledge-engineering study) → **Keywords** → §1 System snapshot (metrics table) → §2 Structure (compact architecture diagram) → §3 Method (workflow master tree + the regeneration-loop diagram, the ingest/query/lint prose) → §4 **Leads** (the active-threads diagram mirroring `Vault State Memory` §5 — tracer batch states ✅/NEXT, supporting threads, parked items) → §5 Verification & provenance → §6 Vision & trajectory (condensed from `docs/VISION.md`) → the corpus links. Figure-free throughout; diagrams stay ≤ 25 nodes and compact — the full versions live in the docs/ suite. **Never touch a byte outside the markers** — the surrounding README text is human-authored.
 
-On delta runs, revise a suite file only where the underlying vault actually changed (e.g. a new supplier → supply-ecosystem tree; a tracer batch → workflow tree + roadmap; a people note → family tree). An untouched domain leaves its file byte-identical.
+On delta runs, revise a suite file only where the underlying vault actually changed (e.g. a new supplier → supply-ecosystem tree; a tracer batch → workflow tree + roadmap; a people note → family tree). An untouched domain leaves its file's **body** unchanged — but every suite file's **header line (snapshot SHA + generated date) is refreshed every run**, so per-file freshness is verifiable and the git-sync guard can require the full 5-file suite in every analysis-bearing push (its check covers all five).
 
 ## Mode selection
 
@@ -53,19 +53,20 @@ Stable section order (do not reorder between runs):
 10. **Methodology & provenance** — how generated, what was inferred vs stated.
 
 ### Step 4 — Refresh the README block
-Regenerate only the marker-delimited block: what the vault is (3 sentences), the snapshot table (compact), link to `docs/REPO_ANALYSIS.md`.
+Regenerate only the marker-delimited block, per the **Output-4 contract above** (the fixed editorial front-page order: abstract → keywords → §1–§6). That contract is stated once, there — this step intentionally holds no second copy of it.
 
 ### Step 5 — Self-check (all mandatory)
 - [ ] Every cited path exists — verify deterministically: extract backtick-quoted `.md` paths from the doc and test existence with a short python check; remove or fix any miss.
 - [ ] Every Mermaid block parses on GitHub: labels with spaces/punctuation wrapped in `["..."]`; no raw `()`:`;`#`{}` inside labels; short ASCII node IDs; ≤ 25 nodes per diagram (abstract to MOC/domain level above that); legend line per diagram (solid `-->` explicit link · dashed `-.->` inferred · thick `==>` primary flow).
 - [ ] Explicit vs inferred relationships visually distinguished; interpretation labeled as such in prose.
 - [ ] Changelog history preserved; snapshot SHA + date refreshed.
+- [ ] Every suite file's header carries THIS run's snapshot SHA + date (refreshed even when its body is unchanged).
 - [ ] Idempotent: an unchanged vault re-run would produce a near-identical file (stable ordering — alphabetical or by degree).
 - [ ] No generic filler; every section says something true and specific to this vault.
 
 ## Hard rules (override any instinct to be complete)
 
-- **Confidentiality:** never restate concrete commercial figures — discount cascades, net prices, credit terms, revenue, margins. Name the note that holds them (e.g. "commercial terms live in the Kronos dossier's private fields") and move on. The repo is private but this doc is its front door — keep it clean enough to screen-share.
+- **Confidentiality:** never restate concrete commercial figures — discount cascades, net prices, credit terms, revenue, margins. Name the note that holds them (e.g. "commercial terms live in the Kronos dossier's private fields") and move on. **Bands and ranges count as figures**: the markup/margin band is existence-named only (say that a band exists and which note holds it — never the numeric range). **Never name real clients or projects**, in Latin or Greek script (a ΚΟΥΒΑΣ example row counts): anonymize to role — "a live client order", "the golden-case client". Both rules exist because each leaked once (2026-07-19 baseline, G1/G2). The repo is private but this doc is its front door — keep it clean enough to screen-share.
 - **Personal wing (12/13/15/16/17):** describe structure and system design only. Never quote the Journal or wellness notes; no intimate details. The seam between the halves IS worth describing; its contents are not.
 - **Zero hallucination:** never reference a file, link, tag, or count you have not verified this run. When unsure, omit or flag.
 - **Voice:** use the vault's own vocabulary (ΚΟΥΒΑΣ, conduits, the tracer, the 5-layer OS). If you overlay an external frame (e.g. Business Model Canvas), say so explicitly.

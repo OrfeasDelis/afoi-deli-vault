@@ -37,8 +37,11 @@ SENSITIVITY_PATTERNS = [
     ("contact_email", re.compile(r"[\w.+-]+@[\w-]+\.\w{2,}")),
     ("contact_phone", re.compile(r"\+30\s?\d{9,10}|\b69\d{8}\b|\b21\d{8}\b")),
     ("financial_id", re.compile(r"(?i)\bIBAN\b|\bGR\d{2}\s?\d{4}|\bΑΦΜ\b|\bP\.?\s?IVA\b|\bVAT\b")),
-    ("client_identity", re.compile(r"(?i)Skintzi|Kaliontzis|Igeiasi")),
-    ("revenue_figure", re.compile(r"(?i)€\s?\d+\s?m\b|revenue")),
+    # Greek stems included — Python re case-folds Greek under (?i); the Latin-only
+    # pattern missed ΣΚΙΝΤΖΗ in the Cockpit note (baseline 2026-07-19, §13).
+    ("client_identity", re.compile(r"(?i)Skintzi|Kaliontzis|Igeiasi|σκιντζ|καλιοντζ|υγειασ|υγείασ")),
+    # Requires an actual figure — bare "revenue" produced 6+ false positives (§13).
+    ("revenue_figure", re.compile(r"(?i)€\s?\d+(?:\.\d+)?\s?m\+?\b|revenue\D{0,20}\d+\s?m\b|\b\d+\s?m\+?\s?(?:scale|revenue)")),
 ]
 
 

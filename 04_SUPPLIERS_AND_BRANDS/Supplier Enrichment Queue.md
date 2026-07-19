@@ -50,7 +50,7 @@ SORT updated DESC
 The `memory_seed` stubs (Florim, Atlas Concorde, Antonio Lupi, ABK, Emilgroup, 41zero42, Sant'Agostino, Fima Carlo Frattini) need the **public research first** — run the [[Supplier Research Workflow]]. The full dossiers (Kronos, Cielo, Mutina, Fantini, Scavolini) are ready for your private enrichment now.
 
 > [!success] Enrichment progress
-> - **[[Supplier - Kronos\|Kronos]]** — first private pass landed (2026-06-17): **discount cascade** (base −70 / module −60−10 / decor −60−10−5), **payment & credit** (90 d standard / 120 d stock), **sale conditions**, and the **2026 price list** archived (`_sources/`). Cost-to-quote chain seeded in [[Cost & Quote Build]]. *Still open for Kronos `(your knowledge)`:* hero SKUs / our best-sellers, lead-time-per-hero-line, loading & packaging habits, common proforma mistakes.
+> - **[[Supplier - Kronos\|Kronos]]** — first private pass landed (2026-06-17): **discount cascade**, **payment & credit terms**, **sale conditions** — *figures live only in [[Supplier - Kronos]] §Pricing (redacted here 2026-07-19, OV-08)* — and the **2026 price list** archived (`_sources/`). Cost-to-quote chain seeded in [[Cost & Quote Build]] (method-only). *Still open for Kronos `(your knowledge)`:* hero SKUs / our best-sellers, lead-time-per-hero-line, loading & packaging habits, common proforma mistakes.
 
 ## Links
 - [[Supplier Master Index]] · [[Supplier Research Workflow]] · [[Capture Backlog]]

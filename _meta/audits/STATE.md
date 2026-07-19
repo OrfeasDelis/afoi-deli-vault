@@ -18,7 +18,7 @@ tags:
 > [!abstract] What this is
 > The **forward-looking ledger** of the vault audit system. It complements its two siblings: [[Vault Integrity Audit]] holds the *why/how* (charter: the 8 checks + method), the dated `_meta/audits/<date>-vault-audit.md` reports hold *each run*, and **this file holds the running account** — the latest snapshot and the live state of every finding (Open / Done / Rejected / Deferred). The `/vault-audit` skill reads this first (to avoid re-litigating Rejected findings) and updates it last.
 
-**Last session:** 2026-06-19 — **routine `/vault-audit` run executed** ([[2026-06-19-vault-audit]]), mid-tracer. Verdict: **healthy, no P0/P1.** Two prior findings closed (the inverted §7 n8n flag → fixed; `AI Agent Roles` → wired). 4 carried P2 polish remain + 1 new deferred watch-item (the MEGASOFT schema-diff). 4/6 critic-confirmed, 1 deflated, 0 false-positives. Prior: 2026-06-17 — first `/vault-audit`, healthy, settled the Contested n8n item.
+**Last update:** 2026-07-19 — **consolidation baseline (Pass 0–2) + Orfeas's §17 review + the §16-C mechanical batch** ran under ADR-0007 (a [[Consolidation and Enrichment Programme]] instrument, *not* a `/vault-audit` run — its findings live in `docs/VAULT_BASELINE_2026-07-19.md` + `_meta/consolidation/`). Ledger effects this date: **F1/F2 fixed** (template emitters) · **F3 superseded-marked** (OV-01) · **F4 re-armed** as the schema-diff trigger (Pass 4 Layer C) · **F5 rides Pass 3** · **F6 pointed at Pass 4** (the tracer landing). Prior: 2026-06-19 — routine `/vault-audit` ([[2026-06-19-vault-audit]]), mid-tracer: **healthy, no P0/P1**; two prior findings closed (the inverted §7 n8n flag → fixed; `AI Agent Roles` → wired); 4/6 critic-confirmed, 1 deflated, 0 false-positives. Prior: 2026-06-17 — first `/vault-audit`, healthy, settled the Contested n8n item.
 
 ---
 
@@ -41,22 +41,22 @@ tags:
 ---
 
 ## Open
-*Confirmed findings awaiting Orfeas's action. Labels from [[2026-06-19-vault-audit]] (4 confirmed P2, 0 false-positives).*
+*Confirmed findings awaiting Orfeas's action. Labels from [[2026-06-19-vault-audit]].*
 
-- **F1 (P2) — `98_TEMPLATES/Template - ADR.md` L4** emits `status: proposed` (invalid). Set YAML to `status: idea`/`seed`. *(Carried from 2026-06-17.)* Effort: XS.
-- **F2 (P2) — `98_TEMPLATES/Template - Project.md` L12** emits an empty `status:`. Default it (`status: idea`) or make it a Templater prompt. *(Carried.)* Effort: XS.
-- **F3 (P2) — `04_SUPPLIERS_AND_BRANDS/Supplier Note System.md`** is a genuine content orphan (0 inbound) + redundant `{supplier_name}` skeleton duplicating `Template - Supplier`. Merge into / delete in favour of the real template, or relocate to `98_TEMPLATES`. *(Carried — the `AI Agent Roles` half of the prior 2-orphan finding is now Done.)* Effort: S.
-- **F5 (P2, carried) — `README_START_HERE.md` rewrite** still pending (pre-pivot 4-layer framing; mitigated by its banner + `CLAUDE.md §9`). Already a [[Capture Backlog]] P2. Effort: M.
-- **F6 (standing gap, Orfeas's call — not a defect) — ship-coupling still structurally open but now *actively being worked*.** 11 CSVs hold zero rows; no structured `Client -`/`Order -` record notes; [[The Selection Engine]] L164 dangles `Client - Kaliontzis Fotis` + `Project - Igeiasi Offices`. **But the tracer ([[Capture Backlog]] Priority 0.1) is the live effort closing it** — first ground-truth landed 2026-06-19. Decision: spin the Skintzi order into real records, or keep capturing process first.
+- **F5 (P2, carried) — `README_START_HERE.md` rewrite** still pending (pre-pivot 4-layer framing; mitigated by its banner + `CLAUDE.md §9`). **Now scheduled: rides Pass 3 of the consolidation sequence (baseline §16-E), gated on ADR-0008.** Effort: M.
+- **F6 (standing gap, Orfeas's call — not a defect) — ship-coupling still structurally open but now *actively being worked*.** 11 CSVs hold zero rows; no structured `Client -`/`Order -` record notes; [[The Selection Engine]] L164 dangles `Client - Kaliontzis Fotis` + `Project - Igeiasi Offices`. The tracer interview **completed A–G 2026-07-18**; **closure = Pass 4, the tracer final landing** (Layer D births the golden case + `Cases/`) — the landing matrix is staged in `docs/VAULT_BASELINE_2026-07-19.md` §7.
 
 ## Watch (deferred — not a defect)
 *Tracked, intentionally not acting now.*
 
-- **F4 (2026-06-19) — MEGASOFT + rebate ground-truth not yet in the `03` schemas.** [[Order Lifecycle — Ground-Truth Capture]] §6 lists 15 schema-corrections (incl. MEGASOFT as external AR system-of-record + a `rebates` table) absent from `Invoices and Payments Schema` / `Database Master Schema` / `People and Roles Map`, with no back-pointer. **Deliberately deferred** to the tracer's "final landing" (post-interview; D–G still open) — tracked, not drift. The critic deflated it from P2 to a watch-item. No action now; the schema-diff closes it when the interview lands. Optional: a one-line back-pointer banner on the 3 schema notes while in flight.
+- **F4 (2026-06-19, re-armed 2026-07-19) — tracer ground-truth not yet in the `03` schemas / CSVs.** The interview completed A–G (2026-07-18); the correction set grew from 15 to **49**, now fully staged as the landing matrix in `docs/VAULT_BASELINE_2026-07-19.md` §7 (9 new tables · 24 gating decisions · 1 blocked item). **Trigger: Pass 4 Layer C** — the schema-diff executes there, after ADR-0011 declares the external-system boundaries (MEGASOFT = AR · Kostas-Excel = AP · stock Excel = inventory). Until then the CSV headers stay frozen (baseline §18). Closes when the diff lands.
 
 ## Done
 *Findings resolved (with the date + how).*
 
+- **F1 (Template - ADR `status: proposed`) — FIXED 2026-07-19** (§16-C mechanical batch): YAML now emits `status: seed`. (The body's `proposed | accepted | superseded` ADR-lifecycle prose stays — legitimate, per the 2026-06-19 report.)
+- **F2 (Template - Project empty `status:`) — FIXED 2026-07-19**: defaults to `status: idea`. Same-class fix applied to `13_DAILY_NOTES/Daily Note Template.md` (empty status → `seed`), found by the baseline scanner.
+- **F3 (Supplier Note System orphan/duplicate) — SUPERSEDED-MARKED 2026-07-19** per Overlap Registry **OV-01** (approved in the §17 review): warning banner + `status: complete`; canonical = [[Template - Supplier]], with both stale vs [[Supplier Research Workflow]] §A (OV-12 folds the vocabularies at Pass 4). **Deletion eligible after one audit cycle** (no-silent-deletion lifecycle).
 - **Inverted `CLAUDE.md §7` n8n freshness flag (2026-06-17 F1) — FIXED, verified 2026-06-19.** §7 now reads as a settled pointer ("settled stack: Supabase Postgres + Python worker … a settled pointer, not an open task — if you ever find a note prescribing n8n as current, it's a regression: flag it"). The last source-of-truth conflict between the two most-read contract files is gone.
 - **`08_AUTOMATION_AND_AI/AI Agent Roles.md` orphan (half of 2026-06-17 F4) — WIRED, verified 2026-06-19.** Now carries a resolving inbound `[[AI Agent Roles]]` edge; no longer an orphan. *(The other half, `Supplier Note System`, remains — now Open F3.)*
 - **2026-06-16 audit P0 (structure↔index drift) — cleared.** Per [[Vault State Memory]] and verified on disk: phantom `15/16/18` resolved, 22 folders match [[Vault Map]], canonical index consolidated, schema governance settled. *(Re-confirmed clean 2026-06-17 and 2026-06-19.)*

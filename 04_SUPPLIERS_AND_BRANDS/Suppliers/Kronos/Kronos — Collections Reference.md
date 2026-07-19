@@ -23,6 +23,7 @@ tags:
 
 > [!warning] Cross-reference confidence (read before trusting the afoideli column)
 > afoideli.gr is a JavaScript WooCommerce store, so presence was checked here via **web search only** (2026-06-15). That yields reliable **positives** (a surfaced product page definitely exists) but **unreliable negatives** — "unverified" means *not found via search*, NOT *absent*. Our site also sometimes renames a collection or appends the brand (e.g. "Nativa Kronos"). Definitive presence/absence needs the **WooCommerce Store API** (`/wp-json/wc/store/v1/products?search=<name>`), run from your side — see the parked Store-API spec in [[Automation Backlog]]. Treat unverified rows as TODO, not as gaps in our range.
+> **Column status settled 2026-07-19 (baseline §17 decision 11): kept** — this column is the canonical site-presence surface for Kronos lines (per the [[Canonical Note Registry]]), pilot-scope until the Store-API audit fills the unverified rows.
 
 > [!note] Roster status (the ✅/⬚ checklist — [[Architecture Decision Records|ADR-0005]])
 > Collections are **born on ingestion**: when a source is fed, the line gets its own `Collection - Kronos <Name>` note (specs live there, against [[Collection Schema]]) and is marked **✅ ingested** here; everything else is **⬚ not-yet** and stays a roster row. This reference is now the **index/checklist**, not the home of the specs.

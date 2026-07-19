@@ -9,7 +9,7 @@ project_type:
 architect:
 designer:
 contractor:
-status:
+status: idea
 budget:
 target_delivery:
 case_study_ready: false

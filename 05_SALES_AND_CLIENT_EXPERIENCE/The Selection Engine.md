@@ -21,7 +21,7 @@ tags:
 > This note descends from [[Afoi Deli — Operating Doctrine]] and, beneath it, [[The Heart]]. The doctrine names the moat as the **uplift engine** and splits it into two halves — **staging** (taste, the room, discretion) and **conversion** (the human gift that makes the client say yes). The staging half is documented across [[Brand DNA]] and the editorial system. **This note is the conversion half**: how, at the sample wall, a general idea becomes a chosen, sold specification. Extracted from a working session on 2026-06-15; revise and enrich freely — nothing here is final.
 
 > [!note] How to read the confidence in this note
-> Tags follow [[Vault State Memory|vault convention]] — `verified | likely | needs_check`. Each load-bearing claim is also marked by **source**:
+> Tags follow [[Vault State Memory|vault convention]] — `verified | likely | memory_seed | needs_check`. Each load-bearing claim is also marked by **source**:
 > - **(stated)** — Orfeas said it directly. Treat as fact.
 > - **(inferred)** — a read proposed during extraction, *not yet explicitly confirmed*. Treat as a working assumption.
 > - **(model)** — a framework we built together from the instances. A conclusion, not a fact.
