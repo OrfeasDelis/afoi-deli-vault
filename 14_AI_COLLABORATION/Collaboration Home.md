@@ -13,6 +13,7 @@ The control room for how **Orfeas + Claude** build this vault and the future app
 - [[Session Protocol]] — how each session starts, runs, and ends.
 
 ## Planning & decisions
+- [[Consolidation and Enrichment Programme]] — the standing consolidation/enrichment frame (ADR-0007): baseline → review → execute; interviews, ingestion, cases, audit v2.
 - [[Roadmap]] — phased plan from memory -> git -> automation -> data -> interface.
 - [[Open Questions]] — live list of decisions to resolve.
 - [[Architecture Decision Records]] — dated record of system choices.

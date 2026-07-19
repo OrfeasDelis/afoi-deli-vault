@@ -1,7 +1,7 @@
 ---
 type: backlog
 created: 2026-06-14
-updated: 2026-06-17
+updated: 2026-07-19
 status: active
 tags:
   - command-center
@@ -29,6 +29,14 @@ tags:
 - [x] **P1 sweep** *(2026-06-16)*: n8n→Python-worker done across all 10 live-prescription notes (no live n8n remains) · orphans wired ([[The Selection Engine]] ← Doctrine + Sales Map · [[Order Workflow 0-4]] ← Operations Map · [[Profitability Engine]] + [[Credit and Due Date Calendar]] ← Management Dashboard · [[Strategic Axes]] ← Home Dashboard · [[SEO Topic Map]] ← Strategic Axes) + [[The Material Atelier]] created (seed) · frontmatter governance fixed at source + all existing instances · cold notes refreshed not retired ([[Roadmap]], [[Open Questions]], ADR-0004, [[Collaboration Home]] Dataview) · async capture shipped ([[Research Queue]]) + [[Circles]] written + [[Inbox]] dormant.
 - [ ] **P2 polish (audit, remaining):** [[Weekly Review]] + daily notes → mark dormant until the data layer exists · tag question ([[Obsidian Tips and Tricks]] dead tag-search) · `created`/`updated` on every dossier for [[Supplier Enrichment Queue]] · ERD `PEOPLE`/`PAYMENTS` gap · remaining orphans beyond the named set · full [[README_START_HERE]] rewrite · [[Vault Integrity Audit]] TODO — ✅ `/vault-audit` skill + `audit-critic` shipped *(2026-06-17)*; **write-time lint rules/hooks still pending**.
 - [ ] **P2 polish (2026-06-17 audit — F2/F3/F4):** **F2** — `Template - ADR` frontmatter `status: proposed` → set to a valid value (`idea`/`seed`) · **F3** — `Template - Project` emits an empty `status:` → default it (`idea`) or Templater-prompt · **F4** — wire orphan `AI Agent Roles` (08) from [[Automation Masterplan]]/[[Python Worker Map]] + resolve duplicate `Supplier Note System` (04) (merge into `Template - Supplier` or relocate to `98_TEMPLATES`). Full list: [[2026-06-17-vault-audit]].
+
+## Priority 0.05 — Consolidation & Enrichment Programme (ADR-0007) `[adopted 2026-07-19 · baseline → review → execute]`
+*Orfeas brought an external programme draft (`redoal.md`); adopted 2026-07-19 as [[Consolidation and Enrichment Programme]] via [[Architecture Decision Records|ADR-0007]] (raw immutable in `14_AI_COLLABORATION/_sources/`). The frame for consolidation (one canonical home per truth), enrichment (interviews at 12-layer depth), ingestion (source manifests), cases and audit v2. It runs INSIDE the session ritual and never displaces the tracer landing (Priority 0.1 = the programme's Pass 4).*
+
+- [x] **Adopt + file the programme** — charter + ADR-0007 + reconciliations (confidence enum unchanged · one queue · fields deferred to post-baseline ADR · homes born on ingestion) *(2026-07-19)*.
+- [x] **Discard the unlogged 2026-07-13 ΕΡΓΟΣΤΑΣΙΑ sweep** (~44 seed dossiers, Orfeas: "delete the whole concept, we will redo it") — held in a git stash as cooling period; **redo later through the programme's §5 ingestion pipeline** (manifest → hash → classify → extract → dossier), supplier by supplier, artifacts paired with narration *(2026-07-19)*.
+- [ ] **Baseline (Pass 0–2, read-only, deep multi-agent)** — deterministic registries + parallel domain readers + audit-critic verification → `docs/VAULT_BASELINE_2026-07-19.md` + `_meta/consolidation/` registries. **No consolidation executes until Orfeas reviews.**
+- [ ] **Post-baseline (gated on Orfeas's review):** Pass 3 steering consolidation ([[Roadmap]]/[[Open Questions]]/priority files) · the `canonicality` + `data_classification` ADR · governance rules A–J into `CLAUDE.md` · then Pass 4 = the tracer landing below.
 
 ## Priority 0.1 — Make the operational spine real (Root A — the tracer) `[#1 · INTERVIEW COMPLETE A–G (2026-07-18) — final landing next]`
 *From the first `/os-brainstorm` ([[Brainstorm 2026-06-17]]). Orfeas decided the spine is **Root A — the operational everyday** ("Definitely A… do best what I currently do better — the everyday workflow"), and converged on one rule: **"I need to explain reality. Everything else is derived and adjusted to this."** This now leads; Materials (Root B, below) is the deferred fast-follow. **Refined 2026-06-18 ([[Session 2026-06-18]]): unit + method decided below; this is the #1 action for the next session, to be run via the `/goal` command.***
