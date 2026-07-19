@@ -1,6 +1,6 @@
 # Afoi Deli — Workflow Tree
 
-**Generated 2026-07-02** by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.**
+**Generated 2026-07-19 · snapshot 6bdac9f** by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.**
 
 This is the *hierarchical* view of every documented workflow in the vault: what belongs to what. The *sequential* view — stage-by-stage flowcharts with decision gates — lives in `docs/REPO_ANALYSIS.md` §6 (one source of truth per shape; this file does not duplicate the flowcharts).
 
@@ -52,7 +52,7 @@ Each leaf names its owner and its SOP. Decision gates are marked ◇.
   - Supplier PO → ◇ proforma check → confirmation · `02_OPERATIONS_OS/Supplier PO Creation SOP.md`, `02_OPERATIONS_OS/Proforma Checking SOP.md`
   - DTS/loading → arrive + check (status 2) → ◇ payment gate → delivery · `02_OPERATIONS_OS/DTS and Loading Date SOP.md`, `02_OPERATIONS_OS/Warehouse Receiving SOP.md`, `02_OPERATIONS_OS/Delivery Scheduling SOP.md`
   - Exceptions — 11 coded types with prevention rules · `02_OPERATIONS_OS/Exception Handling Rules.md`
-  - **Ground truth wins on conflict** · `02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md` (batches A–D settled, E–G open)
+  - **Ground truth wins on conflict** · `02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md` (interview COMPLETE A–G, 49 schema-corrections; final landing = the #1 next action, mapped in `docs/VAULT_BASELINE_2026-07-19.md` §7)
 - **Money** — owner finance/Orfeas · list → net → landed → sell (`10_FINANCE_AND_MANAGEMENT/Cost & Quote Build.md`), per-order margin (`10_FINANCE_AND_MANAGEMENT/Profitability Engine.md`), credit/due dates (`10_FINANCE_AND_MANAGEMENT/Credit and Due Date Calendar.md`), 10 money moments (`02_OPERATIONS_OS/Finance and Credit Terms SOP.md`)
 
 ## Branch detail — the knowledge engine
@@ -67,6 +67,7 @@ Each leaf names its owner and its SOP. Decision gates are marked ◇.
 - **Audit** — routine ~10 sessions/monthly, deep quarterly; 8 standing checks; writes only to `_meta/audits/` · `_meta/audits/Vault Integrity Audit.md`
 - **Brainstorm** — read-only strategic grounding with a deliberate promotion step (log proposes, Orfeas disposes) · `14_AI_COLLABORATION/Strategic Brainstorm Protocol.md`
 - **Living repo analysis** — this docs/ suite, regenerated every session end; a push guard blocks a stale push · `.claude/skills/repo-analysis/SKILL.md`
+- **Consolidation programme (ADR-0007)** — baseline (deterministic registries + domain readers + adversarial critic) → **Orfeas's review gate** → passes execute (steering → tracer landing → interviews → ingestion → cases); one canonical home per truth, no silent deletion · `14_AI_COLLABORATION/Consolidation and Enrichment Programme.md`, `docs/VAULT_BASELINE_2026-07-19.md`, `_meta/consolidation/Overlap Registry.md`
 
 ## The automation track (specified, not built — honest status)
 

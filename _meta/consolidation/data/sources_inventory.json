@@ -1,0 +1,149 @@
+{
+ "files": [
+  {
+   "path": ".gitattributes",
+   "zone": "root",
+   "ext": "",
+   "bytes": 131
+  },
+  {
+   "path": ".gitignore",
+   "zone": "root",
+   "ext": "",
+   "bytes": 516
+  },
+  {
+   "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/_sources/Kronos Listino Prezzi 2026.pdf",
+   "zone": "sources",
+   "ext": ".pdf",
+   "bytes": 1741899,
+   "sha256": "bbec5dc49e8a9513b58b3a775c25009308a3e70fb182913db78dffecd2afbaeb"
+  },
+  {
+   "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/_sources/PierreVive.pdf",
+   "zone": "sources",
+   "ext": ".pdf",
+   "bytes": 10724385,
+   "sha256": "8c6ddec8c7586879730dc158e1c88a39af0cdd40a25073c6ca21857df76b8292"
+  },
+  {
+   "path": "97_CSV_SCHEMAS/client_invoices.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 112
+  },
+  {
+   "path": "97_CSV_SCHEMAS/clients.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 154
+  },
+  {
+   "path": "97_CSV_SCHEMAS/issues_exceptions.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 180
+  },
+  {
+   "path": "97_CSV_SCHEMAS/order_lines.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 316
+  },
+  {
+   "path": "97_CSV_SCHEMAS/orders.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 213
+  },
+  {
+   "path": "97_CSV_SCHEMAS/products.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 323
+  },
+  {
+   "path": "97_CSV_SCHEMAS/projects.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 184
+  },
+  {
+   "path": "97_CSV_SCHEMAS/supplier_invoices.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 132
+  },
+  {
+   "path": "97_CSV_SCHEMAS/supplier_loadings.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 177
+  },
+  {
+   "path": "97_CSV_SCHEMAS/suppliers.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 297
+  },
+  {
+   "path": "97_CSV_SCHEMAS/tasks_alerts.csv",
+   "zone": "system",
+   "ext": ".csv",
+   "bytes": 109
+  },
+  {
+   "path": "_meta/audits/run-audit.ps1",
+   "zone": "meta",
+   "ext": ".ps1",
+   "bytes": 1104
+  },
+  {
+   "path": "Afoi Deli — Operations Cockpit.html",
+   "zone": "root",
+   "ext": ".html",
+   "bytes": 39814
+  },
+  {
+   "path": "Afoi Deli — The Realm.html",
+   "zone": "root",
+   "ext": ".html",
+   "bytes": 35134
+  },
+  {
+   "path": "Afoi Deli — The Realm.svg",
+   "zone": "root",
+   "ext": ".svg",
+   "bytes": 20121
+  }
+ ],
+ "csv_rows": {
+  "client_invoices.csv": 0,
+  "clients.csv": 0,
+  "issues_exceptions.csv": 0,
+  "order_lines.csv": 0,
+  "orders.csv": 0,
+  "products.csv": 0,
+  "projects.csv": 0,
+  "supplier_invoices.csv": 0,
+  "supplier_loadings.csv": 0,
+  "suppliers.csv": 0,
+  "tasks_alerts.csv": 0
+ },
+ "personal_files": [
+  "12_PERSONAL_OS/Deep Work and Focus.md",
+  "12_PERSONAL_OS/Health and Energy.md",
+  "12_PERSONAL_OS/Leadership Standards.md",
+  "12_PERSONAL_OS/Learning System.md",
+  "12_PERSONAL_OS/Mindfulness and Reflection.md",
+  "12_PERSONAL_OS/Personal Operating System.md",
+  "12_PERSONAL_OS/Personal Weekly Review.md",
+  "12_PERSONAL_OS/Studies and Subjects.md",
+  "15_PERSONAL_LIFE/Finance/Personal Finance.md",
+  "15_PERSONAL_LIFE/Personal Life — Home.md",
+  "15_PERSONAL_LIFE/Relationships/Relationships.md",
+  "15_PERSONAL_LIFE/Wellness/Wellness.md",
+  "17_JOURNAL/2026-06-14 — The first page.md",
+  "17_JOURNAL/Journal.md"
+ ]
+}

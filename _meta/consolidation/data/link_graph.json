@@ -1,0 +1,871 @@
+{
+ "broken": [
+  {
+   "from": "00_COMMAND_CENTER/Capture Backlog.md",
+   "zone": "content",
+   "target": "order-fulfillment-workflow-normalized"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+   "zone": "content",
+   "target": "order-fulfillment-workflow-normalized"
+  },
+  {
+   "from": "04_SUPPLIERS_AND_BRANDS/Supplier Enrichment Queue.md",
+   "zone": "content",
+   "target": "Supplier - Kronos\\"
+  },
+  {
+   "from": "04_SUPPLIERS_AND_BRANDS/Supplier Master Index.md",
+   "zone": "content",
+   "target": "Supplier - <Name>"
+  },
+  {
+   "from": "04_SUPPLIERS_AND_BRANDS/Supplier Research Workflow.md",
+   "zone": "content",
+   "target": "Supplier - <Name>"
+  },
+  {
+   "from": "04_SUPPLIERS_AND_BRANDS/Supplier Research Workflow.md",
+   "zone": "content",
+   "target": "06_PROJECTS_AND_CASES"
+  },
+  {
+   "from": "04_SUPPLIERS_AND_BRANDS/Supplier Research Workflow.md",
+   "zone": "content",
+   "target": "wikilinks"
+  },
+  {
+   "from": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Kronos — Catalogue & Asset Ingestion.md",
+   "zone": "content",
+   "target": "obsidian-bases"
+  },
+  {
+   "from": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Supplier - Kronos.md",
+   "zone": "content",
+   "target": "06_PROJECTS_AND_CASES"
+  },
+  {
+   "from": "05_SALES_AND_CLIENT_EXPERIENCE/The Selection Engine.md",
+   "zone": "content",
+   "target": "Client - Kaliontzis Fotis"
+  },
+  {
+   "from": "05_SALES_AND_CLIENT_EXPERIENCE/The Selection Engine.md",
+   "zone": "content",
+   "target": "Project - Igeiasi Offices"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Laufen"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Bathroom Furniture Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Radiator & Towel-Warmer Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Countertop Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Wikilink"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Glass Mosaic"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Brass & Faucet Finishes"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Tempered Safety Glass"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Material - <Name>"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Large-Format Porcelain Slab"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Mirror Glass"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Glazed Ceramic"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Shading System Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Wood Flooring & Parquet"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Mutina"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Wellness Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "SaphirKeramik"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Material name"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Solid Surface Composite"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Bathroom Furniture Materials\\"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Afoi Deli — Materials Intelligence.md",
+   "zone": "content",
+   "target": "Sanitary Ceramic"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Deep-Research Prompt (source).md",
+   "zone": "sources",
+   "target": "wikilinked"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Deep-Research Prompt (source).md",
+   "zone": "sources",
+   "target": "..."
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Deep-Research Prompt (source).md",
+   "zone": "sources",
+   "target": "Atlas Concorde"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Deep-Research Prompt (source).md",
+   "zone": "sources",
+   "target": "material_id"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Deep-Research Prompt (source).md",
+   "zone": "sources",
+   "target": "Mutina"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Deep-Research Prompt (source).md",
+   "zone": "sources",
+   "target": "Florim"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Laufen"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Bathroom Furniture Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Radiator & Towel-Warmer Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Countertop Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Wikilink"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Glass Mosaic"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Brass & Faucet Finishes"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Tempered Safety Glass"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Large-Format Porcelain Slab"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Mirror Glass"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Porcelain Stoneware"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Glazed Ceramic"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Shading System Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Wood Flooring & Parquet"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Mutina"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Wellness Materials"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "SaphirKeramik"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Solid Surface Composite"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Bathroom Furniture Materials\\"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/_sources/Materials Intelligence — Seed Draft (source).md",
+   "zone": "sources",
+   "target": "Sanitary Ceramic"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Collection Schema.md",
+   "zone": "content",
+   "target": "Material - <Class>"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Collection Schema.md",
+   "zone": "content",
+   "target": "Supplier - <Name>"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Material - Porcelain Stoneware.md",
+   "zone": "content",
+   "target": "Material - Large-Format Porcelain Slab"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Research Workflow.md",
+   "zone": "content",
+   "target": "Material - <Class>"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Research Workflow.md",
+   "zone": "content",
+   "target": "Supplier - <Name>"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Research Workflow.md",
+   "zone": "content",
+   "target": "Material - <Name>\\"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Research Workflow.md",
+   "zone": "content",
+   "target": "wikilinks"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Research Workflow.md",
+   "zone": "content",
+   "target": "Vault Map\\"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Research Workflow.md",
+   "zone": "content",
+   "target": "Porcelain Stoneware"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Research Workflow.md",
+   "zone": "content",
+   "target": "Material - Wood Flooring & Parquet"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Research Workflow.md",
+   "zone": "content",
+   "target": "CLAUDE\\"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Schema.md",
+   "zone": "content",
+   "target": "wikilinked"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Materials/Materials Schema.md",
+   "zone": "content",
+   "target": "wikilinks"
+  },
+  {
+   "from": "10_FINANCE_AND_MANAGEMENT/Credit and Due Date Calendar.md",
+   "zone": "content",
+   "target": "Supplier - Kronos\\"
+  },
+  {
+   "from": "14_AI_COLLABORATION/Obsidian Tips and Tricks.md",
+   "zone": "content",
+   "target": "link"
+  },
+  {
+   "from": "14_AI_COLLABORATION/Obsidian Tips and Tricks.md",
+   "zone": "content",
+   "target": "note^block-id"
+  },
+  {
+   "from": "14_AI_COLLABORATION/Sessions/Session 2026-06-15.md",
+   "zone": "content",
+   "target": "wikilinks"
+  },
+  {
+   "from": "14_AI_COLLABORATION/Sessions/Session 2026-06-19.md",
+   "zone": "content",
+   "target": "order-fulfillment-workflow-normalized"
+  },
+  {
+   "from": "14_AI_COLLABORATION/Sessions/Session 2026-06-19b.md",
+   "zone": "content",
+   "target": "wikilink"
+  },
+  {
+   "from": "14_AI_COLLABORATION/Sessions/Session 2026-07-18.md",
+   "zone": "content",
+   "target": "order-fulfillment-workflow-normalized"
+  },
+  {
+   "from": "14_AI_COLLABORATION/Vault State Memory.md",
+   "zone": "content",
+   "target": "wikilinks"
+  },
+  {
+   "from": "14_AI_COLLABORATION/Vault State Memory.md",
+   "zone": "content",
+   "target": "Session 2026-07-19"
+  },
+  {
+   "from": "_meta/audits/2026-06-16-vault-audit.md",
+   "zone": "meta",
+   "target": "04_SUPPLIERS_AND_BRANDS/..."
+  },
+  {
+   "from": "_meta/audits/2026-06-16-vault-audit.md",
+   "zone": "meta",
+   "target": "wikilinks"
+  },
+  {
+   "from": "_meta/audits/2026-06-17-vault-audit.md",
+   "zone": "meta",
+   "target": "Material - <Class>"
+  },
+  {
+   "from": "_meta/audits/2026-06-17-vault-audit.md",
+   "zone": "meta",
+   "target": "Supplier - <Name>"
+  },
+  {
+   "from": "_meta/audits/2026-06-17-vault-audit.md",
+   "zone": "meta",
+   "target": "wikilinks"
+  },
+  {
+   "from": "_meta/audits/2026-06-17-vault-audit.md",
+   "zone": "meta",
+   "target": "material-class"
+  },
+  {
+   "from": "_meta/audits/2026-06-19-vault-audit.md",
+   "zone": "meta",
+   "target": "Material - <Class>"
+  },
+  {
+   "from": "_meta/audits/2026-06-19-vault-audit.md",
+   "zone": "meta",
+   "target": "Client - Kaliontzis Fotis"
+  },
+  {
+   "from": "_meta/audits/2026-06-19-vault-audit.md",
+   "zone": "meta",
+   "target": "Supplier - <Name>"
+  },
+  {
+   "from": "_meta/audits/2026-06-19-vault-audit.md",
+   "zone": "meta",
+   "target": "wikilinks"
+  },
+  {
+   "from": "_meta/audits/2026-06-19-vault-audit.md",
+   "zone": "meta",
+   "target": "order-fulfillment-workflow-normalized"
+  },
+  {
+   "from": "_meta/audits/2026-06-19-vault-audit.md",
+   "zone": "meta",
+   "target": "Project - Igeiasi Offices"
+  },
+  {
+   "from": "_meta/audits/2026-06-19-vault-audit.md",
+   "zone": "meta",
+   "target": "Countertop Materials"
+  },
+  {
+   "from": "_meta/audits/2026-06-19-vault-audit.md",
+   "zone": "meta",
+   "target": "Solid Surface Composite"
+  },
+  {
+   "from": "CLAUDE.md",
+   "zone": "root",
+   "target": "04_SUPPLIERS_AND_BRANDS/..."
+  },
+  {
+   "from": "CLAUDE.md",
+   "zone": "root",
+   "target": "wikilinks"
+  },
+  {
+   "from": "docs/REPO_ANALYSIS.md",
+   "zone": "generated",
+   "target": "Laufen"
+  },
+  {
+   "from": "docs/REPO_ANALYSIS.md",
+   "zone": "generated",
+   "target": "Client - Kaliontzis Fotis"
+  },
+  {
+   "from": "docs/REPO_ANALYSIS.md",
+   "zone": "generated",
+   "target": "Mutina"
+  }
+ ],
+ "orphans": [
+  {
+   "path": "04_SUPPLIERS_AND_BRANDS/Supplier Note System.md",
+   "zone": "content",
+   "type": "supplier",
+   "words": 140
+  },
+  {
+   "path": "13_DAILY_NOTES/Daily Note Template.md",
+   "zone": "content",
+   "type": "daily_note",
+   "words": 68
+  },
+  {
+   "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-07.md",
+   "zone": "content",
+   "type": "session_log",
+   "words": 253
+  },
+  {
+   "path": "README.md",
+   "zone": "root",
+   "type": "",
+   "words": 1615
+  }
+ ],
+ "path_style_links": [
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "10_FINANCE_AND_MANAGEMENT/Management Dashboard"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "11_EXPANSION_AND_VENTURES/Expansion Map"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "06_PROJECTS_AND_CASES/Projects Dashboard"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "00_COMMAND_CENTER/Inbox"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "09_WEBSITE_MARKETING_AND_CONTENT/Website and Content System"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "12_PERSONAL_OS/Personal Operating System"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "01_COMPANY_CORE/Afoi Deli Master Profile"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "08_AUTOMATION_AND_AI/Automation Masterplan"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "00_COMMAND_CENTER/Decision Log"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "00_COMMAND_CENTER/Questions To Resolve"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "04_SUPPLIERS_AND_BRANDS/Supplier Master Index"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Product Knowledge Map"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "14_AI_COLLABORATION/Collaboration Home"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "02_OPERATIONS_OS/Operations Map"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "00_COMMAND_CENTER/Weekly Review"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "03_DATABASE_DESIGN/Database Master Schema"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Home Dashboard.md",
+   "target": "05_SALES_AND_CLIENT_EXPERIENCE/Sales and Client Experience Map"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Inbox.md",
+   "target": "06_PROJECTS_AND_CASES/Projects Dashboard"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Inbox.md",
+   "target": "08_AUTOMATION_AND_AI/Automation Backlog"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Inbox.md",
+   "target": "12_PERSONAL_OS/Personal Operating System"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Inbox.md",
+   "target": "04_SUPPLIERS_AND_BRANDS/Supplier Master Index"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Inbox.md",
+   "target": "02_OPERATIONS_OS/Operations Map"
+  },
+  {
+   "from": "00_COMMAND_CENTER/Inbox.md",
+   "target": "09_WEBSITE_MARKETING_AND_CONTENT/Content Ideas"
+  },
+  {
+   "from": "01_COMPANY_CORE/Strategic Axes.md",
+   "target": "11_EXPANSION_AND_VENTURES/Scavolini Kitchen Expansion"
+  },
+  {
+   "from": "01_COMPANY_CORE/Strategic Axes.md",
+   "target": "06_PROJECTS_AND_CASES/Project - Corfu Scavolini Kitchens"
+  },
+  {
+   "from": "01_COMPANY_CORE/Strategic Axes.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Kitchen Knowledge Map"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Daily Order Processing SOP.md",
+   "target": "02_OPERATIONS_OS/Supplier PO Creation SOP"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Daily Order Processing SOP.md",
+   "target": "02_OPERATIONS_OS/Exception Handling Rules"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Daily Order Processing SOP.md",
+   "target": "08_AUTOMATION_AND_AI/Automation Backlog"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/Daily Order Processing SOP"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/Supplier PO Creation SOP"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/Exception Handling Rules"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/Proforma Checking SOP"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/Folder State Machine"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/DTS and Loading Date SOP"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/Finance and Credit Terms SOP"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/Warehouse Receiving SOP"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/Delivery Scheduling SOP"
+  },
+  {
+   "from": "02_OPERATIONS_OS/Operations Map.md",
+   "target": "02_OPERATIONS_OS/Kouvas System"
+  },
+  {
+   "from": "03_DATABASE_DESIGN/Orders Schema.md",
+   "target": "03_DATABASE_DESIGN/Projects Schema"
+  },
+  {
+   "from": "03_DATABASE_DESIGN/Orders Schema.md",
+   "target": "03_DATABASE_DESIGN/Clients Schema"
+  },
+  {
+   "from": "03_DATABASE_DESIGN/Orders Schema.md",
+   "target": "03_DATABASE_DESIGN/Order Lines Schema"
+  },
+  {
+   "from": "05_SALES_AND_CLIENT_EXPERIENCE/Sales and Client Experience Map.md",
+   "target": "98_TEMPLATES/Template - Order"
+  },
+  {
+   "from": "05_SALES_AND_CLIENT_EXPERIENCE/Sales and Client Experience Map.md",
+   "target": "05_SALES_AND_CLIENT_EXPERIENCE/Quote Creation Checklist"
+  },
+  {
+   "from": "05_SALES_AND_CLIENT_EXPERIENCE/Sales and Client Experience Map.md",
+   "target": "05_SALES_AND_CLIENT_EXPERIENCE/Ready For Delivery Message"
+  },
+  {
+   "from": "05_SALES_AND_CLIENT_EXPERIENCE/Sales and Client Experience Map.md",
+   "target": "98_TEMPLATES/Template - Client"
+  },
+  {
+   "from": "05_SALES_AND_CLIENT_EXPERIENCE/Sales and Client Experience Map.md",
+   "target": "05_SALES_AND_CLIENT_EXPERIENCE/Client Intake Checklist"
+  },
+  {
+   "from": "05_SALES_AND_CLIENT_EXPERIENCE/Sales and Client Experience Map.md",
+   "target": "05_SALES_AND_CLIENT_EXPERIENCE/Premium Human Email Tone"
+  },
+  {
+   "from": "05_SALES_AND_CLIENT_EXPERIENCE/Sales and Client Experience Map.md",
+   "target": "98_TEMPLATES/Template - Project"
+  },
+  {
+   "from": "06_PROJECTS_AND_CASES/Projects Dashboard.md",
+   "target": "06_PROJECTS_AND_CASES/Project - Designer Outlet Athens Bathrooms"
+  },
+  {
+   "from": "06_PROJECTS_AND_CASES/Projects Dashboard.md",
+   "target": "06_PROJECTS_AND_CASES/Project - Nur Athens Boutique Hotel"
+  },
+  {
+   "from": "06_PROJECTS_AND_CASES/Projects Dashboard.md",
+   "target": "06_PROJECTS_AND_CASES/Project - Corfu Scavolini Kitchens"
+  },
+  {
+   "from": "06_PROJECTS_AND_CASES/Projects Dashboard.md",
+   "target": "06_PROJECTS_AND_CASES/Project - Golden Hall Bathrooms"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Product Knowledge Map.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Bathroom Knowledge Map"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Product Knowledge Map.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Product Comparison Framework"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Product Knowledge Map.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Tile Knowledge Map"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Product Knowledge Map.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Outdoor and Pool Knowledge"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Product Knowledge Map.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Technical Standards and Certifications"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Product Knowledge Map.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Packaging and Quantity Rules"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Product Knowledge Map.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Kitchen Knowledge Map"
+  },
+  {
+   "from": "07_PRODUCT_KNOWLEDGE/Product Knowledge Map.md",
+   "target": "07_PRODUCT_KNOWLEDGE/Large Slabs Knowledge"
+  },
+  {
+   "from": "09_WEBSITE_MARKETING_AND_CONTENT/Content Ideas.md",
+   "target": "98_TEMPLATES/Template - Collection Page"
+  },
+  {
+   "from": "09_WEBSITE_MARKETING_AND_CONTENT/Content Ideas.md",
+   "target": "98_TEMPLATES/Template - Case Study"
+  },
+  {
+   "from": "09_WEBSITE_MARKETING_AND_CONTENT/Content Ideas.md",
+   "target": "98_TEMPLATES/Template - Brand Page"
+  },
+  {
+   "from": "11_EXPANSION_AND_VENTURES/Expansion Map.md",
+   "target": "11_EXPANSION_AND_VENTURES/AI Construction Materials Platform"
+  },
+  {
+   "from": "11_EXPANSION_AND_VENTURES/Expansion Map.md",
+   "target": "11_EXPANSION_AND_VENTURES/Outdoor Showroom Expansion"
+  },
+  {
+   "from": "11_EXPANSION_AND_VENTURES/Expansion Map.md",
+   "target": "11_EXPANSION_AND_VENTURES/Scavolini Kitchen Expansion"
+  },
+  {
+   "from": "11_EXPANSION_AND_VENTURES/Expansion Map.md",
+   "target": "11_EXPANSION_AND_VENTURES/Stock House Eshop Concept"
+  },
+  {
+   "from": "11_EXPANSION_AND_VENTURES/Expansion Map.md",
+   "target": "11_EXPANSION_AND_VENTURES/Personal Brand and Thought Leadership"
+  },
+  {
+   "from": "11_EXPANSION_AND_VENTURES/Expansion Map.md",
+   "target": "11_EXPANSION_AND_VENTURES/Hotel and Real Estate Strategy"
+  },
+  {
+   "from": "11_EXPANSION_AND_VENTURES/Hotel and Real Estate Strategy.md",
+   "target": "06_PROJECTS_AND_CASES/Project - Nur Athens Boutique Hotel"
+  },
+  {
+   "from": "12_PERSONAL_OS/Personal Operating System.md",
+   "target": "12_PERSONAL_OS/Learning System"
+  },
+  {
+   "from": "12_PERSONAL_OS/Personal Operating System.md",
+   "target": "12_PERSONAL_OS/Mindfulness and Reflection"
+  },
+  {
+   "from": "12_PERSONAL_OS/Personal Operating System.md",
+   "target": "12_PERSONAL_OS/Personal Weekly Review"
+  },
+  {
+   "from": "12_PERSONAL_OS/Personal Operating System.md",
+   "target": "12_PERSONAL_OS/Health and Energy"
+  },
+  {
+   "from": "12_PERSONAL_OS/Personal Operating System.md",
+   "target": "12_PERSONAL_OS/Deep Work and Focus"
+  },
+  {
+   "from": "12_PERSONAL_OS/Personal Operating System.md",
+   "target": "12_PERSONAL_OS/Leadership Standards"
+  },
+  {
+   "from": "README_START_HERE.md",
+   "target": "02_OPERATIONS_OS/Daily Order Processing SOP"
+  },
+  {
+   "from": "README_START_HERE.md",
+   "target": "98_TEMPLATES/Template - Order"
+  },
+  {
+   "from": "README_START_HERE.md",
+   "target": "00_COMMAND_CENTER/Current Priorities"
+  },
+  {
+   "from": "README_START_HERE.md",
+   "target": "98_TEMPLATES/Template - Supplier"
+  },
+  {
+   "from": "README_START_HERE.md",
+   "target": "08_AUTOMATION_AND_AI/Automation Backlog"
+  },
+  {
+   "from": "README_START_HERE.md",
+   "target": "98_TEMPLATES/Template - Client"
+  },
+  {
+   "from": "README_START_HERE.md",
+   "target": "01_COMPANY_CORE/Afoi Deli Master Profile"
+  },
+  {
+   "from": "README_START_HERE.md",
+   "target": "04_SUPPLIERS_AND_BRANDS/Supplier Master Index"
+  },
+  {
+   "from": "README_START_HERE.md",
+   "target": "00_COMMAND_CENTER/Home Dashboard"
+  }
+ ]
+}

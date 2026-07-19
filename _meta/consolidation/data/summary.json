@@ -1,0 +1,89 @@
+{
+ "generated": "2026-07-19",
+ "head": "6bdac9f",
+ "md_files": 195,
+ "other_files": 19,
+ "zones": {
+  "content": 145,
+  "root": 4,
+  "personal": 14,
+  "system": 19,
+  "meta": 5,
+  "generated": 5,
+  "sources": 3
+ },
+ "link_edges": 1075,
+ "broken_targets": 99,
+ "path_style_links": 86,
+ "orphans": 4,
+ "duplicate_stems": 0,
+ "exact_normalized_collisions": 0,
+ "similar_title_pairs": 172,
+ "frontmatter_violations": 6,
+ "csv_rows": {
+  "client_invoices.csv": 0,
+  "clients.csv": 0,
+  "issues_exceptions.csv": 0,
+  "order_lines.csv": 0,
+  "orders.csv": 0,
+  "products.csv": 0,
+  "projects.csv": 0,
+  "supplier_invoices.csv": 0,
+  "supplier_loadings.csv": 0,
+  "suppliers.csv": 0,
+  "tasks_alerts.csv": 0
+ },
+ "sources_hashed": 2,
+ "sensitivity_by_category": {
+  "commercial_terms": 12,
+  "financial_id": 24,
+  "revenue_figure": 13,
+  "price_figure": 14,
+  "client_identity": 11,
+  "contact_email": 7,
+  "payment_terms": 14
+ },
+ "personal_files_inventoried_not_scanned": 14,
+ "top_hubs": [
+  {
+   "path": "The Heart.md",
+   "inbound": 50
+  },
+  {
+   "path": "14_AI_COLLABORATION/Vault State Memory.md",
+   "inbound": 39
+  },
+  {
+   "path": "00_COMMAND_CENTER/Capture Backlog.md",
+   "inbound": 34
+  },
+  {
+   "path": "01_COMPANY_CORE/Afoi Deli — Operating Doctrine.md",
+   "inbound": 30
+  },
+  {
+   "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Supplier - Kronos.md",
+   "inbound": 30
+  },
+  {
+   "path": "14_AI_COLLABORATION/Architecture Decision Records.md",
+   "inbound": 29
+  },
+  {
+   "path": "99_SYSTEM/Vault Map.md",
+   "inbound": 22
+  },
+  {
+   "path": "04_SUPPLIERS_AND_BRANDS/Supplier Master Index.md",
+   "inbound": 19
+  },
+  {
+   "path": "08_AUTOMATION_AND_AI/Python Worker Map.md",
+   "inbound": 18
+  },
+  {
+   "path": "14_AI_COLLABORATION/Open Questions.md",
+   "inbound": 18
+  }
+ ]
+}

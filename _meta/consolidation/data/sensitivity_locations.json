@@ -1,0 +1,572 @@
+[
+ {
+  "path": "00_COMMAND_CENTER/Capture Backlog.md",
+  "line": 74,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "00_COMMAND_CENTER/Capture Backlog.md",
+  "line": 92,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "00_COMMAND_CENTER/Weekly Review.md",
+  "line": 12,
+  "category": "revenue_figure",
+  "zone": "content"
+ },
+ {
+  "path": "01_COMPANY_CORE/Afoi Deli Master Profile.md",
+  "line": 38,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "01_COMPANY_CORE/Afoi Deli Master Profile.md",
+  "line": 38,
+  "category": "revenue_figure",
+  "zone": "content"
+ },
+ {
+  "path": "01_COMPANY_CORE/Business Model Map.md",
+  "line": 10,
+  "category": "revenue_figure",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 19,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 60,
+  "category": "contact_email",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 81,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 84,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 125,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 136,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 164,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 174,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 181,
+  "category": "contact_email",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 188,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 191,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 205,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 213,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 231,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Order Lifecycle — Ground-Truth Capture.md",
+  "line": 238,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "02_OPERATIONS_OS/Proforma Checking SOP.md",
+  "line": 29,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "03_DATABASE_DESIGN/Invoices and Payments Schema.md",
+  "line": 21,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Supplier Enrichment Queue.md",
+  "line": 25,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Supplier Enrichment Queue.md",
+  "line": 53,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Supplier Enrichment Queue.md",
+  "line": 53,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Supplier Research Workflow.md",
+  "line": 54,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Supplier Research Workflow.md",
+  "line": 68,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Supplier Research Workflow.md",
+  "line": 86,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Cielo/Cielo — Collections Reference.md",
+  "line": 125,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Cielo/Supplier - Cielo.md",
+  "line": 40,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Cielo/Supplier - Cielo.md",
+  "line": 44,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Cielo/Supplier - Cielo.md",
+  "line": 61,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Fantini/Supplier - Fantini.md",
+  "line": 40,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Fantini/Supplier - Fantini.md",
+  "line": 40,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Fantini/Supplier - Fantini.md",
+  "line": 40,
+  "category": "revenue_figure",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Supplier - Kronos.md",
+  "line": 36,
+  "category": "contact_email",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Supplier - Kronos.md",
+  "line": 38,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Supplier - Kronos.md",
+  "line": 41,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Supplier - Kronos.md",
+  "line": 42,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Supplier - Kronos.md",
+  "line": 59,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Supplier - Kronos.md",
+  "line": 68,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Kronos/Supplier - Kronos.md",
+  "line": 73,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Mutina/Supplier - Mutina.md",
+  "line": 39,
+  "category": "contact_email",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Mutina/Supplier - Mutina.md",
+  "line": 39,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Scavolini/Supplier - Scavolini.md",
+  "line": 40,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Scavolini/Supplier - Scavolini.md",
+  "line": 40,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Scavolini/Supplier - Scavolini.md",
+  "line": 40,
+  "category": "revenue_figure",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Scavolini/Supplier - Scavolini.md",
+  "line": 70,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "04_SUPPLIERS_AND_BRANDS/Suppliers/Scavolini/Supplier - Scavolini.md",
+  "line": 70,
+  "category": "revenue_figure",
+  "zone": "content"
+ },
+ {
+  "path": "05_SALES_AND_CLIENT_EXPERIENCE/Quote Creation Checklist.md",
+  "line": 22,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "05_SALES_AND_CLIENT_EXPERIENCE/The Selection Engine.md",
+  "line": 35,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "05_SALES_AND_CLIENT_EXPERIENCE/The Selection Engine.md",
+  "line": 85,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "05_SALES_AND_CLIENT_EXPERIENCE/The Selection Engine.md",
+  "line": 126,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "05_SALES_AND_CLIENT_EXPERIENCE/The Selection Engine.md",
+  "line": 151,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "05_SALES_AND_CLIENT_EXPERIENCE/The Selection Engine.md",
+  "line": 164,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "10_FINANCE_AND_MANAGEMENT/Cost & Quote Build.md",
+  "line": 47,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "10_FINANCE_AND_MANAGEMENT/Cost & Quote Build.md",
+  "line": 49,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "10_FINANCE_AND_MANAGEMENT/Cost & Quote Build.md",
+  "line": 59,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "10_FINANCE_AND_MANAGEMENT/Credit and Due Date Calendar.md",
+  "line": 35,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Open Questions.md",
+  "line": 17,
+  "category": "revenue_figure",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-14.md",
+  "line": 91,
+  "category": "contact_email",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-16.md",
+  "line": 30,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-16.md",
+  "line": 36,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-17c.md",
+  "line": 25,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-17c.md",
+  "line": 25,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-17c.md",
+  "line": 27,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-17c.md",
+  "line": 28,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-17c.md",
+  "line": 31,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-19.md",
+  "line": 18,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-19.md",
+  "line": 20,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-19.md",
+  "line": 21,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-19.md",
+  "line": 22,
+  "category": "contact_email",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-21.md",
+  "line": 20,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-06-21.md",
+  "line": 23,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-07-18.md",
+  "line": 10,
+  "category": "client_identity",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Sessions/Session 2026-07-18.md",
+  "line": 19,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Vault State Memory.md",
+  "line": 58,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Vault State Memory.md",
+  "line": 58,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Vault State Memory.md",
+  "line": 58,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Vault State Memory.md",
+  "line": 87,
+  "category": "price_figure",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Vault State Memory.md",
+  "line": 87,
+  "category": "revenue_figure",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Vault State Memory.md",
+  "line": 92,
+  "category": "commercial_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Vault State Memory.md",
+  "line": 92,
+  "category": "payment_terms",
+  "zone": "content"
+ },
+ {
+  "path": "14_AI_COLLABORATION/Vault State Memory.md",
+  "line": 92,
+  "category": "financial_id",
+  "zone": "content"
+ },
+ {
+  "path": "99_SYSTEM/Afoi Deli — Operations Cockpit.md",
+  "line": 20,
+  "category": "contact_email",
+  "zone": "system"
+ },
+ {
+  "path": "docs/REPO_ANALYSIS.md",
+  "line": 145,
+  "category": "commercial_terms",
+  "zone": "generated"
+ },
+ {
+  "path": "docs/REPO_ANALYSIS.md",
+  "line": 145,
+  "category": "financial_id",
+  "zone": "generated"
+ },
+ {
+  "path": "docs/REPO_ANALYSIS.md",
+  "line": 361,
+  "category": "commercial_terms",
+  "zone": "generated"
+ },
+ {
+  "path": "docs/REPO_ANALYSIS.md",
+  "line": 368,
+  "category": "client_identity",
+  "zone": "generated"
+ },
+ {
+  "path": "docs/REPO_ANALYSIS.md",
+  "line": 410,
+  "category": "revenue_figure",
+  "zone": "generated"
+ },
+ {
+  "path": "docs/VISION.md",
+  "line": 22,
+  "category": "revenue_figure",
+  "zone": "generated"
+ },
+ {
+  "path": "docs/WORKFLOW_TREE.md",
+  "line": 12,
+  "category": "revenue_figure",
+  "zone": "generated"
+ },
+ {
+  "path": "docs/WORKFLOW_TREE.md",
+  "line": 41,
+  "category": "revenue_figure",
+  "zone": "generated"
+ },
+ {
+  "path": "README.md",
+  "line": 75,
+  "category": "revenue_figure",
+  "zone": "root"
+ }
+]

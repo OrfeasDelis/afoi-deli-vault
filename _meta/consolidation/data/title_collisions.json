@@ -1,0 +1,866 @@
+{
+ "duplicate_stems": {},
+ "exact_normalized": {},
+ "similar": [
+  {
+   "a": "Order Lines Schema",
+   "b": "Orders Schema",
+   "ratio": 0.857
+  },
+  {
+   "a": "Products Schema",
+   "b": "Projects Schema",
+   "ratio": 0.857
+  },
+  {
+   "a": "Cielo — Collections Reference",
+   "b": "Kronos — Collections Reference",
+   "ratio": 0.824
+  },
+  {
+   "a": "Cielo — Collections Reference",
+   "b": "Mutina — Collections Reference",
+   "ratio": 0.824
+  },
+  {
+   "a": "Fantini — Collections Reference",
+   "b": "Mutina — Collections Reference",
+   "ratio": 0.868
+  },
+  {
+   "a": "Fantini — Collections Reference",
+   "b": "Scavolini — Collections Reference",
+   "ratio": 0.857
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-14",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-15",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-15b",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-16",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-16b",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-16c",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-16d",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-17",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-17b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-18",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-19",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-20",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-06-21",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-07-02",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-07",
+   "b": "Session 2026-07-18",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-15",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-15b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-16",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-16b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-16c",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-16d",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-17",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-17b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-18",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-19",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-20",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-06-21",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-14",
+   "b": "Session 2026-07-18",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-15b",
+   "ratio": 0.968
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-16",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-16b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-16c",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-16d",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-17",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-17b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-18",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-19",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-20",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-06-21",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-15",
+   "b": "Session 2026-07-18",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-16",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-16b",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-16c",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-16d",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-17",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-17b",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-18",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-19",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-20",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-06-21",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-15b",
+   "b": "Session 2026-07-18",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-16b",
+   "ratio": 0.968
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-16c",
+   "ratio": 0.968
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-16d",
+   "ratio": 0.968
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-17",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-17b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-18",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-19",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-20",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-06-21",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-16",
+   "b": "Session 2026-07-18",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-16c",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-16d",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-17",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-17b",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-18",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-19",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-20",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-06-21",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16b",
+   "b": "Session 2026-07-18",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-16d",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-17",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-17b",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-18",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-19",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-20",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-06-21",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16c",
+   "b": "Session 2026-07-18",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-06-17",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-06-17b",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-06-18",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-06-19",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-06-20",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-06-21",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-16d",
+   "b": "Session 2026-07-18",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-06-17b",
+   "ratio": 0.968
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.968
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.968
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-06-18",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-06-19",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-06-20",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-06-21",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-07-02",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-17",
+   "b": "Session 2026-07-18",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-17b",
+   "b": "Session 2026-06-17c",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-17b",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-17b",
+   "b": "Session 2026-06-18",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17b",
+   "b": "Session 2026-06-19",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17b",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-17b",
+   "b": "Session 2026-06-20",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-17b",
+   "b": "Session 2026-06-21",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17b",
+   "b": "Session 2026-07-02",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-17b",
+   "b": "Session 2026-07-18",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-17c",
+   "b": "Session 2026-06-17d",
+   "ratio": 0.938
+  },
+  {
+   "a": "Session 2026-06-17c",
+   "b": "Session 2026-06-18",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17c",
+   "b": "Session 2026-06-19",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17c",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-17c",
+   "b": "Session 2026-06-20",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-17c",
+   "b": "Session 2026-06-21",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17c",
+   "b": "Session 2026-07-02",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-17c",
+   "b": "Session 2026-07-18",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-17d",
+   "b": "Session 2026-06-18",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17d",
+   "b": "Session 2026-06-19",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17d",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.875
+  },
+  {
+   "a": "Session 2026-06-17d",
+   "b": "Session 2026-06-20",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-17d",
+   "b": "Session 2026-06-21",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-17d",
+   "b": "Session 2026-07-02",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-17d",
+   "b": "Session 2026-07-18",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-18",
+   "b": "Session 2026-06-19",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-18",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-18",
+   "b": "Session 2026-06-20",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-18",
+   "b": "Session 2026-06-21",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-18",
+   "b": "Session 2026-07-18",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-19",
+   "b": "Session 2026-06-19b",
+   "ratio": 0.968
+  },
+  {
+   "a": "Session 2026-06-19",
+   "b": "Session 2026-06-20",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-19",
+   "b": "Session 2026-06-21",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-19",
+   "b": "Session 2026-07-18",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-19b",
+   "b": "Session 2026-06-20",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-19b",
+   "b": "Session 2026-06-21",
+   "ratio": 0.903
+  },
+  {
+   "a": "Session 2026-06-19b",
+   "b": "Session 2026-07-18",
+   "ratio": 0.839
+  },
+  {
+   "a": "Session 2026-06-20",
+   "b": "Session 2026-06-21",
+   "ratio": 0.933
+  },
+  {
+   "a": "Session 2026-06-20",
+   "b": "Session 2026-07-02",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-21",
+   "b": "Session 2026-07-02",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-06-21",
+   "b": "Session 2026-07-18",
+   "ratio": 0.867
+  },
+  {
+   "a": "Session 2026-07-02",
+   "b": "Session 2026-07-18",
+   "ratio": 0.867
+  },
+  {
+   "a": "Relationships",
+   "b": "RELATIONSHIP_TREES",
+   "ratio": 0.867
+  },
+  {
+   "a": "Template - ADR",
+   "b": "Template - Order",
+   "ratio": 0.833
+  },
+  {
+   "a": "Template - Product",
+   "b": "Template - Project",
+   "ratio": 0.867
+  },
+  {
+   "a": "2026-06-16-vault-audit",
+   "b": "2026-06-17-vault-audit",
+   "ratio": 0.944
+  },
+  {
+   "a": "2026-06-16-vault-audit",
+   "b": "2026-06-19-vault-audit",
+   "ratio": 0.944
+  },
+  {
+   "a": "2026-06-17-vault-audit",
+   "b": "2026-06-19-vault-audit",
+   "ratio": 0.944
+  }
+ ]
+}

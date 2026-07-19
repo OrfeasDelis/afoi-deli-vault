@@ -1,0 +1,32 @@
+[
+ {
+  "path": "13_DAILY_NOTES/Daily Note Template.md",
+  "field": "status",
+  "value": "(empty)"
+ },
+ {
+  "path": "98_TEMPLATES/Template - ADR.md",
+  "field": "status",
+  "value": "proposed"
+ },
+ {
+  "path": "98_TEMPLATES/Template - ADR.md",
+  "field": "created",
+  "value": "<% tp.date.now(\"YYYY-MM-DD\") %>"
+ },
+ {
+  "path": "98_TEMPLATES/Template - Journal Entry.md",
+  "field": "created",
+  "value": "<% tp.date.now(\"YYYY-MM-DD\") %>"
+ },
+ {
+  "path": "98_TEMPLATES/Template - Order.md",
+  "field": "created",
+  "value": "<% tp.date.now(\"YYYY-MM-DD\") %>"
+ },
+ {
+  "path": "98_TEMPLATES/Template - Project.md",
+  "field": "status",
+  "value": "(empty)"
+ }
+]

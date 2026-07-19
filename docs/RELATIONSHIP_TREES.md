@@ -1,6 +1,6 @@
 # Afoi Deli — Relationship Trees
 
-**Generated 2026-07-02** by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.**
+**Generated 2026-07-19 · snapshot 6bdac9f** by the `/repo-analysis` skill — regenerated at every session end (`CLAUDE.md` §8, ADR-0006). **Do not hand-edit.**
 
 Four trees: the supply ecosystem, the people around the operation, the data-contract family, and the memory spine. Quantitative link-graph numbers (hub degrees, edge counts) live in `docs/REPO_ANALYSIS.md` §2/§7 — one source of truth per number. The human family itself is drawn in `docs/FAMILY_TREE.md`.
 
@@ -88,11 +88,11 @@ graph TD
 graph TD
     heart2["The Heart"] ==> claude2["CLAUDE.md — boot order + rituals"]
     claude2 ==> vsm2["Vault State Memory — single source of where-we-are"]
-    vsm2 --> sessions["Session logs ×18 — one per working session"]
-    vsm2 --> adrs["ADRs ×6 — dated decisions"]
+    vsm2 --> sessions["Session logs ×20 — one per working session"]
+    vsm2 --> adrs["ADRs ×7 — dated decisions"]
     vsm2 --> brains["Brainstorm trail — strategic reframings"]
-    vsm2 --> backlog["Capture Backlog — the ranked next-work queue"]
-    audits2["_meta audits — charter · STATE ledger · dated reports"] -.-> vsm2
+    vsm2 --> backlog["Capture Backlog — the ONE ranked work queue"]
+    audits2["_meta — audit charter · STATE ledger · consolidation registries"] -.-> vsm2
     vsm2 --> docsuite["docs suite — this analysis, regenerated each session"]
     docsuite -.-> guard2["git-sync guard — a stale push does not leave the machine"]
 ```
